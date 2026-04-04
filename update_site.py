@@ -8,7 +8,7 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1"
 )
 
-# 升级为硅谷/学术界顶级前沿信源
+# 全球顶级前沿信源
 SOURCES = [
     "https://www.semianalysis.com/feed",
     "https://www.servethehome.com/feed/", 
@@ -23,11 +23,11 @@ def get_latest_news():
     for url in SOURCES:
         try:
             parsed = feedparser.parse(url)
-            # 每个源只取前2条，6个源共12条核心动态，确保绝不会超过 Token 限制
+            # 每个源取前2条核心动态
             for entry in parsed.entries[:2]:
                 raw_summary = entry.summary if hasattr(entry, 'summary') else ""
                 clean_summary = re.sub(r'<[^>]+>', '', raw_summary)
-                short_summary = clean_summary[:200] # 严格截断
+                short_summary = clean_summary[:200]
                 
                 news_items.append(f"原新闻标题：{entry.title}\n链接：{entry.link}\n摘要：{short_summary}...")
         except Exception as e:
@@ -37,7 +37,7 @@ def get_latest_news():
 
 def generate_radar_html(news_text):
     prompt = f"""
-    你是一个名叫“芯无旁骛”的顶尖AI与芯片产业专家。请阅读以下从全球权威科技源抓取的最新英文/中文资讯，完成【情报雷达】的构建任务。
+    你是一个名叫“芯无旁骛”的顶尖AI与芯片产业专家。请阅读以下从全球权威科技源抓取的最新资讯，完成【情报雷达】的构建任务。
     
     【核心任务】：
     你必须输出且仅输出 3 条深度情报，分别严格对应以下三个领域：
@@ -47,15 +47,15 @@ def generate_radar_html(news_text):
 
     【严格执行以下逻辑】：
     1. 匹配挑选：从资讯中寻找与这三个领域最相关的 TOP 动态。
-    2. 严格保留原标题：卡片上的标题必须【一字不差地翻译成中文的原新闻标题】，绝对不要自己瞎编或过度润色标题！
-    3. 专家级评价：用中文撰写。语气极其权威、犀利、穿透商业/技术本质（100字左右）。
+    2. 保持原汁原味的英文标题：卡片上的标题必须【一字不差地使用原英文新闻标题，绝对不要翻译成中文】，绝对不要瞎编！
+    3. 专家级中文评价：虽然标题是英文，但你的深度点评【必须全部用中文撰写】。语气极其权威、犀利、穿透商业/技术本质（100字左右）。
     4. 兜底机制：如果没找到某领域的资讯，动用你的先验知识写一条该领域的硬核前瞻研判（链接填 # ）。
-    5. 重点高亮：必须在每段点评中最核心的论点/金句上，使用以下HTML标签画蓝色波浪线：
+    5. 重点高亮：必须在每段的中文点评中，找出最核心的论点/金句，使用以下HTML标签画蓝色波浪线：
        <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是金句</span>
     
     【输出格式要求】：
     请直接输出 3 个 <a> 标签包裹的 HTML 代码，不要带 ```html 标记，不要多余的废话。
-    模板如下（请确保标签名为相应的领域名，副标题改为“今日前沿”）：
+    模板如下（请确保标签名为相应的领域名，副标题为“今日前沿”）：
 
     <a href="[原文链接]" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
         <div class="flex items-center justify-between mb-3">
@@ -63,7 +63,7 @@ def generate_radar_html(news_text):
             <span class="text-sm font-semibold text-slate-500">今日前沿</span>
         </div>
         <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">
-            [此处必须填入：翻译为中文的原新闻标题]
+            [此处必须填入：原汁原味的原新闻标题（不翻译）]
         </h4>
         <p class="text-base text-slate-600 font-serif leading-relaxed">
             [在这里写你的权威中文评价，必须包含带有波浪线高亮的 span 标签]
@@ -77,7 +77,7 @@ def generate_radar_html(news_text):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile", 
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.3 # 温度调低，让AI更加老实地翻译标题，不要乱发散
+        temperature=0.3
     )
     
     result = response.choices[0].message.content
