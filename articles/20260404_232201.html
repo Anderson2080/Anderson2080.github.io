@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芯片架构的变革：解析Test-Time Compute对推理算力的深刻影响和KV Cache内存墙危机的应对策略 | 芯无旁骛 Neural Silicon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F8FAFC; color: #0F172A; } 
+        .font-serif p { margin-bottom: 1.8rem; line-height: 1.8; font-size: 1.125rem; } 
+        .font-serif h3 { font-family: 'Inter', sans-serif; font-size: 1.75rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.2rem; color: #0F172A; letter-spacing: -0.025em; } 
+        .font-serif blockquote { border-left: 4px solid #2563EB; padding-left: 1.5rem; font-style: italic; color: #334155; background: #F1F5F9; padding: 1.5rem; border-radius: 0.5rem; margin-top: 2rem; margin-bottom: 2rem; font-size: 1.125rem; font-family: 'Inter', sans-serif; }
+        .font-serif ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8; }
+        .font-serif li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-200 selection:text-blue-900">
+    <nav class="max-w-3xl mx-auto px-6 py-8">
+        <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-widest">
+            ← 返回主页 Home
+        </a>
+    </nav>
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        <div class="mb-12 border-b border-slate-200 pb-10">
+            <div class="text-blue-600 font-bold tracking-widest uppercase mb-4 text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span> 首席研判 Deep Dive
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black leading-[1.2] tracking-tight text-slate-900 mb-6">芯片架构的变革：解析Test-Time Compute对推理算力的深刻影响和KV Cache内存墙危机的应对策略</h1>
+            <div class="text-slate-500 font-medium text-sm uppercase tracking-widest">2026-04-04 23:22</div>
+        </div>
+        <article class="font-serif text-slate-700">
+            <h3>第一章：Test-Time Compute对推理算力的深刻影响</h3>
+<p>Test-Time Compute的爆发式增长主要是由于其能够实时调整模型参数以适应不同场景的需求。这种能力使得模型能够更好地适应新的数据和场景，从而提高推理算力的准确性和效率。</p>
+<p>然而，这种增长也带来了新的挑战。例如，SRAM和HBM3e的使用成为提高推理算力的关键因素。PagedAttention和MoE Routing等技术也被广泛应用以提高模型的并行度和效率。</p>
+<img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop" class="w-full h-64 md:h-80 object-cover rounded-2xl my-8 shadow-sm border border-slate-200">
+<h3>第二章：KV Cache内存墙危机的成因和应对策略</h3>
+<p>KV Cache内存墙危机主要是由于模型参数的增长导致内存需求的增加。这种增长使得传统的内存架构难以满足模型的需求，从而导致内存墙危机。</p>
+<p>为了应对这种危机，开发者可以使用TTFT（Tensor Train Factorization）等技术来压缩模型参数，减少内存需求。另外，使用多智能体和分布式训练等方法也可以帮助提高模型的并行度和效率。</p>
+<img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop" class="w-full h-64 md:h-80 object-cover rounded-2xl my-8 shadow-sm border border-slate-200">
+<h3>第三章：多智能体对底层路由的挑战和未来发展趋势</h3>
+<blockquote>多智能体技术的发展将对底层路由提出新的挑战。开发者需要设计更高效和更灵活的路由算法来适应多智能体的需求。</blockquote>
+<p>未来，芯片架构的发展将更加注重推理算力的提高和内存墙危机的解决。开发者和投资者需要密切关注这些变化，并提前布局以应对未来挑战和机遇。</p>
+        </article>
+        <div class="mt-20 pt-10 border-t border-slate-200 text-center">
+            <a href="../archive.html" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-600 transition-colors tracking-wide">
+                浏览全部过往深度研判
+            </a>
+        </div>
+    </main>
+</body>
+</html>
