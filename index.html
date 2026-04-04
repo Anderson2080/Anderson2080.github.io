@@ -96,32 +96,47 @@
             
 <div class="space-y-12">
                 
+    
     <!-- DEEP_DIVES_START -->
-    <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8">
+    <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
-                <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">首席研判</span>
+                <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
                 <span class="text-slate-500">2026-04-04</span>
             </div>
         </div>
-        <h4 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            AI芯片革命：解锁下一代智能时代的底层逻辑与技术突破
+        <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
+            芯片革命与算力爆发：解析Test-Time Compute、O1/R1模型与KV Cache内存墙危机对AI Infra与芯片架构的深度影响
         </h4>
-        <p class="text-lg text-slate-600 font-serif leading-relaxed mb-8 border-l-4 border-slate-300 pl-5">
-            随着人工智能（AI）技术的蓬勃发展，AI芯片的需求也日益增长。作为AI系统的核心组件，AI芯片的性能和效率将直接影响到整个系统的表现。近年来，各大科技公司都在AI芯片研发上投入了大量资源，推出了多款高性能的AI芯片。然而，AI芯片的发展还远未止步，未来将会有哪些突破和创新？本文将深入探讨AI芯片的发展趋势、Agent的底层逻辑以及最新芯片架构的突破，带您领略AI芯片革命的风采。
-        </p>
-        <a href="articles/2026-04-04.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
-            阅读完整深度研判 
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
+        
+        <!-- 这里填充 AI 生成的几百字长摘要，拉长左侧高度 -->
+        <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
+            <p>近期，AI领域经历了一场前所未有的剧变，Test-Time Compute测试时计算的爆发、O1/R1模型对推理算力的拉扯、KV Cache的内存墙危机等问题逐渐浮现，给AI Infra与芯片架构带来了深刻的影响。作为全球顶尖的AI Infra与芯片架构专家，我们将深入探讨这些问题的根源、发展趋势以及对行业的影响。</p>
+<p>本文将重点分析以下几个核心论点：</p>
+<ul>
+<li>Test-Time Compute测试时计算的崛起与其对传统芯片架构的挑战</li>
+<li>O1/R1模型对推理算力的拉扯与其对KV Cache内存墙危机的影响</li>
+<li>多智能体对底层路由的挑战与其对AI Infra的深度影响</li>
+</ul>
+<p>通过对这些问题的深入分析，我们将为开发者和投资者提供一个全面的视角，帮助他们更好地理解当前AI领域的发展趋势和未来方向。同时，我们也将探讨这些问题的解决方案，包括SRAM、HBM3e、PagedAttention、MoE Routing、TTFT等硬核行业技术的应用与创新。请继续阅读，揭开AI领域的神秘面纱，探索芯片革命与算力爆发的深度影响。</p>
+        </div>
+        
+        <div class="mt-auto pt-6">
+            <a href="articles/2026-04-04.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+                阅读完整深度研判 
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
     </article>
-    <div class="mt-10 pt-8 border-t-2 border-slate-100">
-        <a href="archive.html" class="inline-flex items-center gap-2 text-lg font-black text-slate-400 hover:text-slate-800 transition-colors uppercase tracking-widest">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-            浏览历史文库与归档
+    
+    <div class="mt-10 pt-6 flex items-center">
+        <a href="archive.html" class="inline-flex items-center gap-2 text-base font-black text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-widest">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            过往深度研判 Archive
         </a>
     </div>
     <!-- DEEP_DIVES_END -->
+    
     
             </div>
             
@@ -170,7 +185,7 @@
         <span class="text-sm font-semibold text-slate-500">今日前沿</span>
     </div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Sodola SL510S-4T2XS Review A Cheap Half-Width 6-port 10G Web Managed Switch</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">这款 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">169美元的半宽度6端口10G网管交换机</span> 在性能和价格上都有着不错的表现，值得关注的是其在 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">数据中心和企业网络</span> 中的应用潜力。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">这款 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">169美元的半宽6端口10G网络交换机</span> 在性能和价格上都有着不错的表现，值得关注的是其 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">10GbE交换能力</span> 和 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Web管理功能</span>。</p>
 </a>
 
 <a href="https://semiengineering.com/automated-security-assertion-generation-using-llms-u-of-florida/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
@@ -179,7 +194,7 @@
         <span class="text-sm font-semibold text-slate-500">今日前沿</span>
     </div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Automated Security Assertion Generation Using LLMs (U. of Florida)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">这项 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">使用大语言模型自动生成安全断言</span> 的技术有望大大提高安全性验证的效率和准确性，尤其是在 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片设计和开发</span> 中的应用前景广阔。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">佛罗里达大学的研究人员提出了一种使用 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">大语言模型（LLMs）</span> 自动生成安全断言的方法，旨在提高系统的安全性和 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">自动化程度</span>，这是 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">人工智能安全</span> 领域的一个重要进展。</p>
 </a>
 
 <a href="https://semiengineering.com/chip-industry-week-in-review-132/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
@@ -188,7 +203,7 @@
         <span class="text-sm font-semibold text-slate-500">今日前沿</span>
     </div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">近期 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片行业的重大事件</span> 包括DUV光刻技术的限制、Arm和IBM的双架构合作等，这些变化将对 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片制造和技术发展</span> 产生深远影响。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">本周，芯片行业有多项重要新闻，包括 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">DUV光刻技术的限制</span>、<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Arm-IBM的双架构合作</span> 以及 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">1.4nm AI芯片的发布</span>，这些都表明了芯片技术的 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">快速发展</span> 和 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">创新</span>。</p>
 </a>
 <!-- RADAR_END -->
                 </div>    
