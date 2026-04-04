@@ -1,6 +1,8 @@
 import os
 import re
 import feedparser
+import time
+from datetime import datetime, timedelta
 from openai import OpenAI
 
 client = OpenAI(
@@ -20,16 +22,30 @@ SOURCES = [
 
 def get_latest_news():
     news_items = []
+    # 计算7天前的时间节点
+    seven_days_ago = datetime.now() - timedelta(days=7)
+    
     for url in SOURCES:
         try:
             parsed = feedparser.parse(url)
-            # 每个源取前2条核心动态
-            for entry in parsed.entries[:2]:
+            valid_entries = 0
+            
+            for entry in parsed.entries:
+                if valid_entries >= 2: # 每个源最多取2条符合条件的
+                    break
+                    
+                # 检查发布时间，过滤掉7天前的新闻
+                if hasattr(entry, 'published_parsed') and entry.published_parsed:
+                    entry_date = datetime.fromtimestamp(time.mktime(entry.published_parsed))
+                    if entry_date < seven_days_ago:
+                        continue # 跳过旧新闻
+                
                 raw_summary = entry.summary if hasattr(entry, 'summary') else ""
                 clean_summary = re.sub(r'<[^>]+>', '', raw_summary)
                 short_summary = clean_summary[:200]
                 
                 news_items.append(f"原新闻标题：{entry.title}\n链接：{entry.link}\n摘要：{short_summary}...")
+                valid_entries += 1
         except Exception as e:
             continue
             
@@ -37,7 +53,7 @@ def get_latest_news():
 
 def generate_radar_html(news_text):
     prompt = f"""
-    你是一个名叫“芯无旁骛”的顶尖AI与芯片产业专家。请阅读以下从全球权威科技源抓取的最新资讯，完成【情报雷达】的构建任务。
+    你是一个名叫“芯无旁骛”的顶尖AI与芯片产业专家。请阅读以下从全球权威科技源抓取的【最近7天内】的最新资讯，完成【情报雷达】的构建任务。
     
     【核心任务】：
     你必须输出且仅输出 3 条深度情报，分别严格对应以下三个领域：
@@ -48,13 +64,13 @@ def generate_radar_html(news_text):
     【严格执行以下逻辑】：
     1. 匹配挑选：从资讯中寻找与这三个领域最相关的 TOP 动态。
     2. 保持原汁原味的英文标题：卡片上的标题必须【一字不差地使用原英文新闻标题，绝对不要翻译成中文】，绝对不要瞎编！
-    3. 专家级中文评价：虽然标题是英文，但你的深度点评【必须全部用中文撰写】。语气极其权威、犀利、穿透商业/技术本质（100字左右）。
+    3. 专家级中文评价：深度点评【必须全部用中文撰写】。语气极其权威、犀利、穿透商业/技术本质（100字左右）。
     4. 兜底机制：如果没找到某领域的资讯，动用你的先验知识写一条该领域的硬核前瞻研判（链接填 # ）。
     5. 重点高亮：必须在每段的中文点评中，找出最核心的论点/金句，使用以下HTML标签画蓝色波浪线：
        <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是金句</span>
     
     【输出格式要求】：
-    请直接输出 3 个 <a> 标签包裹的 HTML 代码，不要带 ```html 标记，不要多余的废话。
+    请直接输出 3 个 <a> 标签包裹的 HTML 代码，不要带 ```html 标记。
     模板如下（请确保标签名为相应的领域名，副标题为“今日前沿”）：
 
     <a href="[原文链接]" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
@@ -88,9 +104,12 @@ def generate_radar_html(news_text):
     return result.strip()
 
 def update_html():
-    print("正在扫略全球顶级科技源(SemiAnalysis, arXiv等)...")
+    print("正在扫略过去7天内的全球顶级科技源...")
     news = get_latest_news()
     
+    if not news.strip():
+        print("过去7天无匹配新闻，AI将使用先验知识库生成前瞻研判...")
+        
     print("AI专家正在进行跨语种研判与排版...")
     new_radar_html = generate_radar_html(news)
     
@@ -108,7 +127,7 @@ def update_html():
     with open('index.html', 'w', encoding='utf-8') as f:
         f.write(html_content)
     
-    print("硬核情报雷达更新完毕！")
+    print("硬核情报雷达(7天滤网版)更新完毕！")
 
 if __name__ == "__main__":
     update_html()
