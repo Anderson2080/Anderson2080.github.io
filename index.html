@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芯无旁骛 Neural Silicon | AI Infra & 芯片前沿战略洞察</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #F8FAFC; 
+            color: #0F172A;
+        }
+        .font-sans { font-family: 'Inter', system-ui, sans-serif; }
+        .font-serif { font-family: 'Lora', Georgia, serif; }
+        
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #2563EB;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        input:focus { outline: none; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-blue-200 selection:text-blue-900 flex flex-col min-h-screen">
+
+    <!-- 导航栏 -->
+    <nav class="max-w-7xl mx-auto w-full px-6 py-6 flex justify-between items-center relative">
+        <div class="text-xl font-black tracking-tight flex items-center gap-2 text-slate-900 z-10">
+            <div class="w-8 h-8 bg-blue-600 flex items-center justify-center text-white text-sm font-bold rounded-md shadow-sm">芯</div>
+            <span>Neural Silicon</span>
+        </div>
+        
+        <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 items-center w-max">
+            <span class="text-base lg:text-lg font-black tracking-widest text-slate-800 uppercase">
+                学新知 <span class="text-slate-300 mx-1.5 font-light">·</span> 提认知 <span class="text-slate-300 mx-1.5 font-light">·</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">不内卷</span>
+            </span>
+        </div>
+
+        <div class="hidden md:flex gap-10 text-lg font-bold text-slate-700 z-10">
+            <a href="#deep-dives" class="flex items-center gap-2 hover-underline-animation hover:text-slate-900 transition-colors">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                深度研判
+            </a>
+            <a href="#radar" class="flex items-center gap-2 hover-underline-animation hover:text-slate-900 transition-colors">
+                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                情报雷达
+            </a>
+        </div>
+    </nav>
+
+    <!-- 核心视觉区 -->
+    <header class="max-w-7xl mx-auto px-6 pt-16 pb-20 text-center flex flex-col items-center">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-10 tracking-tight leading-tight md:leading-snug">
+            <span class="font-serif italic text-blue-700 pr-1">AI Infra</span>
+            <span class="text-slate-300 mx-1 md:mx-2 font-light align-middle text-2xl md:text-3xl">×</span>
+            <span class="font-sans font-black text-slate-800 tracking-tighter">Agent</span>
+            <span class="text-slate-300 mx-1 md:mx-2 font-light align-middle text-2xl md:text-3xl">×</span>
+            <span class="font-sans font-bold text-emerald-600">芯片前沿</span>
+            <span class="block mt-4 md:inline md:mt-0 md:ml-4 text-slate-900">硬核洞察</span>
+        </h1>
+        <div class="w-full">
+            <p class="text-xl md:text-2xl text-slate-700 font-serif md:whitespace-nowrap tracking-wide">
+                为 <strong class="text-slate-900 font-bold">技术开发者</strong>、<strong class="text-slate-900 font-bold">创新创业者</strong> 与 <strong class="text-slate-900 font-bold">前沿投资人</strong>，提供基于硬核逻辑与一手数据的战略研判。
+            </p>
+        </div>
+    </header>
+
+    <!-- 主体内容矩阵 -->
+    <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-12 flex-grow">
+        
+        <!-- 左侧：深度长文 -->
+        <section id="deep-dives" class="lg:col-span-7">
+            <div class="flex items-center justify-between mb-8 border-b-2 border-slate-800 pb-2">
+                <h3 class="text-base font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                    Deep Dives / 深度研判
+                </h3>
+            </div>
+            
+<div class="space-y-12">
+                <!-- DEEP_DIVES_START -->
+                <article class="group cursor-pointer">
+                    <div class="flex items-center gap-3 text-xs font-bold mb-3 uppercase tracking-wider">
+                        <span class="text-slate-500">等待更新</span>
+                    </div>
+                    <h4 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300 leading-snug">
+                        AI 正在生成最新的深度研判...
+                    </h4>
+                    <p class="text-slate-600 font-serif leading-relaxed line-clamp-3">
+                        请稍候，自动化脚本一旦运行，就会在此处填入今日最新的硬核技术与商业洞察。
+                    </p>
+                </article>
+                <!-- DEEP_DIVES_END -->
+            </div>
+            
+            <div class="mt-12 pt-8">
+                <a href="#" class="inline-flex items-center gap-2 text-lg font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                    浏览完整文库 
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- 右侧：作者名片 + 情报雷达 -->
+        <aside class="lg:col-span-5 space-y-10">
+            
+            <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-5 mb-6">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Neural" alt="芯无旁骛" class="w-20 h-20 shrink-0 rounded-2xl bg-slate-100 object-cover border-2 border-white shadow-sm ring-1 ring-slate-200">
+                    <div class="font-black text-xl text-slate-900 tracking-tight leading-snug">
+                        芯无旁骛 <span class="font-bold text-blue-600">（AI与芯片产业专家）</span>
+                    </div>
+                </div>
+                
+                <div class="text-base text-slate-700 leading-relaxed font-serif space-y-3">
+                    <p>前沿智能探索者、芯片科技思考者。</p>
+                    <p><strong class="text-slate-900 font-bold bg-yellow-100 px-1 rounded">20年一线科研和工程经验。</strong></p>
+                    <p class="text-slate-800 font-medium">为你提供鞭辟入里、反共识的技术与商业洞察。</p>
+                </div>
+            </div>
+
+            <!-- 情报雷达 -->
+            <div id="radar">
+                <div class="flex items-center justify-between mb-6 border-b-2 border-slate-200 pb-2">
+                    <h3 class="text-lg font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                        情报雷达 Radar
+                        <span class="relative flex h-2.5 w-2.5">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                        </span>
+                    </h3>
+                </div>
+            <div class="space-y-4">
+                    <!-- RADAR_START -->
+                    <a href="#" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">系统</span>
+                            <span class="text-sm font-semibold text-slate-500">Status</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-2">
+                            情报雷达等待更新中...
+                        </h4>
+                        <p class="text-base text-slate-600 line-clamp-2 font-serif leading-relaxed">
+                            自动化脚本即将在此处填入由 AI 筛选和总结的最前沿短评与数据分析。
+                        </p>
+                    </a>
+                    <!-- RADAR_END -->
+                </div>    
+             </div>
+
+        </aside>
+    </main>
+
+    <!-- 底部邮箱订阅区 -->
+    <section class="border-t border-slate-200 bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-24 text-center">
+            <h3 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 tracking-tight">拒绝信息噪音，获取穿越周期的核心研判</h3>
+            <div class="w-full overflow-hidden mb-12">
+                <p class="text-slate-500 text-base md:text-lg font-serif tracking-wide md:whitespace-nowrap">
+                    每月推送经过多维交叉验证的重磅深度研判，只交付影响产业走向的底层逻辑。
+                </p>
+            </div>
+            <form class="max-w-xl mx-auto">
+                <div class="flex items-center p-1.5 bg-white border border-slate-300 rounded-xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/20 transition-all duration-300">
+                    <input type="email" placeholder="输入您的工作邮箱..." class="flex-1 w-full px-4 text-base text-slate-700 bg-transparent border-none placeholder-slate-400 focus:outline-none focus:ring-0" required>
+                    <button type="submit" class="bg-[#111827] text-white px-8 py-3.5 rounded-lg text-sm font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300 whitespace-nowrap">免费订阅</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- 完美整合的横向排布 Footer (高度大幅压缩，视觉更紧凑) -->
+    <footer class="bg-[#0B1120] text-slate-400 py-16 md:py-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            <!-- 左侧：微信二维码 + 品牌愿景 (横向布局 Flex) -->
+            <div class="lg:col-span-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 lg:gap-8">
+                
+                <!-- 放大版二维码，保留白底防误扫 -->
+                <div class="shrink-0 bg-white p-2 rounded-xl shadow-lg transition-transform hover:scale-105 duration-300">
+                    <img src="avatar.jpg" alt="芯无旁骛微信公众号" class="w-36 h-36 md:w-40 md:h-40 object-contain">
+                </div>
+                
+                <!-- 品牌标题与愿景文字 -->
+                <div class="text-center sm:text-left pt-2 md:pt-4">
+                    <div class="text-3xl font-bold text-white mb-4 tracking-tight">Neural Silicon</div>
+                    <p class="text-slate-400 text-base font-serif leading-loose mb-3">
+                        在喧嚣的 AI 时代，我们选择潜心研究。<br>
+                        基于严谨数据分析，只提供最优价值的洞见。
+                    </p>
+                    <div class="text-sm font-medium text-slate-500 tracking-wide mt-2">
+                        微信扫一扫，关注公众号 <span class="text-slate-200 font-bold">芯无旁骛</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：导航与链接区 -->
+            <div class="lg:col-span-4 flex justify-center sm:justify-start lg:justify-end gap-16 md:gap-20">
+                
+                <!-- 导航 -->
+                <div>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-widest mb-6 opacity-80">Navigation</h4>
+                    <ul class="space-y-4 text-base font-medium">
+                        <li><a href="#deep-dives" class="hover:text-white transition-colors">深度研判 Deep Dives</a></li>
+                        <li><a href="#radar" class="hover:text-white transition-colors">情报雷达 Radar</a></li>
+                    </ul>
+                </div>
+
+                <!-- 社交 -->
+                <div>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-widest mb-6 opacity-80">Connect</h4>
+                    <ul class="space-y-4 text-base font-medium">
+                        <li><a href="#" class="hover:text-white transition-colors">Twitter / X</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">RSS Feed</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
