@@ -60,41 +60,50 @@ def generate_radar_html(news_text):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile", messages=[{"role": "user", "content": prompt}], temperature=0.3
     )
-    return re.sub(r'^```(html)?\n?|\n?```$', '', response.choices[0].message.content, flags=re.IGNORECASE).strip()
+    return re.sub(r'^```(html)?\n?|\n?最新?\n?|\n?```$', '', response.choices[0].message.content, flags=re.IGNORECASE).strip()
 
 def generate_deep_dive_data():
     prompt = """
-    你是一个世界顶级AI Infra与芯片创新专家。请撰写一篇前沿、硬核的深度研判文章。
-    主题可以聚焦于：AI Infra的发展趋势、Agent的底层逻辑、或者最新芯片架构的突破。
-    
-    文章要求极度深入丰富、数据支撑感强、逻辑令人醍醐灌顶。不要废话。
-    
-    【必须严格遵守以下输出格式，绝不能用Markdown代码块，只能输出三个标签包裹的内容】：
+    你是全球顶尖的AI Infra与芯片架构专家（类似 SemiAnalysis 的首席分析师）。
+    请基于最近一个月的行业剧变（例如：Test-Time Compute 测试时计算的爆发、O1/R1模型对推理算力的拉扯、KV Cache的内存墙危机、多智能体对底层路由的挑战等），写一篇极其硬核、反共识、令人醍醐灌顶的深度研判长文。
+
+    【严苛要求】：
+    1. 拒绝面面俱到！像手术刀一样剖析一个极度深刻的单点问题。
+    2. 使用大量硬核行业词汇（如：SRAM、HBM3e、PagedAttention、MoE Routing、TTFT等）。
+    3. 文章必须图文并茂！在正文 [CONTENT] 中，必须插入2到3张我提供的精美配图：
+       图1 URL：https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop (用于芯片/算力分析)
+       图2 URL：https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop (用于神经网络/架构分析)
+       插入图片的HTML格式：<img src="URL" class="w-full h-64 md:h-80 object-cover rounded-2xl my-8 shadow-sm border border-slate-200">
+
+    【必须且只能输出以下三个部分的格式，不要带任何 Markdown 标记】：
 
     [TITLE]
-    这里写一个震撼的中文长标题
+    (写一个极具震撼力、专业性的中文长标题)
     [/TITLE]
 
-    [EXCERPT]
-    这里写一段200字左右的极度浓缩的核心摘要，留有悬念，吸引读者点击阅读全文。
-    [/EXCERPT]
+    [HOME_SUMMARY]
+    (这是一段会直接展示在网站主页的引言内容。为了让主页左右高度对齐，这里必须写得丰富饱满，字数约400字。
+    请使用 HTML 标签，如 <p> 标签分段，或者加上一个 <ul> 列表列出本文将要探讨的核心论点。
+    风格要犀利，留有巨大悬念，吸引读者点击“阅读全文”。)
+    [/HOME_SUMMARY]
 
     [CONTENT]
-    这里写详细的正文内容。使用HTML排版（如 <h3>, <p>, <ul>, <blockquote> 等）。要求内容极其丰富详实，分几个章节深度剖析。在核心金句上使用 <span class="font-bold text-blue-600"> 进行高亮。
+    (这里写详细的正文内容。使用HTML排版，包括 <h3> 标题、<p> 正文、<blockquote> 引用。
+    要求内容极其详实深透，分三个深度章节剖析，并给出对开发者和投资人的终局研判。记得插入我给的图片URL。)
     [/CONTENT]
     """
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile", messages=[{"role": "user", "content": prompt}], temperature=0.6
+        model="llama-3.3-70b-versatile", messages=[{"role": "user", "content": prompt}], temperature=0.5
     )
     text = response.choices[0].message.content
     
     try:
         title = re.search(r'\[TITLE\](.*?)\[/TITLE\]', text, re.S).group(1).strip()
-        excerpt = re.search(r'\[EXCERPT\](.*?)\[/EXCERPT\]', text, re.S).group(1).strip()
+        home_summary = re.search(r'\[HOME_SUMMARY\](.*?)\[/HOME_SUMMARY\]', text, re.S).group(1).strip()
         content = re.search(r'\[CONTENT\](.*?)\[/CONTENT\]', text, re.S).group(1).strip()
-        return title, excerpt, content
+        return title, home_summary, content
     except:
-        return "系统升级中", "深度研判文章正在赶来的路上...", "<p>生成失败，请稍后重试。</p>"
+        return "系统升级中", "<p>深度研判文章正在加载...</p>", "<p>生成失败，请重试。</p>"
 
 # ========== 生成独立文章页面 ==========
 def build_article_page(title, date_str, content):
@@ -106,24 +115,36 @@ def build_article_page(title, date_str, content):
     <title>{title} | 芯无旁骛 Neural Silicon</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
-    <style>body {{ background-color: #F8FAFC; color: #0F172A; }} .font-serif p {{ margin-bottom: 1.5rem; line-height: 1.8; }} .font-serif h3 {{ font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 900; margin-top: 2.5rem; margin-bottom: 1rem; color: #0F172A; }} .font-serif blockquote {{ border-left: 4px solid #2563EB; padding-left: 1rem; font-style: italic; color: #475569; background: #F1F5F9; padding: 1rem; border-radius: 0.5rem; }}</style>
+    <style>
+        body {{ background-color: #F8FAFC; color: #0F172A; }} 
+        .font-serif p {{ margin-bottom: 1.8rem; line-height: 1.8; font-size: 1.125rem; }} 
+        .font-serif h3 {{ font-family: 'Inter', sans-serif; font-size: 1.75rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.2rem; color: #0F172A; letter-spacing: -0.025em; }} 
+        .font-serif blockquote {{ border-left: 4px solid #2563EB; padding-left: 1.5rem; font-style: italic; color: #334155; background: #F1F5F9; padding: 1.5rem; border-radius: 0.5rem; margin-top: 2rem; margin-bottom: 2rem; font-size: 1.125rem; font-family: 'Inter', sans-serif; }}
+        .font-serif ul {{ list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8; }}
+        .font-serif li {{ margin-bottom: 0.5rem; }}
+    </style>
 </head>
 <body class="antialiased selection:bg-blue-200 selection:text-blue-900">
-    <nav class="max-w-4xl mx-auto px-6 py-8">
+    <nav class="max-w-3xl mx-auto px-6 py-8">
         <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-widest">
             ← 返回主页 Home
         </a>
     </nav>
-    <main class="max-w-4xl mx-auto px-6 pb-20">
-        <div class="mb-10 border-b border-slate-200 pb-8">
-            <div class="text-blue-600 font-bold tracking-widest uppercase mb-4 text-sm">{date_str}</div>
-            <h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight text-slate-900">{title}</h1>
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        <div class="mb-12 border-b border-slate-200 pb-10">
+            <div class="text-blue-600 font-bold tracking-widest uppercase mb-4 text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span> 首席研判 Deep Dive
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black leading-[1.2] tracking-tight text-slate-900 mb-6">{title}</h1>
+            <div class="text-slate-500 font-medium text-sm uppercase tracking-widest">{date_str}</div>
         </div>
-        <article class="font-serif text-lg text-slate-700">
+        <article class="font-serif text-slate-700">
             {content}
         </article>
-        <div class="mt-16 pt-8 border-t border-slate-200 text-center">
-            <a href="../archive.html" class="inline-block bg-slate-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">浏览更多历史深度研判</a>
+        <div class="mt-20 pt-10 border-t border-slate-200 text-center">
+            <a href="../archive.html" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-600 transition-colors tracking-wide">
+                浏览过往深度研判
+            </a>
         </div>
     </main>
 </body>
@@ -133,13 +154,14 @@ def build_article_page(title, date_str, content):
 # ========== 生成历史归档页面 ==========
 def build_archive_page(archive_list):
     cards = ""
-    # 按日期倒序排列
     for item in sorted(archive_list, key=lambda x: x['date'], reverse=True):
+        # 去除excerpt中的HTML标签以在归档列表中纯文本显示
+        clean_excerpt = re.sub(r'<[^>]+>', '', item['excerpt'])
         cards += f"""
-        <a href="{item['url']}" class="block bg-white border border-slate-200 p-6 rounded-2xl hover:shadow-lg hover:border-blue-300 transition-all duration-300 mb-6 group">
-            <div class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">{item['date']}</div>
-            <h2 class="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug">{item['title']}</h2>
-            <p class="text-slate-600 font-serif line-clamp-2">{item['excerpt']}</p>
+        <a href="{item['url']}" class="block bg-white border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:border-blue-400 transition-all duration-300 mb-6 group">
+            <div class="text-sm font-bold text-blue-600 mb-3 uppercase tracking-wider">{item['date']}</div>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 group-hover:text-blue-600 transition-colors mb-4 leading-snug tracking-tight">{item['title']}</h2>
+            <p class="text-slate-600 font-serif line-clamp-3 leading-relaxed">{clean_excerpt}</p>
         </a>
         """
     
@@ -148,7 +170,7 @@ def build_archive_page(archive_list):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>历史文库 Archive | 芯无旁骛 Neural Silicon</title>
+    <title>过往深度研判 | 芯无旁骛 Neural Silicon</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <style>body {{ background-color: #F8FAFC; color: #0F172A; }} </style>
@@ -159,13 +181,13 @@ def build_archive_page(archive_list):
             <div class="w-8 h-8 bg-blue-600 flex items-center justify-center text-white text-sm font-bold rounded-md">芯</div>
             <span>Neural Silicon</span>
         </div>
-        <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">返回主页</a>
+        <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-widest">返回主页</a>
     </nav>
     <main class="max-w-4xl mx-auto px-6 pb-20 pt-10">
         <h1 class="text-4xl md:text-5xl font-black mb-12 tracking-tight text-slate-900">
-            Archive <span class="text-slate-400 font-light mx-2">/</span> <span class="font-serif italic text-blue-700 text-3xl md:text-4xl">历史文库</span>
+            Archive <span class="text-slate-300 font-light mx-2">/</span> <span class="font-serif italic text-blue-700 text-3xl md:text-4xl">过往深度研判</span>
         </h1>
-        <div class="space-y-2">
+        <div class="space-y-4">
             {cards}
         </div>
     </main>
@@ -179,32 +201,27 @@ def update_html():
     today_str = datetime.now().strftime('%Y-%m-%d')
     today_url = f"articles/{today_str}.html"
     
-    print("1. 获取新闻与生成雷达...")
     news = get_latest_news()
     new_radar_html = generate_radar_html(news)
 
-    print("2. 构思撰写深度研判长文...")
-    title, excerpt, content = generate_deep_dive_data()
+    title, home_summary, content = generate_deep_dive_data()
     
-    print("3. 生成独立文章页面并保存...")
     os.makedirs('articles', exist_ok=True)
     article_html = build_article_page(title, today_str, content)
     with open(today_url, 'w', encoding='utf-8') as f:
         f.write(article_html)
         
-    print("4. 更新历史数据库与归档页...")
     archive_file = 'archive.json'
     archive_list = []
     if os.path.exists(archive_file):
         with open(archive_file, 'r', encoding='utf-8') as f:
             archive_list = json.load(f)
             
-    # 避免同一天重复添加
     archive_list = [x for x in archive_list if x['date'] != today_str]
     archive_list.append({
         "date": today_str,
         "title": title,
-        "excerpt": excerpt,
+        "excerpt": home_summary,
         "url": today_url
     })
     
@@ -213,32 +230,37 @@ def update_html():
         
     build_archive_page(archive_list)
 
-    print("5. 更新主页 index.html...")
-    # 主页展示的简化版卡片
+    # 主页展示的加强版卡片，高度对齐右侧
     new_deep_dive_html = f"""
     <!-- DEEP_DIVES_START -->
-    <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8">
+    <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
-                <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">首席研判</span>
+                <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
                 <span class="text-slate-500">{today_str}</span>
             </div>
         </div>
-        <h4 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
+        <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
             {title}
         </h4>
-        <p class="text-lg text-slate-600 font-serif leading-relaxed mb-8 border-l-4 border-slate-300 pl-5">
-            {excerpt}
-        </p>
-        <a href="{today_url}" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
-            阅读完整深度研判 
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
+        
+        <!-- 这里填充 AI 生成的几百字长摘要，拉长左侧高度 -->
+        <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
+            {home_summary}
+        </div>
+        
+        <div class="mt-auto pt-6">
+            <a href="{today_url}" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+                阅读完整深度研判 
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
     </article>
-    <div class="mt-10 pt-8 border-t-2 border-slate-100">
-        <a href="archive.html" class="inline-flex items-center gap-2 text-lg font-black text-slate-400 hover:text-slate-800 transition-colors uppercase tracking-widest">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-            浏览历史文库与归档
+    
+    <div class="mt-10 pt-6 flex items-center">
+        <a href="archive.html" class="inline-flex items-center gap-2 text-base font-black text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-widest">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            过往深度研判 Archive
         </a>
     </div>
     <!-- DEEP_DIVES_END -->
