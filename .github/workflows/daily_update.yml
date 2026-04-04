@@ -2,10 +2,9 @@ name: Daily Website Update
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天北京时间早上8点自动运行
-  workflow_dispatch: # 允许你随时手动点击运行
+    - cron: '0 23 * * *' # UTC的23点，即北京时间早上7点
+  workflow_dispatch:
 
-# 赋予机器人修改网页代码的权限（非常重要）
 permissions:
   contents: write
 
@@ -26,13 +25,14 @@ jobs:
 
       - name: 运行 AI 更新脚本
         env:
-          AI_API_KEY: ${{ secrets.AI_API_KEY }} # 从 GitHub 密码本读取你的 Groq 密码
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
         run: python update_site.py
 
       - name: 提交并推送到 GitHub
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add index.html
-          git commit -m "🤖 自动更新每日 AI 资讯" || echo "今天没有新内容"
+          # 关键修改：允许机器人上传自动生成的新文件夹和历史文章
+          git add -A 
+          git commit -m "🤖 自动生成深度研判并更新文库" || echo "今天没有新内容"
           git push
