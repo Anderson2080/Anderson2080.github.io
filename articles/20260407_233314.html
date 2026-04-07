@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芯片架构的革命：Test-Time Compute、O1/R1模型和KV Cache内存墙危机的深度分析 | 芯无旁骛 Neural Silicon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F8FAFC; color: #0F172A; } 
+        .font-serif p { margin-bottom: 1.8rem; line-height: 1.8; font-size: 1.125rem; } 
+        .font-serif h3 { font-family: 'Inter', sans-serif; font-size: 1.75rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.2rem; color: #0F172A; letter-spacing: -0.025em; } 
+        .font-serif blockquote { border-left: 4px solid #2563EB; padding-left: 1.5rem; font-style: italic; color: #334155; background: #F1F5F9; padding: 1.5rem; border-radius: 0.5rem; margin-top: 2rem; margin-bottom: 2rem; font-size: 1.125rem; font-family: 'Inter', sans-serif; }
+        .font-serif ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8; }
+        .font-serif li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-200 selection:text-blue-900">
+    <nav class="max-w-3xl mx-auto px-6 py-8">
+        <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-widest">
+            ← 返回主页 Home
+        </a>
+    </nav>
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        <div class="mb-12 border-b border-slate-200 pb-10">
+            <div class="text-blue-600 font-bold tracking-widest uppercase mb-4 text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span> 首席研判 Deep Dive
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black leading-[1.2] tracking-tight text-slate-900 mb-6">芯片架构的革命：Test-Time Compute、O1/R1模型和KV Cache内存墙危机的深度分析</h1>
+            <div class="text-slate-500 font-medium text-sm uppercase tracking-widest">2026-04-07 23:33</div>
+        </div>
+        <article class="font-serif text-slate-700">
+            <h3>第一章：Test-Time Compute的技术原理和影响</h3>
+<p>Test-Time Compute是一种新型的计算模式，它能够在测试时进行计算，从而提高计算效率和降低能耗。这种模式的实现依赖于SRAM、HBM3e等新型存储技术和PagedAttention、MoE Routing等新型算法。下图展示了Test-Time Compute的基本架构：</p>
+<img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop" class="w-full h-64 md:h-80 object-cover rounded-2xl my-8 shadow-sm border border-slate-200">
+<p>Test-Time Compute的技术原理是通过在测试时进行计算来提高计算效率和降低能耗。这种模式的实现依赖于新型存储技术和新型算法，能够显著提高计算速度和降低能耗。</p>
+<h3>第二章：O1/R1模型对推理算力的拉扯和KV Cache的影响</h3>
+<p>O1/R1模型是一种新型的神经网络模型，它能够通过在推理时进行计算来提高推理算力。这种模型的实现依赖于TTFT等新型算法和KV Cache等新型存储技术。下图展示了O1/R1模型的基本架构：</p>
+<img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop" class="w-full h-64 md:h-80 object-cover rounded-2xl my-8 shadow-sm border border-slate-200">
+<p>O1/R1模型对推理算力的拉扯是通过在推理时进行计算来提高推理算力。这种模型的实现依赖于新型算法和新型存储技术，能够显著提高推理速度和降低能耗。但是，O1/R1模型也对KV Cache产生了影响，导致KV Cache的内存墙危机。</p>
+<h3>第三章：KV Cache内存墙危机的成因和解决方案</h3>
+<p>KV Cache内存墙危机是由于O1/R1模型对KV Cache的过度依赖导致的。这种危机的成因是KV Cache的容量和带宽不足，导致计算效率和能耗显著降低。解决方案是通过增加KV Cache的容量和带宽，或者使用新型存储技术来提高KV Cache的性能。</p>
+<blockquote>通过对Test-Time Compute、O1/R1模型和KV Cache内存墙危机的深入分析，我们可以看出，芯片架构的未来发展趋势是朝着高效和低能耗的方向发展。Test-Time Compute和O1/R1模型是芯片架构的未来发展方向，而KV Cache内存墙危机是需要解决的挑战。通过解决这些挑战，我们可以实现芯片架构的革命和技术的突破。</blockquote>
+        </article>
+        <div class="mt-20 pt-10 border-t border-slate-200 text-center">
+            <a href="../archive.html" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-600 transition-colors tracking-wide">
+                浏览全部过往深度研判
+            </a>
+        </div>
+    </main>
+</body>
+</html>
