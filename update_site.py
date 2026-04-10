@@ -122,8 +122,58 @@ def generate_deep_dive_data(news_text):
         print("长文解析失败，请检查模型输出。")
         return "顶级研判正在推演中", "<p>算力正在集中...</p>", "<p>生成失败，请重试。</p>"
 
+# ========== 3. 生成独立文章页面 (顶级研报排版级) ==========
 def build_article_page(title, date_str, content):
-    html = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{title} | 芯无旁骛 Neural Silicon</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"><style>body {{ background-color: #F8FAFC; color: #0F172A; }} .font-serif p {{ margin-bottom: 2rem; line-height: 1.9; font-size: 1.15rem; }} .font-serif h3 {{ font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 900; margin-top: 4rem; margin-bottom: 1.5rem; color: #0F172A; letter-spacing: -0.025em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.5rem; }} .font-serif blockquote {{ border-left: 4px solid #2563EB; padding-left: 1.5rem; font-style: italic; color: #334155; background: #F1F5F9; padding: 2rem; border-radius: 0.5rem; margin-top: 2.5rem; margin-bottom: 2.5rem; font-size: 1.15rem; font-family: 'Inter', sans-serif; }} .font-serif ul {{ list-style-type: disc; padding-left: 1.5rem; margin-bottom: 2rem; font-size: 1.15rem; line-height: 1.8; }} .font-serif li {{ margin-bottom: 0.75rem; }}</style></head><body class="antialiased selection:bg-blue-200 selection:text-blue-900"><nav class="max-w-4xl mx-auto px-6 py-8"><a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-widest">← 返回主页 Home</a></nav><main class="max-w-4xl mx-auto px-6 pb-24"><div class="mb-14 border-b border-slate-200 pb-10"><div class="text-blue-600 font-bold tracking-widest uppercase mb-6 text-sm flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-600"></span> 全球智库级研判 Deep Dive</div><h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.2] tracking-tight text-slate-900 mb-8">{title}</h1><div class="text-slate-500 font-bold text-sm uppercase tracking-widest">{date_str}</div></div><article class="font-serif text-slate-800">{content}</article></main></body></html>"""
+    html = f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} | 芯无旁骛 Neural Silicon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        body {{ background-color: #FAFAFA; color: #111827; }} 
+        .font-serif p {{ margin-bottom: 2.5rem; line-height: 2; font-size: 1.18rem; color: #374151; text-align: justify; }} 
+        .font-serif h3 {{ font-family: 'Inter', sans-serif; font-size: 1.8rem; font-weight: 900; margin-top: 4.5rem; margin-bottom: 1.8rem; color: #0F172A; letter-spacing: -0.03em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.8rem; }} 
+        .font-serif h4 {{ font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #1E293B; }}
+        .font-serif blockquote {{ border-left: 4px solid #0F172A; padding-left: 1.8rem; font-style: normal; color: #1E293B; background: #F1F5F9; padding: 2rem; border-radius: 0.5rem; margin: 3rem 0; font-size: 1.15rem; font-family: 'Inter', sans-serif; font-weight: 500; box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05); }} 
+        .font-serif ul {{ list-style-type: square; padding-left: 1.5rem; margin-bottom: 2.5rem; font-size: 1.15rem; line-height: 1.9; color: #374151; }} 
+        .font-serif li {{ margin-bottom: 0.8rem; }}
+        .font-serif strong {{ color: #0F172A; font-weight: 700; }}
+        /* 增加专业表格样式支持 */
+        .font-serif table {{ width: 100%; border-collapse: collapse; margin: 3rem 0; font-family: 'Inter', sans-serif; font-size: 1rem; }}
+        .font-serif th {{ background-color: #0F172A; color: white; padding: 1rem; text-align: left; font-weight: 600; border: 1px solid #0F172A; }}
+        .font-serif td {{ padding: 1rem; border: 1px solid #E2E8F0; color: #374151; }}
+        .font-serif tr:nth-child(even) {{ background-color: #F8FAFC; }}
+    </style>
+</head>
+<body class="antialiased selection:bg-slate-900 selection:text-white">
+    <nav class="max-w-4xl mx-auto px-6 py-10">
+        <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-widest">
+            ← Back to Neural Silicon
+        </a>
+    </nav>
+    <main class="max-w-4xl mx-auto px-6 pb-32">
+        <div class="mb-16 border-b border-slate-300 pb-12">
+            <div class="text-slate-900 font-bold tracking-widest uppercase mb-6 text-sm flex items-center gap-3">
+                <span class="w-3 h-3 bg-red-600"></span> 芯无旁骛 / 首席产业研判
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-black leading-[1.15] tracking-tight text-slate-900 mb-8">{title}</h1>
+            <div class="flex items-center gap-4 border-t border-slate-200 pt-6 mt-8">
+                <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-xl font-bold">NS</div>
+                <div>
+                    <div class="font-bold text-slate-900">Neural Silicon 智库</div>
+                    <div class="text-slate-500 text-sm font-medium">{date_str} · Subscriber Exclusive</div>
+                </div>
+            </div>
+        </div>
+        <article class="font-serif text-slate-800">
+            {content}
+        </article>
+    </main>
+</body>
+</html>"""
     return html
 
 # ========== 3. 全局调度逻辑 ==========
