@@ -71,48 +71,46 @@ def build_radar_archive_page(radar_list):
     with open('radar_archive.html', 'w', encoding='utf-8') as f: f.write(html)
 
 
-# ========== 2. 每周巨献：骨灰级长文生成引擎 ==========
+# ========== 2. 每周巨献：SemiAnalysis 级硬核长文生成引擎 ==========
 def generate_deep_dive_data(news_text):
     prompt = f"""
-    你是全球顶尖的AI Infra与芯片架构专家（级别对标 SemiAnalysis 首席分析师）。
-    请从以下【本周全球最新科技资讯】中，敏锐地提取出一个最硬核、最具备产业颠覆性的【底层痛点或趋势】，并以此为题，撰写一篇极具震撼力、反共识的、不少于3000字的骨灰级深度研判长文。
+    你是全球最顶尖、最毒舌的 AI Infra 与芯片架构首席分析师（你的对标人物是 SemiAnalysis 的 Dylan Patel）。
+    你只为全球顶级对冲基金、芯片巨头的高管撰写价值 10 万美元的内部付费研报。
+    
+    请从以下【本周全球最新资讯】中提取一个切入点，写一篇极度硬核、信息密度爆炸、反共识的深度研判长文。
 
-    【严苛要求（绝不妥协）】：
-    1. 拒绝面面俱到和车轱辘话！像手术刀一样剖析一个极度深刻的单点物理/算力真相。
-    2. 大量使用硬核专业词汇（如SRAM容量、CXL互联、NVLink带宽瓶颈、PagedAttention、KV Cache碎片化等），并给出强逻辑的数据支撑分析。
-    3. 必须图文并茂！在正文 [CONTENT] 中，必须在合适的章节插入以下3张精美配图：
-       图1 URL：https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop
-       图2 URL：https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop
-       图3 URL：https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
-       HTML插入格式：<img src="URL" class="w-full h-64 md:h-[26rem] object-cover rounded-2xl my-10 shadow-lg border border-slate-200">
+    【极度严苛的写作纪律（违背任何一条都是失败）】：
+    1. 绝对不要解释什么是大模型、什么是芯片等基础概念！你的读者是资深专家。直接切入最底层的物理、算力和商业逻辑。
+    2. 必须大量使用并深入分析具体的硬核指标，例如：
+       - 硬件层：SRAM 单元面积与漏电流、HBM3e/HBM4的堆叠良率与TSV成本、TSMC CoWoS-L/SOIC 封装产能瓶颈、NVLink 与 NVSwitch 的拓扑局限、PCIe 6.0 协议开销、RoCEv2 与 InfiniBand 的尾部延迟。
+       - 算法层：KV Cache 的 PagedAttention 显存碎片化、Test-Time Compute (System 2) 带来的 TTFT 暴增、MoE 路由坍塌、FP8/FP4 的精度墙。
+    3. 语气要高傲、冷酷、一针见血，必须指出目前市场上某个被过度炒作的谎言（例如某巨头的 PPT 性能），并用技术逻辑无情反驳。
+    4. 篇幅必须极度宏大，信息量爆炸，达到大模型单次输出的物理极限（至少4000字以上的高密度干货）。
 
-    【强制输出以下三大标签，不要带有任何 Markdown 代码块包裹】：
+    【排版与配图强制要求】：
+    在 [CONTENT] 中，必须分为 4 到 5 个深不可测的专业章节。
+    必须在合适的章节中插入这 3 张架构/硬件配图（并为每张图配上一句专业的图注）：
+    图1：<figure class="my-10"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 1: 硅基底层的物理极限与封装演进路径</figcaption></figure>
+    图2：<figure class="my-10"><img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 2: 异构计算网络拓扑与多智能体状态路由</figcaption></figure>
+    图3：<figure class="my-10"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 3: 下一代 AI Infra 的集群互联架构</figcaption></figure>
 
-    [TITLE]
-    (在此写一个极度硬核、极具张力的中文长标题)
-    [/TITLE]
+    【强制输出格式】：
+    [TITLE] (写一个充满火药味和专业度的极客标题) [/TITLE]
 
-    [HOME_SUMMARY]
-    (为网站主页生成的引言，约400字。必须使用 <p> 和 <ul> 标签排版。列出本篇将要颠覆认知的核心观点，留下巨大悬念。要求字字珠玑，压迫感十足。)
-    [/HOME_SUMMARY]
+    [HOME_SUMMARY] (用于主页的导语，400字。必须包含 <ul> 列表，列出本文揭露的3个残酷真相，制造极强的付费阅读感。) [/HOME_SUMMARY]
 
-    [CONTENT]
-    (使用纯HTML排版正文，包含 <h3>章节名</h3>、<p>、<blockquote>。
-    长文必须分为四大深度章节，深入到令人发指的程度：
-    1. 破局：表象背后的物理/算力真相（深入到芯片架构层面）
-    2. 架构解剖：硬核技术原理剖析（解释清楚为什么现有方案不行）
-    3. 产业洗牌：谁的护城河正在坍塌，谁在暗中崛起
-    4. 终局推演：给开发者与顶级投资人的生存指南
-    记得插入图片！)
-    [/CONTENT]
+    [CONTENT] (纯 HTML 排版，多用 <h3>, <p>, <blockquote>, 表格 <table> 等标签提升专业感。内容必须深不可测！) [/CONTENT]
 
     【本周全球资讯参考】：
     {news_text}
     """
     
-    # max_tokens 开到极致，确保它能写完长文
+    # 彻底解除封印：将 max_tokens 开到最大，并调低 temperature 让它聚焦于硬核逻辑而非发散文学
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile", messages=[{"role": "user", "content": prompt}], temperature=0.6, max_tokens=4000
+        model="llama-3.3-70b-versatile", 
+        messages=[{"role": "user", "content": prompt}], 
+        temperature=0.3, 
+        max_tokens=8000
     )
     text = response.choices[0].message.content
     try:
@@ -121,7 +119,7 @@ def generate_deep_dive_data(news_text):
         content = re.search(r'\[CONTENT\](.*?)\[/CONTENT\]', text, re.S).group(1).strip()
         return title, home_summary, content
     except Exception as e:
-        print("长文解析失败，原文：", text)
+        print("长文解析失败，请检查模型输出。")
         return "顶级研判正在推演中", "<p>算力正在集中...</p>", "<p>生成失败，请重试。</p>"
 
 def build_article_page(title, date_str, content):
