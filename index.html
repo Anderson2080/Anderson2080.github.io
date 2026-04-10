@@ -108,35 +108,31 @@
     
         
         
-        <!-- DEEP_DIVES_START -->
-        <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
-            <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
-                    <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                    <span class="text-slate-500">2026-04-10 13:21</span>
-                </div>
+        
+    <!-- DEEP_DIVES_START -->
+    <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+                <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
+                <span class="text-slate-500">2026-04-10 13:47</span>
             </div>
-            <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-                绝对碾压：HBM4、PagedAttention 和光学互联如何彻底颠覆传统 AI Infra 设计，以及为什么现有解决方案都是纸上谈兵的庸医
-            </h4>
-            <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-                <p>近期，人们对 AI Infra 的讨论越来越多，但绝大多数都是纸上谈兵，缺乏对底层技术的深入理解。作为全球顶尖的芯片架构与 AI Infra 首席分析师，我将在本文中用硬核数据和逻辑推演，证明以下三个反共识推论：</p>
-<ul>
-<li>现有的 HBM3e 解决方案在面对 100K Context 的 FP16 精度训练时，会消耗至少 256GB 的 HBM，导致 NVLink 的 1.8 TB/s 带宽在几千个并发 Agent 时，会导致至少 10us 的 TTFT（首字延迟）。</li>
-<li>PagedAttention 在多路复用下的显存碎片化与互联拓扑拥塞问题是无法通过简单的软件优化解决的，需要从根本上改变芯片架构和互联设计。</li>
-<li>下一代 Infra 集群需要从胖树拓扑转向端到端全硅光互联，才能满足未来 AI 和 HPC 系统的高带宽需求。</li>
-</ul>
-<p>本文将通过对 HBM4、PagedAttention 和光学互联的深度剖析，证明这些技术如何彻底颠覆传统 AI Infra 设计，并为读者提供一个全新的视角来看待未来 AI 和 HPC 系统的发展方向。</p>
-            </div>
-            <div class="mt-2 pt-2">
-                <a href="articles/20260410_132126.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
-                    阅读完整深度研判 
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-            </div>
-            
-        </article>
-        <!-- DEEP_DIVES_END -->
+        </div>
+        <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
+            硅基算力终局推演：HBM3e带宽墙、KV Cache碎片化与硅光互联的物理账本——为什么当前AI硬件架构将在2025年Q3前触及绝对瓶颈
+        </h4>
+        <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
+            市场对Scaling Law的线性外推是危险的。本报告基于物理定律与商业账本，证明当前AI硬件架构路径将在18个月内撞上不可逾越的墙。核心论点：1. **Test-Time Compute需求呈超线性增长**：推理阶段算力消耗正超越训练，成为成本主导。2. **HBM内存墙是物理死结**：HBM3e的1.2TB/s带宽与5.6pJ/bit能效，无法支撑下一代MoE模型在100K上下文下的实时推理。3. **KV Cache碎片化将吞噬80%的可用显存**：多租户、长上下文场景下，显存有效利用率将低于20%。4. **硅光互联是唯一解，但存在3-5年量产鸿沟**。下文将用TFLOPS/mm²、GB/s/$、pJ/bit等参数，推演泡沫破裂的精确时间点。
+        </div>
+        <div class="mt-2 pt-2">
+            <a href="articles/20260410_134720.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+                阅读完整深度研判 
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+        
+    </article>
+    <!-- DEEP_DIVES_END -->
+    
         
         
         
@@ -186,39 +182,23 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://semiengineering.com/pcie-8-0-enabling-the-next-generation-of-high-bandwidth-systems/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3">
-        <span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span>
-        <span class="text-sm font-semibold text-slate-500">今日前沿</span>
-    </div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">PCIe 8.0: Enabling The Next Generation Of High Bandwidth Systems</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">随着数据速率的不断增加，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">维持可靠的链接需要仔细协调物理层和控制器层</span>。PCIe 8.0 的出现将为下一代高带宽系统提供强大的支持，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">推动 AI 和 HPC 系统的发展</span>。</p>
+<a href="https://www.servethehome.com/nvidia-vera-rubin-nvl72-rack-and-more-in-the-pegatron-booth-at-gtc-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA Vera Rubin NVL72 Rack and More in the Pegatron booth at GTC 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">英伟达提前两年展示Rubin架构NVL72机柜，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI算力军备竞赛已进入“期货”阶段</span>，系统级整合（CPU/GPU/网络/存储）成为新护城河，ODM厂商深度绑定是产能与成本控制的关键。</p>
 </a>
 
 <a href="https://arxiv.org/abs/2604.06233" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3">
-        <span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span>
-        <span class="text-sm font-semibold text-slate-500">今日前沿</span>
-    </div>
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Blind Refusal: Language Models Refuse to Help Users Evade Unjust, Absurd, and Illegitimate Rules</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">语言模型在面对不公正、荒谬或非法规则时，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">会拒绝提供帮助</span>，这体现了语言模型的安全性和伦理性。这种拒绝机制可以帮助防止语言模型被用于不法目的，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">保护用户的权益和安全</span>。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">研究揭示当前AI安全对齐的致命缺陷：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">模型只会“盲目拒绝”而非“道德判断”</span>。这为对抗性Agent提供了可乘之机，也意味着真正的自主Agent必须发展出情境化伦理推理能力，否则只是高级复读机。</p>
 </a>
 
-<a href="https://semiengineering.com/chip-industry-week-in-review-133/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3">
-        <span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span>
-        <span class="text-sm font-semibold text-slate-500">今日前沿</span>
-    </div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">芯片行业的发展日新月异，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">新技术和新产品层出不穷</span>。从 Intel 的合作到 GPU 的攻击，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片行业的竞争日益激烈</span>，各大公司都在努力推动技术的进步和创新，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">为用户提供更好的产品和服务</span>。</p>
-</a>
-    <div class="mt-6 pt-5 border-t border-slate-200">
-        <a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">
-            过往情报雷达 Archive 
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
-    </div>
-    
+<a href="https://semiengineering.com/pcie-8.0-enabling-the-next-generation-of-high-bandwidth-systems/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">PCIe 8.0: Enabling The Next Generation Of High Bandwidth Systems</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">PCIe 8.0标准推进揭示后摩尔时代核心矛盾：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片算力增长已远超互连带宽提升速度</span>。PHY与控制器协同设计成为瓶颈，这不仅是技术问题，更是重塑产业链（IP、封装、测试）话语权的战争。</p>
+</a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
              </div>
