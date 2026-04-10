@@ -70,46 +70,46 @@ def build_radar_archive_page(radar_list):
     html = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>过往情报雷达 | 芯无旁骛 Neural Silicon</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"><style>body {{ background-color: #F8FAFC; color: #0F172A; font-family: 'Inter', sans-serif; }} </style></head><body class="antialiased"><nav class="max-w-4xl mx-auto px-6 py-8 flex justify-between items-center"><div class="text-xl font-black tracking-tight flex items-center gap-2"><div class="w-8 h-8 bg-emerald-500 flex items-center justify-center text-white text-sm font-bold rounded-md">雷</div><span>情报雷达 Archive</span></div><a href="index.html" class="text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">返回主页</a></nav><main class="max-w-4xl mx-auto px-6 pb-20 pt-10"><h1 class="text-4xl md:text-5xl font-black mb-12 tracking-tight text-slate-900">Radar <span class="text-slate-300 font-light mx-2">/</span> <span class="font-serif italic text-emerald-600 text-3xl md:text-4xl">过往情报集</span></h1><div>{cards}</div></main></body></html>"""
     with open('radar_archive.html', 'w', encoding='utf-8') as f: f.write(html)
 
-
-# ========== 2. 每周巨献：SemiAnalysis 级硬核长文生成引擎 ==========
+# ========== 2. 每周巨献：骨灰级长文生成引擎 (终极量化版) ==========
 def generate_deep_dive_data(news_text):
     prompt = f"""
-    你是全球最顶尖、最毒舌的 AI Infra 与芯片架构首席分析师（你的对标人物是 SemiAnalysis 的 Dylan Patel）。
-    你只为全球顶级对冲基金、芯片巨头的高管撰写价值 10 万美元的内部付费研报。
-    
-    请从以下【本周全球最新资讯】中提取一个切入点，写一篇极度硬核、信息密度爆炸、反共识的深度研判长文。
+    你是全球最顶尖、最毒舌的芯片架构与 AI Infra 首席分析师（对标 SemiAnalysis 的 Dylan Patel）。
+    你现在要写一篇价值 10 万美元的内部核心研报。
 
-    【极度严苛的写作纪律（违背任何一条都是失败）】：
-    1. 绝对不要解释什么是大模型、什么是芯片等基础概念！你的读者是资深专家。直接切入最底层的物理、算力和商业逻辑。
-    2. 必须大量使用并深入分析具体的硬核指标，例如：
-       - 硬件层：SRAM 单元面积与漏电流、HBM3e/HBM4的堆叠良率与TSV成本、TSMC CoWoS-L/SOIC 封装产能瓶颈、NVLink 与 NVSwitch 的拓扑局限、PCIe 6.0 协议开销、RoCEv2 与 InfiniBand 的尾部延迟。
-       - 算法层：KV Cache 的 PagedAttention 显存碎片化、Test-Time Compute (System 2) 带来的 TTFT 暴增、MoE 路由坍塌、FP8/FP4 的精度墙。
-    3. 语气要高傲、冷酷、一针见血，必须指出目前市场上某个被过度炒作的谎言（例如某巨头的 PPT 性能），并用技术逻辑无情反驳。
-    4. 篇幅必须极度宏大，信息量爆炸，达到大模型单次输出的物理极限（至少4000字以上的高密度干货）。
+    【🚨 绝对禁令（触发任何一条直接判定失败）】：
+    1. 严禁使用任何宏大叙事和废话，如：“随着技术的发展”、“面临巨大的挑战”、“需要进一步研究”、“推动人类社会进步”、“不仅...而且”。
+    2. 严禁只抛出名词而不加解释！绝对不允许写“KV Cache导致了问题”，你必须用数字证明。
+    3. 严禁写任何结论性的套话。
+
+    【✅ 强制量化与硬核推演要求（必须执行）】：
+    1. 你的文章中必须充满具体的硬件参数、带宽数据、延迟（ns/us）、成本估算（美元）。如果你不知道确切数字，请基于你的顶级专家直觉给出【极其合理的估算值】。
+    2. 例如写 KV Cache 内存墙时，你必须计算：在 FP16 精度下，100K Context 到底消耗多少 GB 的 HBM？NVLink 的 1.8 TB/s 带宽在面对几千个并发并发 Agent 时，会导致多少微秒的 TTFT（首字延迟）？
+    3. 例如写芯片架构时，必须深入到 SRAM 单元的面积（平方毫米）、CoWoS 的晶圆级封装良率瓶颈、或者光学互联（800G/1.6T 硅光模块）的功耗优势。
+    4. 你的语气必须极度自信、甚至带有傲慢。无情地嘲笑市场上那些不懂底层的PPT创业者和盲目推崇Scaling Law的做市商。
 
     【排版与配图强制要求】：
-    在 [CONTENT] 中，必须分为 4 到 5 个深不可测的专业章节。
-    必须在合适的章节中插入这 3 张架构/硬件配图（并为每张图配上一句专业的图注）：
-    图1：<figure class="my-10"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 1: 硅基底层的物理极限与封装演进路径</figcaption></figure>
-    图2：<figure class="my-10"><img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 2: 异构计算网络拓扑与多智能体状态路由</figcaption></figure>
-    图3：<figure class="my-10"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 3: 下一代 AI Infra 的集群互联架构</figcaption></figure>
+    正文 [CONTENT] 必须分为 3-4 个深度剖析章节。
+    必须在第一和第二章节的末尾，插入以下图片HTML代码，并为每张图加上极其专业的图注分析：
+    图1：<figure class="my-10"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 1: HBM3e 堆叠良率与 TSV 穿孔热密度的物理极限推演</figcaption></figure>
+    图2：<figure class="my-10"><img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 2: PagedAttention 在多路复用下的显存碎片化与互联拓扑拥塞</figcaption></figure>
+    图3：<figure class="my-10"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" class="w-full h-[28rem] object-cover rounded-2xl shadow-lg border border-slate-200"><figcaption class="text-center text-sm text-slate-500 mt-3 font-medium">Exhibit 3: 下一代 Infra 集群：从胖树拓扑到端到端全硅光互联</figcaption></figure>
 
     【强制输出格式】：
-    [TITLE] (写一个充满火药味和专业度的极客标题) [/TITLE]
+    [TITLE] (写一个包含具体技术名词、极具挑衅性的长标题) [/TITLE]
 
-    [HOME_SUMMARY] (用于主页的导语，400字。必须包含 <ul> 列表，列出本文揭露的3个残酷真相，制造极强的付费阅读感。) [/HOME_SUMMARY]
+    [HOME_SUMMARY] (用于主页的导语，约400字。必须使用 <p> 和 <ul> 标签排版。列出本文将要用硬核数据证明的3个反共识推论，充满数据感。) [/HOME_SUMMARY]
 
-    [CONTENT] (纯 HTML 排版，多用 <h3>, <p>, <blockquote>, 表格 <table> 等标签提升专业感。内容必须深不可测！) [/CONTENT]
+    [CONTENT] (纯 HTML 排版，多用 <h3>, <p>, <blockquote> 标签。内容必须极其深透，充满计算和逻辑推演！) [/CONTENT]
 
     【本周全球资讯参考】：
     {news_text}
     """
     
-    # 彻底解除封印：将 max_tokens 开到最大，并调低 temperature 让它聚焦于硬核逻辑而非发散文学
+    # 稍微提高 temperature (0.6 -> 0.7) 允许大模型进行更大胆的数字估算和推演
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile", 
         messages=[{"role": "user", "content": prompt}], 
-        temperature=0.3, 
+        temperature=0.7, 
         max_tokens=8000
     )
     text = response.choices[0].message.content
@@ -119,7 +119,7 @@ def generate_deep_dive_data(news_text):
         content = re.search(r'\[CONTENT\](.*?)\[/CONTENT\]', text, re.S).group(1).strip()
         return title, home_summary, content
     except Exception as e:
-        print("长文解析失败，请检查模型输出。")
+        print("长文解析失败，原文：", text)
         return "顶级研判正在推演中", "<p>算力正在集中...</p>", "<p>生成失败，请重试。</p>"
 
 # ========== 3. 生成独立文章页面 (顶级研报排版级) ==========
