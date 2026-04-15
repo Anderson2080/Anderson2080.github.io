@@ -114,29 +114,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-04-14 23:38</span>
+                <span class="text-slate-500">2026-04-15 23:37</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            硅基算力终局推演：HBM3e 带宽墙、KV Cache 碎片化与硅光互联的物理账本——为什么当前 10 万亿美元 AI 资本开支面临 3 年内边际收益归零
+            硅基算力终局推演：HBM3e带宽墙、KV Cache碎片化与硅光互联的物理账本——为什么当前AI硬件架构将在2025年Q3前触及绝对瓶颈
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场叙事将算力增长简化为 GPU 堆叠，严重低估了物理定律的约束。本报告基于晶圆级数据、热力学方程与网络拓扑模型，证明当前架构路径已逼近极限。核心结论：1. 在 100K 上下文、FP8 精度下，单次推理的 KV Cache 将占用 200MB。1000 并发请求将瞬间耗尽 80GB HBM3e 的 90% 容量，迫使 99% 的算力周期用于数据搬运而非计算，有效 TFLOPS 降至标称值的 3.7%。2. HBM3e 的 6.4TB/s 聚合带宽被 1024-bit 总线与 12-hi 堆叠的 TSV 良率锁死，每瓦特性能提升在 2026 年后将低于 5%。3. 硅光互联的 4pJ/bit 能耗优势被 III-V 族材料外延成本与 56Gbaud 调制器带宽抵消，单位比特成本仍是铜互联的 8.3 倍。资本开支的 ROI 拐点将在 2027 年前出现。
+            市场叙事严重偏离物理定律。当前估值隐含的假设是：算力规模将线性扩展至10^28 FLOPS，而成本与延迟持续下降。本报告基于晶圆厂数据、热力学方程与架构仿真，证伪三个核心谎言：1）HBM容量与带宽的同步提升；2）Test-Time Compute成本可被模型压缩技术抵消；3）多芯片互联可无限扩展。数据表明：在FP8精度下，单次处理100K上下文请求，模型参数量超过1.8T时，80GB HBM3e的可用有效带宽将骤降至理论值的38%，系统功耗的72%将消耗在数据搬运而非计算上。KV Cache碎片化将使SRAM需求呈O(n²)增长，而硅光互联的pJ/bit优势在3D堆叠热密度超过500W/cm²时完全消失。本文将逐项拆解算力账本，结论指向2025年Q3前，物理极限将强制重构整个AI硬件栈。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260414_233840.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260415_233758.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260413_233823.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：从HBM3e热崩溃到硅光互联的1.6Tbps救赎——基于Test-Time Compute与KV Cache碎片化的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-13 23:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260412_233003.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：HBM3e堆叠热崩溃、硅光互联延迟悖论与KV Cache碎片化对万亿美元推理市场的物理性绞杀</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-12 23:30</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260411_232856.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-11 23:28</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260410_233047.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局：HBM3e堆叠热崩溃、KV Cache碎片化与硅光互联延迟的物理账本——拆解万亿美元AI泡沫的底层架构熵增</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-10 23:30</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260414_233840.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：HBM3e 带宽墙、KV Cache 碎片化与硅光互联的物理账本——为什么当前 10 万亿美元 AI 资本开支面临 3 年内边际收益归零</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-14 23:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260413_233823.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：从HBM3e热崩溃到硅光互联的1.6Tbps救赎——基于Test-Time Compute与KV Cache碎片化的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-13 23:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260412_233003.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：HBM3e堆叠热崩溃、硅光互联延迟悖论与KV Cache碎片化对万亿美元推理市场的物理性绞杀</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-12 23:30</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260411_232856.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-11 23:28</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -192,22 +194,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/acemagic-m1a-pro-review-an-amd-powered-128gb-ai-mini-pc/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Acemagic M1A PRO+ Review An AMD-Powered 128GB AI Mini PC</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD Ryzen AI Max+ 395与128GB LPDDR5X的组合，标志着<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">高性能AI推理正从云端服务器向紧凑型边缘设备狂飙突进</span>。这不仅是硬件的胜利，更是对“AI无处不在”范式的终极押注，直接挑战英伟达的Jetson霸权。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2604.09554" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/why-more-cpus-are-needed-for-agentic-ai/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">LABBench2: An Improved Benchmark for AI Systems Performing Biology Research</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">科学AI Agent的竞赛已进入<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">标准化、可复现的深水区</span>。LABBench2的出现，意味着AI for Science正从“炫技式”的论文发表，转向解决真实、复杂、可衡量的科研工作流，这是AI成为“科研合伙人”而非“玩具”的关键一步。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Why More CPUs Are Needed For Agentic AI</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AI Agent浪潮的本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">将推理负载从云端“摊薄”到海量边缘设备</span>，这直接颠覆了“算力即GPU”的狭隘认知。通用CPU需求将因机器间自主对话而激增，边缘侧异构计算格局正在重构。</p>
 </a>
 
-<a href="https://semiengineering.com/heterogeneous-npu-data-movement-what-the-execution-flow-shows/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2604.11914" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Self-Monitoring Benefits from Structural Integration: Lessons from Metacognition in Continuous-Time Multi-Timescale Agents</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">为AI Agent构建“元认知”硬件架构是下一场军备竞赛。研究指出，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">将自监控能力（如自我预测）通过硬件结构整合</span>，比软件模拟更高效。这预示专用推理芯片需内置时序管理与状态感知单元。</p>
+</a>
+
+<a href="https://www.servethehome.com/lenovo-thinkpad-p14s-gen-6-intel-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Heterogeneous NPU Data Movement: What The Execution Flow Shows</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">芯片性能的瓶颈已从算力转向数据搬运。本文赤裸揭示：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">异构NPU架构中，低效的数据流足以让TOPS峰值算力沦为纸上谈兵</span>。这是对盲目堆砌算力者的当头棒喝，真正的竞争在于内存墙和互连拓扑的微观战争。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Lenovo ThinkPad P14s Gen 6 (Intel) Review</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Intel Arrow Lake-H搭配NVIDIA RTX PRO 500 Blackwell GPU的移动工作站，是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">“混合AI”终端落地的标准样本</span>。它揭示了产业趋势：边缘AI设备正从“CPU+通用GPU”转向“新制程CPU+专用推理GPU”的紧耦合设计。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
