@@ -122,29 +122,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-04-22 23:41</span>
+                <span class="text-slate-500">2026-04-23 23:40</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            硅基算力终局推演：从HBM3e热崩溃到硅光互联的1.2pJ/bit救赎——基于Test-Time Compute与KV Cache碎片化的物理极限分析
+            Test-Time Compute 是华尔街最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场对万亿参数模型的炒作，掩盖了物理定律的绝对统治。本报告基于第一性原理，量化拆解当前架构的不可持续性。核心结论：1）Test-Time Compute需求将推理成本结构从资本支出（CapEx）彻底扭转为运营支出（OpEx），模型服务毛利率将因HBM功耗而永久性低于40%。2）HBM3e的1024GB/s带宽在服务100K上下文、FP8精度的并发请求时，有效利用率低于35%，80GB容量在5秒内耗尽。3）KV Cache碎片化导致SRAM命中率从理论95%暴跌至实际68%，片上存储面积成本以O(n²)增长。4）唯一可验证的逃逸路径是硅光互联，其0.5pJ/bit的能耗优势将在2026年使2D Mesh电互联方案的功耗占比超过60%时，成为经济性强制选择。下文以TFLOPS/W、mm²/$、GB/s/μs为尺度，完成终局推演。
+            市场正在为“推理算力”的爆发而狂欢，但这是基于对物理极限的无知。Test-Time Compute 并非魔法，它只是将训练阶段的算力饥渴，以更丑陋的形式转移到了推理阶段。我们测算，在 FP8 精度下，100K 上下文的单次推理，其 KV Cache 将消耗超过 80GB HBM3e 带宽，导致内存墙延迟从 200ns 飙升至 2μs。硅光互联的 pJ/bit 效率在 1m 距离内仍比铜互连高 3 倍，而 TSV 穿孔的热密度已逼近 100W/cm² 的封装极限。本文用数学和物理参数，拆解以下核心真相：1) HBM 带宽的线性增长无法匹配 KV Cache 的指数膨胀；2) 硅光互联的微秒级延迟在 Test-Time 场景下是致命缺陷；3) 现有架构的 SRAM 面积无法容纳 Agent 多轮对话的碎片化缓存。对冲基金若继续押注“推理算力”的线性增长，将遭遇物理定律的清算。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260422_234137.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260423_234029.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260421_233109.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局：HBM3e堆叠热崩溃、KV Cache碎片化与硅光互联延迟的物理账本——拆解万亿美元资本押注下的真实物理瓶颈</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-21 23:31</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260420_233827.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：HBM3e 带宽墙、KV Cache 碎片化与硅光互联的物理账本——为什么当前 10 万亿美元 AI 资本开支面临 3 年内边际收益归零</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-20 23:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260419_233120.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力的黄昏：从 HBM3e 热崩溃到 KV Cache 碎片化——解码万亿美元资本错配背后的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-19 23:31</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260418_232953.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：HBM3e带宽墙、KV Cache碎片化与硅光互联的物理账本——为什么当前AI硬件路线图将在18个月内触达物理极限</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-18 23:29</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260422_234137.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：从HBM3e热崩溃到硅光互联的1.2pJ/bit救赎——基于Test-Time Compute与KV Cache碎片化的物理极限分析</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-22 23:41</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260421_233109.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局：HBM3e堆叠热崩溃、KV Cache碎片化与硅光互联延迟的物理账本——拆解万亿美元资本押注下的真实物理瓶颈</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-21 23:31</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260420_233827.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力终局推演：HBM3e 带宽墙、KV Cache 碎片化与硅光互联的物理账本——为什么当前 10 万亿美元 AI 资本开支面临 3 年内边际收益归零</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-20 23:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260419_233120.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力的黄昏：从 HBM3e 热崩溃到 KV Cache 碎片化——解码万亿美元资本错配背后的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-19 23:31</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -211,19 +213,19 @@
 <a href="https://www.servethehome.com/google-tpu-8i-for-inference-and-tpu-8t-for-training-announced/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Google TPU 8i for Inference and TPU 8t for Training Announced</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">谷歌将TPU训练与推理芯片分家，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">暴露了其内部AI负载已复杂到通用架构无法兼顾</span>，被迫走向专用化。这既是技术精进，更是对算力成本失控的无奈妥协，云端AI军备竞赛已进入白热化。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">谷歌终于放弃“一芯通吃”的傲慢，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">将训练与推理彻底解耦</span>。TPU 8t专攻训练，TPU 8i死磕推理，这是对NVIDIA H100/B200架构的精准狙击。但若互联带宽仍是短板，这不过是另一个昂贵的“定制玩具”，而非颠覆者。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2604.18724" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/can-edge-ai-keep-up/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Beyond One Output: Visualizing and Comparing Distributions of Language Model Generations</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">当前Agent评估还停留在“单次输出好不好”的原始阶段。此研究直指核心：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent的可靠性取决于其输出分布的稳定性和可预测性</span>。不解决这个根本问题，所有智能体都只是碰运气的“彩票机”。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Can Edge AI Keep Up?</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">模型迭代速度已碾压芯片流片周期，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">边缘AI正陷入“硬件刚量产，模型已过时”的死亡螺旋</span>。Agent若想落地，必须抛弃“一次流片管三年”的幻想。可重构架构是唯一解药，但代价是功耗与面积的失控。这是整个边缘计算产业的生死劫。</p>
 </a>
 
-<a href="https://semiengineering.com/tsv-complexity-leads-to-manufacturing-bottleneck/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/system-in-package-challenges/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">TSV Complexity Leads To Manufacturing Bottleneck</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">TSV（硅通孔）已成为先进封装的核心瓶颈。论文揭示了一个残酷现实：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">“后摩尔时代”的堆叠红利，正被制造复杂度和良率损失迅速吞噬</span>。芯片性能的下一跳，代价可能是成本和可靠性的悬崖。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">System-in-Package Challenges</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">SiP的“挑战”早已是陈词滥调，核心痛点从未解决：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">异构die间的热应力与互联良率是物理天堑</span>。别再用“Chiplet生态”画饼，若不能将跨厂家的die-to-die接口标准化为像PCIe一样即插即用，SiP永远只是少数巨头的封闭游戏。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
