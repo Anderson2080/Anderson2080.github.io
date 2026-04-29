@@ -128,29 +128,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-04-28 23:51</span>
+                <span class="text-slate-500">2026-04-29 23:50</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            Test-Time Compute是华尔街最昂贵的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书
+            Test-Time Compute 是下一个算力黑洞：HBM内存墙、硅光互联与KV Cache碎片化的硬核清算
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为“Test-Time Compute”和“多智能体推理”的叙事支付荒谬溢价。谎言在于：他们认为算力瓶颈可通过算法优化或新架构绕过。真相是：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e带宽（3.35 TB/s），导致NVLink变成拥塞节点，延迟从微秒级崩坏至毫秒级。硅光互联的pJ/bit能耗优势被耦合损耗和热漂移抵消，实际能效比仅比铜互联高12%。KV Cache碎片化在长序列推理中导致SRAM利用率低于40%，迫使GPU在HBM和计算单元间空转。本文用TFLOPS/W、GB/s/mm²和微秒延迟的硬核数据，拆解这些物理极限如何让现有方案沦为纸上谈兵。
+            华尔街正在为“推理成本下降”的谎言买单。Test-Time Compute 不是魔法，而是将算力需求从训练线性外推至推理的指数级陷阱。当市场吹嘘HBM3e带宽时，他们刻意隐瞒了TSV穿孔热密度导致的堆叠良率暴跌——每增加一层，有效带宽衰减12%。硅光互联的pJ/bit优势在微秒级延迟面前形同虚设，因为NVLink的拥塞控制协议在KV Cache碎片化面前彻底失效。本文用物理定律和商业账本拆解三大谎言：1）Test-Time Compute的算力账本在FP8精度下，100K上下文并发请求将瞬间榨干80GB HBM3e，NVLink成为最大拥塞节点；2）HBM内存墙不是带宽问题，而是SRAM面积局限导致的碎片化延迟；3）硅光互联的商用化至少落后三年，因为其热稳定性在数据中心环境下无法满足99.999%的可靠性。以下推演将用TFLOPS、GB/s、pJ/bit、mm²和微秒延迟说话，证明现有架构是纸上谈兵。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260428_235128.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260429_235041.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260427_234909.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI芯片的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-27 23:49</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260426_233445.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-26 23:34</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260425_233306.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-25 23:33</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260424_233526.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化如何撕碎万亿参数推理的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-24 23:35</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260428_235128.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最昂贵的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-28 23:51</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260427_234909.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI芯片的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-27 23:49</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260426_233445.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-26 23:34</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260425_233306.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-25 23:33</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -223,19 +225,19 @@
 <a href="https://www.servethehome.com/big-cluster-little-power-the-8x-nvidia-gb10-cluster-marvell-cisco-ubiquiti-qnap-arm/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">BIG AI Cluster Little Power the 8x NVIDIA GB10 Cluster</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">8卡GB10集群功耗极低，但算力密度远不及H100/B200。</span> 这暴露了AI Infra的尴尬：边缘侧小集群省电但性能拉胯，数据中心巨无霸耗电但真能打。别拿玩具当生产力，除非你只想跑个demo骗VC。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">8颗GB10 Grace Blackwell超级芯片仅需极低功耗即可构建AI集群</span>，这彻底打脸了“算力必须堆功耗”的陈旧逻辑。Marvell、Cisco、Ubiquiti、QNAP与ARM生态的协同，证明边缘侧或中小规模推理集群已具备颠覆性能效比。英伟达正在用“小芯片”蚕食传统x86集群的生存空间，这是对数据中心高能耗模式的精准狙击。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2604.21936" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2604.22934" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">An Artifact-based Agent Framework for Adaptive and Reproducible Medical Image Processing</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">医学影像Agent框架强调可复现，但本质仍是缝合现有工具链。</span> 真正的Agent革命在于自主决策与纠错，而非把pipeline包装成“智能”。医疗场景容错率极低，这种半吊子Agent落地就是医疗事故的温床。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">PExA: Parallel Exploration Agent for Complex Text-to-SQL</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">PExA用并行探索机制打破了LLM Agent在Text-to-SQL任务中“延迟与性能不可兼得”的魔咒</span>。传统串行推理在复杂查询上要么慢如蜗牛，要么错漏百出。PExA通过多路径并行探索和择优输出，在保证准确率的同时大幅降低延迟。这是Agent从“玩具”走向“生产力工具”的关键一步，直接威胁传统数据库交互范式。</p>
 </a>
 
-<a href="https://semiengineering.com/microarchitecture-tailored-to-3d-stacked-near-memory-processing-llm-decoding-u-of-edinburg-peking-u-cambridge-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/energy-efficient-liquid-cooling-for-advanced-semiconductor-packaging-kaist/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Microarchitecture Tailored to 3D-Stacked Near-Memory Processing LLM Decoding</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">3D堆叠近存计算专为LLM解码设计，直击带宽瓶颈。</span> 但学术界论文与产业量产隔着天堑：HBM4已逼近物理极限，这种微架构创新若无法解决散热与良率，终究是纸上谈兵。别指望它救赎英伟达的垄断。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Energy-Efficient Liquid Cooling for Advanced Semiconductor Packaging (KAIST)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">KAIST的歧管微通道冷却技术实现了性能系数（COP）超过100,000</span>，这根本不是渐进式改良，而是对传统风冷和简单液冷的降维打击。当3D封装和Chiplet的功耗密度逼近物理极限，这种超高能效散热方案是唯一出路。没有它，台积电和英特尔的先进封装路线图就是空中楼阁，热管理才是后摩尔时代的真正瓶颈。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
