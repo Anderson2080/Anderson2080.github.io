@@ -132,29 +132,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-05-02 23:38</span>
+                <span class="text-slate-500">2026-05-03 23:39</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书
+            Test-Time Compute是华尔街最大骗局：HBM内存墙与硅光互联的物理死刑判决书
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正狂热追捧“Test-Time Compute”作为AI推理的救世主，声称其能通过延长推理时间换取更高精度。这是彻头彻尾的物理谎言。本报告将用硬核数据证明：在现有HBM3e带宽（3.2 TB/s）和SRAM面积（<100 mm²）约束下，每增加1秒推理时间，代价是2000+ pJ/bit的能耗和NVLink拥塞导致的微秒级延迟雪崩。硅光互联的pJ/bit优势（<1 pJ/bit）被封装成本（>1000美元/片）和热密度（>10 W/mm²）抵消。KV Cache碎片化在100K上下文下，将HBM利用率从理论80%拉低至30%。三个物理瓶颈叠加，宣告任何依赖“算力堆叠”的路线图都是纸上谈兵。核心真相：没有新物理，就没有新AI。
+            市场正在为“Test-Time Compute”和“Agentic AI”的叙事支付荒谬溢价。谎言在于：推理端算力需求爆发将拯救摩尔定律。真相是：现有HBM3e带宽（3.2TB/s）在100K token上下文、FP8精度下，单次KV Cache访问延迟已突破1微秒，直接扼杀实时交互。HBM堆叠良率在8层TSV穿孔后热密度超过2.5W/mm²，物理极限已至。硅光互联的pJ/bit效率（0.5pJ/bit）虽优于铜线（2pJ/bit），但耦合损耗在30dB以上，量产成本每通道超$15。KV Cache碎片化在80GB显存上制造了40%的无效占用，等效于每张H100浪费$12,000。本文用TFLOPS、GB/s、mm²和微秒延迟，拆穿这场算力泡沫。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260502_233801.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260503_233915.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260501_234600.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙将在2025年杀死所有“推理优化”叙事，硅光互联是唯一解药，但良率只有17%</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-01 23:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260430_234742.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最贵的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-30 23:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260429_235041.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是下一个算力黑洞：HBM内存墙、硅光互联与KV Cache碎片化的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-29 23:50</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260428_235128.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最昂贵的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-28 23:51</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260502_233801.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-02 23:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260501_234600.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙将在2025年杀死所有“推理优化”叙事，硅光互联是唯一解药，但良率只有17%</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-01 23:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260430_234742.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最贵的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-30 23:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260429_235041.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是下一个算力黑洞：HBM内存墙、硅光互联与KV Cache碎片化的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-04-29 23:50</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -231,19 +233,19 @@
 <a href="https://semiengineering.com/chip-industry-week-in-review-136/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week in Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Google卖TPU是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI算力从自用转向商业化的标志性拐点</span>。2/3nm产能吃紧与2027年内存短缺预警，暴露了AI基建的供应链脆弱性。Arm推出Agentic Toolkit，说明芯片IP层已开始为智能体原生设计，这是AI Infra从“算力堆叠”走向“任务编排”的底层信号。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Google TPU公开售卖是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI算力去泡沫化的标志性事件</span>。当自用神兵沦为货架商品，意味着超大规模集群的边际效益已触顶。2/3nm产能短缺与2027年内存缺口同步预警，AI Infra正从“堆算力”转向“抢良率”的残酷淘汰赛。</p>
 </a>
 
 <a href="https://semiengineering.com/chip-industry-week-in-review-136/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week in Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Arm的Agentic Toolkit是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">硬件层为AI Agent原生适配的首次公开尝试</span>。这意味着Agent不再只是软件框架的玩具，而是开始要求芯片指令集、内存架构做出妥协。别被“工具包”的温和名字骗了，这是芯片设计哲学从“通用计算”向“意图驱动”的叛逃。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Arm推出Agentic Toolkit，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用指令集架构绑架AI Agent生态</span>。当芯片IP巨头开始定义Agent开发工具链，意味着边缘AI的竞争已从硬件功耗战升级为“软硬一体锁客”的阳谋。开发者小心，别被生态套牢。</p>
 </a>
 
 <a href="https://semiengineering.com/potential-route-to-photonic-fpca-using-nv-low-loss-phase-change-material-oxford/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Potential Route To Photonic FPCA Using NV Low-Loss Phase Change Material (Oxford)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">牛津大学用非易失低损耗相变材料搞出光子FPCA，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是光计算从“实验室玩具”迈向“可编程光路”的关键一步</span>。如果光互连能像FPGA一样动态重构，传统芯片的冯·诺依曼瓶颈将被物理层面瓦解。别盯着DDR5内存条了，真正的带宽革命在光子里。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">牛津大学用非易失低损耗相变材料搞光FPCA，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对电子FPGA的降维打击</span>。光子可编程阵列一旦成熟，将彻底颠覆数据中心互联与AI推理的功耗墙。但别高兴太早，从实验室“潜力”到晶圆厂“量产”，中间隔着十个英特尔的坟场。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
