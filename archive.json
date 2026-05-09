@@ -1,5 +1,12 @@
 [
   {
+    "id": "20260509_234200",
+    "date": "2026-05-09 23:42",
+    "title": "Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化如何撕碎你的算力估值模型",
+    "excerpt": "市场正疯狂追捧“Test-Time Compute”概念，声称推理阶段算力需求将驱动GPU订单暴增。这是彻头彻尾的谎言。物理定律不会因为叙事而改变：HBM3e带宽（3.2 TB/s）在FP8精度下，仅支撑80B参数模型处理约40K token序列的KV Cache吞吐，而100K上下文并发请求将瞬间榨干80GB HBM3e，迫使NVLink（900 GB/s双向）成为拥塞节点，延迟从微秒级飙升到毫秒级。硅光互联的pJ/bit能耗优势（0.5 pJ/bit vs. 铜互连2 pJ/bit）被封装良率（<70%）和热串扰（>10 dB）抵消。KV Cache碎片化更让SRAM面积效率暴跌至30%以下。本文用绝对参数推演：现有架构在Test-Time Compute浪潮下，每token成本将非线性暴涨3-5倍，对冲基金必须重新校准估值模型。",
+    "url": "articles/20260509_234200.html"
+  },
+  {
     "id": "20260508_235244",
     "date": "2026-05-08 23:52",
     "title": "Test-Time Compute 是华尔街最大的骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书",
