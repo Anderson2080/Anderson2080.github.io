@@ -142,29 +142,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-05-12 23:55</span>
+                <span class="text-slate-500">2026-05-13 23:52</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力骗局终结：Test-Time Compute、HBM内存墙与硅光互联的物理死刑判决书
+            Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理计算”的泡沫买单。Test-Time Compute被包装成万能药，但物理定律不会撒谎：在FP8精度下，100K token上下文并发请求将瞬间榨干80GB HBM3e带宽（3.2 TB/s），导致NVLink拥塞延迟飙升到微秒级——这比计算本身贵10倍。HBM堆叠良率在TSV穿孔热密度超过1.5 W/mm²时崩溃，而硅光互联的pJ/bit能耗（0.5 pJ/bit vs 铜互联的0.1 pJ/bit）是骗局。KV Cache碎片化让SRAM面积利用率低于30%，每token成本翻倍。本文用数学和物理参数证明：现有架构在2025年将撞上不可逾越的墙，只有抛弃冯·诺依曼才能活。
+            市场炒作“Test-Time Compute”为推理革命，但这是对物理定律的无知。在FP8精度下，100K上下文并发请求将瞬间榨干80GB HBM3e带宽（3.2 TB/s），导致NVLink延迟从微秒级飙升到毫秒级，成为系统瓶颈。硅光互联的pJ/bit效率虽优于铜缆，但TSV穿孔热密度（>100 W/cm²）限制了堆叠层数。KV Cache碎片化在长序列推理中造成30%以上SRAM浪费，直接推高成本。本文用TFLOPS、GB/s、mm²等硬核参数，推演现有架构的物理极限，揭露市场谎言背后的算力账本。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260512_235557.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260513_235222.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260511_235350.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份给对冲基金的物理清算单</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-11 23:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260510_234533.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的棺材钉：Test-Time Compute、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-10 23:45</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260509_234200.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化如何撕碎你的算力估值模型</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-09 23:42</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260508_235244.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-08 23:52</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260512_235557.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力骗局终结：Test-Time Compute、HBM内存墙与硅光互联的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-12 23:55</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260511_235350.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份给对冲基金的物理清算单</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-11 23:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260510_234533.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的棺材钉：Test-Time Compute、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-10 23:45</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260509_234200.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化如何撕碎你的算力估值模型</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-09 23:42</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -248,22 +250,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/striking-back-at-ai-memory-pricing-using-ai/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/kioxia-xg10-series-pcie-gen5-ssds-announced/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Striking Back at AI Memory Pricing… Using AI</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">用AI对抗AI内存定价，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用算法暴力碾压供应链垄断</span>。HBM价格暴涨已让算力成本失控，这种自下而上的优化策略虽能短期止血，但治标不治本。真正的解药在于打破内存寡头格局，而非在现有架构上修修补补。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Kioxia XG10 Series PCIe Gen5 SSDs Announced</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">PCIe Gen5消费级SSD终于来了，但别兴奋太早。Kioxia XG10最高4TB，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI训练的数据搬运瓶颈仍在主控与散热</span>，而非单纯带宽翻倍。这不过是存储厂在HBM暴利时代下，对PC市场的敷衍式升级，真正革命性的是CXL内存池化。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2605.08200" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2605.11136" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">VLM可靠性研究终于从玄学走向因果工程。论文揭示<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">注意力图锐利不等于可信，隐藏状态才是真相源头</span>。这对Agent系统是致命警示：当前依赖注意力可视化的调试方法全是幻觉，必须重构可解释性范式，否则Agent永远无法在关键场景落地。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">EVOCHAMBER: Test-Time Co-evolution of Multi-Agent System at Individual, Team, and Population Scales</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">多智能体进化不再是单机复制粘贴。EVOCHAMBER在个体、团队、种群三层同时演化，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这直接戳破当前Agent“伪协作”的泡沫</span>。没有种群级淘汰机制，所谓多Agent系统不过是LLM的提线木偶。这才是通往通用智能体的正确路径，但算力消耗将指数级飙升。</p>
 </a>
 
-<a href="https://semiengineering.com/a-comprehensive-study-on-integrating-2d-materials-with-cfet-architecture-skku-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/lasers-are-the-heartbeat-of-the-optical-ai-data-center/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">A Comprehensive Study Of Integrating 2D Materials With CFET Architecture (SKKU, et al.)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">2D材料+CFET架构的整合研究，是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">后FinFET时代最激进的豪赌</span>。论文坦诚挑战重重，但方向正确：只有彻底抛弃硅基物理极限，才能延续摩尔定律。台积电和英特尔若再犹豫，将被材料革命甩出赛道。这是真正的颠覆性技术，不是渐进改良。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Lasers Are The Heartbeat Of The Optical AI Data Center</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">光互连是AI数据中心的命脉，但别被“光学心跳”的浪漫比喻骗了。III-V族激光器良率与成本仍是死穴，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">硅光集成喊了十年，至今没撼动分立器件地位</span>。英伟达的NVLink才是真瓶颈，光模块再快也填不满GPU之间饥饿的带宽胃口。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
