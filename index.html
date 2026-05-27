@@ -155,29 +155,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-05-26 00:02</span>
+                <span class="text-slate-500">2026-05-27 00:00</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本
+            Test-Time Compute是华尔街最蠢的赌注：HBM内存墙、硅光骗局与KV Cache的物理清算
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正疯狂炒作“Test-Time Compute”作为下一代AI推理的救世主，声称能通过动态计算提升模型能力。这是彻头彻尾的谎言。物理定律不会说谎：在FP8精度下，单次推理的KV Cache碎片化已让80GB HBM3e带宽在100K上下文并发中崩溃，NVLink延迟从微秒级飙升到毫秒级。硅光互联的pJ/bit效率被过度吹捧，但实际良率低于40%，每平方毫米成本是铜互联的3倍。本研报用硬核数据推演：HBM内存墙的TSV穿孔热密度已达极限（>100 W/cm²），而Test-Time Compute的额外计算只会加速这一崩溃。核心真相：现有架构无法支撑下一波AI推理需求，除非颠覆内存层级或放弃精度。
+            市场正狂热追捧“Test-Time Compute”作为下一代AI推理的圣杯，但这是对物理定律的无知。核心谎言：通过增加推理时计算提升模型能力。真相：在FP8精度下，100K上下文并发请求瞬间榨干80GB HBM3e，NVLink带宽（900GB/s）成为拥塞节点，延迟从10ms飙升至200ms+。硅光互联被吹捧为救星，但每bit能耗（pJ/bit）在短距离互联中仍高于铜线，且微秒级延迟无法匹配GPU时钟周期。KV Cache碎片化导致SRAM利用率低于30%，浪费40%的HBM带宽。本文用TFLOPS、GB/s、mm²和pJ/bit的硬核推演，拆穿这些伪命题，揭示算力账本的物理极限。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260526_000207.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260527_000012.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260524_235600.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅光互联与HBM内存墙：Test-Time Compute的物理谎言与华尔街的算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-24 23:56</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260523_235331.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-23 23:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260523_000144.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是史上最大算力骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-23 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260521_235745.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是下一个算力黑洞：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂Transformer的经济账</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-21 23:57</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260526_000207.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-26 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260524_235600.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅光互联与HBM内存墙：Test-Time Compute的物理谎言与华尔街的算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-24 23:56</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260523_235331.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-23 23:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260523_000144.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是史上最大算力骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-23 00:01</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -277,19 +279,19 @@
 <a href="https://www.servethehome.com/supermicro-sys-112d-36c-fn3p-review-a-36-core-intel-xeon-6-soc-server-with-2x-100gbe/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Supermicro SYS-112D-36C-FN3P Review A 36 Core Intel Xeon 6 SoC Server with 2x 100GbE</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">边缘AI算力正从“能跑”向“极致集成”进化。</span> Supermicro这款36核Xeon 6 SoC单路服务器，将双100GbE直连集成，本质是数据中心级互联能力向边缘的暴力下放。它宣告了AI推理节点不再需要复杂交换拓扑，单芯片即可完成高吞吐数据预处理与模型分发。这是对传统“CPU+网卡”分离架构的终结，边缘AI Infra的密度竞赛已进入白热化。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">边缘AI的算力饥渴被暴力填平。</span> 36核Xeon 6 SoC集成双100GbE，本质是把数据中心级互联塞进边缘节点。这宣告了AI推理的“最后一公里”不再需要妥协带宽，但功耗和散热设计才是真正考验落地能力的修罗场。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2605.22866" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/characterization-of-gpu-based-inference-for-reasoning-centric-llms-micron-argonne/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">BOHM: Zero-Cost Hierarchical Attribution for Compound AI Systems</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent系统的“黑箱”问责制终于有了零成本解药。</span> BOHM用层次化归因替代SHAP的指数级计算，直击复合AI系统调试痛点。它让开发者能精准定位多Agent协作中的哪个子模块、哪条数据链导致了错误输出。没有可解释性，Agent永远只是玩具。这篇论文是Agent从实验室走向生产环境的“责任险”，价值远超技术本身。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Characterization of GPU-based Inference for Reasoning-Centric LLMs (Micron, Argonne)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">推理型Agent的GPU瓶颈被精准解剖。</span> 美光与阿贡的论文撕开遮羞布：长链推理的显存墙和通信延迟才是真痛点，而非算力。这直接判了“堆算力”思路的死刑，未来Agent的竞争力取决于内存层级与互联架构的协同优化。</p>
 </a>
 
-<a href="https://semiengineering.com/detecting-defect-induced-silent-data-corruptions-in-cpus-stanford-google/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/chip-industry-technical-paper-roundup-may-26/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Detecting Defect-Induced Silent Data Corruptions in CPUs (Stanford, Google)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片缺陷的“隐形杀手”终于被锁定。</span> Stanford与Google联合提出的ITHICA方法，直指CPU中因制造缺陷导致的静默数据损坏（SDC）。这类错误不报错、不崩溃，却悄悄污染AI训练结果。在3nm及以下工艺中，缺陷率飙升，ITHICA通过线程内指令检查实现了实时捕获。这是对“良率至上”论的一记耳光——不解决SDC，先进制程的算力就是毒药。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Technical Paper Roundup: May 26</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">SRAM存内计算与RISC-V向量化成为双引擎。</span> 本周论文揭示产业暗线：用SRAM硬扛LLM推理以绕过HBM瓶颈，同时RISC-V向量扩展试图打破x86生态垄断。这是对传统冯·诺依曼架构的集体叛逃，但良率和软件栈仍是致命短板。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
