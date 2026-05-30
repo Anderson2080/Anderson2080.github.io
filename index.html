@@ -159,29 +159,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-05-30 00:04</span>
+                <span class="text-slate-500">2026-05-30 23:57</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份写给对冲基金的硬核清算报告
+            Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“Test-Time Compute”和“硅光互联”的叙事支付荒谬的溢价。谎言一：推理时增加计算量就能提升智能。物理事实：在FP8精度下，100K token上下文并发请求，单卡H100的80GB HBM3e在3.5TB/s带宽下，KV Cache的读写延迟将直接吞噬60%的算力周期，NVLink变成拥塞的静脉血栓。谎言二：硅光互联是带宽救星。物理事实：当前集成硅光调制器的pJ/bit能耗比Copper SerDes高40%，且温度敏感性导致波分复用（WDM）在85°C TDP下波长漂移超过±0.8nm，误码率（BER）恶化至10^-4。谎言三：HBM堆叠是线性扩展。物理事实：HBM3e 12层堆叠的TSV穿孔良率在65%以下，热密度突破2.5W/mm²，导致内存控制器必须降频15%才能避免热失控。本文用数学推演和物理参数，撕碎这三个伪命题。
+            市场正在为“推理计算”狂欢，但物理定律不会撒谎。Test-Time Compute 的炒作建立在三个致命谬误上：1）HBM3e 带宽（3.2 TB/s）在 FP8 下仅能支撑 400 TFLOPS 的算力利用率，而 GPU 标称 2000 TFLOPS 是骗局；2）硅光互联的 pJ/bit 能耗看似诱人，但片上激光器与微环调制器的热稳定性在 85°C 下直接崩溃，良率低于 15%；3）KV Cache 碎片化在 100K 上下文下导致 40% 的 HBM 容量浪费，等效于每 token 多支付 0.3 美分。本报告将用 TSMC N3E 的 mm² 成本、Micron HBM3e 的 TSV 穿孔热密度（>1.2 kW/cm²）以及 NVIDIA NVLink 的微秒延迟数据，证明现有架构在物理极限前已是死路。对冲基金必须做空任何依赖“推理计算”概念的标的，除非他们愿意为每 FLOP 支付 10 倍于训练的成本。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260530_000427.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260530_235752.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260529_000701.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何绞杀推理经济账</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-29 00:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260527_235716.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是最后的化疗：Test-Time Compute如何撕碎华尔街的算力谎言</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-27 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260527_000012.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最蠢的赌注：HBM内存墙、硅光骗局与KV Cache的物理清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-27 00:00</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260526_000207.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-26 00:02</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260530_000427.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份写给对冲基金的硬核清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-30 00:04</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260529_000701.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何绞杀推理经济账</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-29 00:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260527_235716.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是最后的化疗：Test-Time Compute如何撕碎华尔街的算力谎言</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-27 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260527_000012.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最蠢的赌注：HBM内存墙、硅光骗局与KV Cache的物理清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-27 00:00</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -282,22 +284,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/installing-out-of-the-box-ubuntu-lts-on-xsight-labs-e1-64-core-arm-800g-dpu/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/asus-xa-nb3i-e12-review-a-massive-8x-nvidia-b300-gpu-server/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Installing Out-of-the-Box Ubuntu LTS on Xsight Labs E1 64-Core Arm 800G DPU</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Xsight Labs E1用64核Arm Neoverse N2堆出800Gbps带宽，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">DPU正在吞噬AI数据中心的基础设施层</span>。能跑原生Ubuntu意味着它不再是“网卡”，而是可编程的算力枢纽。这直接冲击了NVIDIA BlueField的生态壁垒，给CSP提供了更开放的AI Infra底座选择。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ASUS XA NB3I-E12 Review A Massive 8x NVIDIA B300 GPU Server</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">华硕这台8卡B300怪兽，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是英伟达用6.4Tbps网络暴力堆叠算力</span>，掩盖单卡能效瓶颈。对AI Infra而言，这是“堆料”路线的极致，但散热和功耗已逼近数据中心物理极限，未来必须靠架构革命而非简单堆叠。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2605.28849" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/installing-out-of-the-box-ubuntu-lts-on-xsight-labs-e1-64-core-arm-800g-dpu/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Behavior-Induced Mirror-Prox Temporal-Difference Learning for Faster Off-Policy Prediction</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">离策略预测是Agent在线学习与长期记忆的命门。这篇论文用Mirror-Prox技巧加速TD算法，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是在解决Agent“学得快但忘得更快”的致命伤</span>。若收敛速度能提升一个数量级，Agent在动态环境中的实时决策能力将质变，这是从“玩具”走向“生产力”的关键补丁。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Installing Out-of-the-Box Ubuntu LTS on Xsight Labs E1 64-Core Arm 800G DPU</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Xsight Labs的800G DPU能跑标准Ubuntu，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">意味着Agent的“大脑”可直接卸载到网卡上</span>，实现微秒级决策。这彻底打脸“Agent必须跑在CPU/GPU”的旧思维，边缘智能的算力民主化正在发生。</p>
 </a>
 
 <a href="https://semiengineering.com/building-fixed-hw-implementations-of-neural-networks-yale-cornell-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Building Fixed HW Implementations of Neural Networks (Yale, Cornell et al.)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">耶鲁、康奈尔等名校联合提出“物理基础模型”，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">试图用固定硬件直接“刻录”神经网络权重</span>。这彻底抛弃了传统冯·诺依曼架构，推理功耗可能降至微瓦级。若成功，边缘AI芯片将迎来“一次流片、永久推理”的范式革命，但灵活性归零的代价意味着它只属于特定杀手级应用。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">耶鲁等机构提出“物理基础模型”，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用固定硬件而非软件定义实现大规模神经网络</span>。这是对“万能GPU”的宣战：专用芯片在推理能效上可碾压通用架构，但灵活性丧失将导致AI模型进化被硬件锁死，是双刃剑。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
