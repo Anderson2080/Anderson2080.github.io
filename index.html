@@ -162,29 +162,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-06-02 00:09</span>
+                <span class="text-slate-500">2026-06-03 00:24</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            硅基囚笼：Test-Time Compute的物理谎言与HBM内存墙的死刑判决书
+            Test-Time Compute 是2025年最大的算力谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“Test-Time Compute”的叙事支付溢价，但这是对物理定律的无知。市场狂热炒作“推理即训练”的伪命题，却无视以下冰冷事实：HBM3e的带宽密度（2.4 TB/s per stack）在100K token上下文下，每生成一个token需搬运整个KV Cache（约1.2GB @ FP8），导致单次推理延迟被内存墙钉死在300微秒以上。硅光互联的pJ/bit效率（<1 pJ/bit）虽优于铜线（5 pJ/bit），但片上激光器阵列的良率（<60%）和热稳定性（±0.1°C漂移即误码）让量产成为笑话。KV Cache的碎片化问题更致命：在FP8精度下，80GB HBM3e在并发1024个请求时，内存利用率不足40%，剩余60%被无效的碎片化缓存占据，等效于每GB成本（$12/GB）的40%被直接烧毁。本文将用晶体管级数据证明：现有架构的物理极限将在2025年Q2前撞墙，任何软件优化都是对热力学第二定律的徒劳反抗。
+            华尔街正在为“Test-Time Compute”的叙事支付溢价，但物理定律不会撒谎。当市场吹嘘“推理即训练”时，他们刻意忽略了：在FP8精度下，单次100K上下文的推理请求将瞬间榨干80GB HBM3e的带宽，导致NVLink成为拥塞节点，延迟从微秒级崩塌至毫秒级。硅光互联的pJ/bit效率在理论峰值下仍比铜互联高3倍，但实际封装良率低于60%，且热密度超过200W/cm²时信号衰减不可逆。KV Cache碎片化更是一个被低估的杀手：在Llama 3 70B模型上，每增加10K上下文，显存占用以二次方速度膨胀，直接击穿SRAM的mm²预算。这篇研报将用TFLOPS/W、GB/s和微秒延迟的硬数据，拆穿三个谎言：1）Test-Time Compute不是免费的午餐，而是功耗与成本的指数级陷阱；2）HBM内存墙是物理极限，不是工程问题；3）现有互联架构在并发场景下是纸上谈兵。真相只有一个：算力账本上的数字不会说谎。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260602_000924.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260603_002446.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260601_000233.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-01 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260530_235752.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-30 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260530_000427.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份写给对冲基金的硬核清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-30 00:04</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260529_000701.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何绞杀推理经济账</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-29 00:07</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260602_000924.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基囚笼：Test-Time Compute的物理谎言与HBM内存墙的死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-02 00:09</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260601_000233.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-01 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260530_235752.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-30 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260530_000427.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份写给对冲基金的硬核清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-05-30 00:04</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -288,22 +290,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/nvidia-computex-2026-news-bytes-vera-rubin-now-in-production-dgx-station-gets-windows/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/intel-xeon-7-diamond-rapids-now-slated-for-2027/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA Computex 2026 News Bytes: Vera Rubin Now In Production, DGX Station Gets Windows</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Vera Rubin量产意味着AI算力霸权进入新纪元，但DGX Station接入Windows暴露了<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">NVIDIA正试图用桌面生态绑架企业级AI工作流</span>。这不仅是硬件迭代，更是对AI Infra入口的终极收割——开发者从训练到部署都将被锁死在CUDA的温床上。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Intel Xeon 7 Diamond Rapids Now Slated for 2027</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Intel的Diamond Rapids拖到2027年，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI Infra的CPU侧已彻底沦为配角</span>。当NVIDIA用Grace CPU+GPU紧耦合方案统治超算集群，Intel还在用老掉牙的x86架构挤牙膏。这不仅是产品延期，更是生态话语权的彻底丧失——AI Infra的算力核心早已不是CPU，而是加速器互联网络。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2605.30542" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2606.00005" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Physically Viable World Models: A Case for Query-Conditioned Embodied AI</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">当大多数Agent还在玩文字游戏，这篇论文直指<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">物理世界模型必须可干预、可查询</span>，否则就是空中楼阁。它撕掉了“端到端黑箱”的遮羞布：真正的具身智能必须能回答“如果推这个杯子会怎样”，而不是靠概率蒙混过关。这才是Agent从玩具走向工具的关键一跃。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Emergent Collaborative Deliberation in Multi-Model AI Systems: A BFT-Derived Protocol for Epistemic Synthesis</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">把拜占庭容错协议塞进多Agent系统，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是用分布式系统的老酒装AI的新瓶</span>。想法很性感，但现实很骨感：Agent间的“共识”成本远高于传统节点，且模型输出的语义歧义会让BFT的数学保证沦为笑话。除非能证明这种“认知合成”比单一强模型微调更高效，否则就是学术自嗨。</p>
 </a>
 
-<a href="https://semiengineering.com/the-sub-2nm-paradox/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/using-graph-attention-for-virtual-metrology-in-semiconductor-manufacturing-asu-intel-foundry/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Sub-2nm Paradox</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Sub-2nm的“悖论”本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">物理极限与商业回报的尖锐对冲</span>。制程微缩带来的PPAC增益正在枯竭，而工艺复杂度与成本却指数级飙升。文章点破真相：未来芯片的胜负手不再是光刻机精度，而是如何用系统级优化和专用架构来“榨干”每一颗晶体管的剩余价值。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Using Graph Attention for Virtual Metrology in Semiconductor Manufacturing (Intel Foundry, ASU)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">用图注意力网络做虚拟量测，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">是Intel Foundry在先进制程良率困局下的无奈自救</span>。当EUV光刻机都无法保证工艺一致性时，AI成了最后的遮羞布。但问题在于：图结构能否真正捕捉薄膜沉积的物理化学非线性？如果不能，这不过是给台积电的追赶者提供了一份精美的PPT安慰剂。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
