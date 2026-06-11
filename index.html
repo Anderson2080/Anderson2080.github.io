@@ -170,29 +170,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-06-10 00:07</span>
+                <span class="text-slate-500">2026-06-11 00:11</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            系统升级中
+            HBM内存墙与硅光骗局：Test-Time Compute的物理账本，以及华尔街正在为“伪线性扩展”买单
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            <p>算力重组中...</p>
+            市场正在为“Test-Time Compute”的线性扩展故事狂欢，仿佛推理成本可以无限摊薄。这是谎言。物理定律不会为商业叙事让步。本报告将用硬核数据证明三个核心真相：第一，HBM3e的带宽（4.8 TB/s）与SRAM容量（~40 MB）构成的“内存墙”，在100K token上下文下，将导致KV Cache碎片化使有效带宽暴跌30%以上，NVLink拥塞延迟飙升至微秒级。第二，硅光互联的pJ/bit效率（约0.5 pJ/bit）在跨节点通信中仍远低于铜互连（~0.1 pJ/bit），其商业化落地至少被高估了2年。第三，多智能体并发推理的“伪线性扩展”本质是算力账本的欺诈——每增加一个智能体，内存带宽需求呈超线性增长（O(n²)），而HBM堆叠良率（当前约75%）和TSV热密度（>10 W/mm²）才是真正的物理天花板。华尔街的乐观模型，将在2025年Q2被实际功耗和延迟数据击穿。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260610_000718.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260611_001145.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260609_000103.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅光互联是骗局，HBM内存墙是癌症：Test-Time Compute的物理账本与架构死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-09 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260608_000214.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，而硅光互联是华尔街的棺材钉：Test-Time Compute与内存墙的死亡交叉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-08 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260607_000003.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力的最后狂欢：Test-Time Compute 与 HBM 内存墙的死亡交叉，以及华尔街正在押注的虚假曙光</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-07 00:00</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260606_000224.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是2024最大骗局：HBM内存墙、硅光互联与KV Cache碎片化将撕裂算力泡沫</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-06 00:02</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260610_000718.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-10 00:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260609_000103.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅光互联是骗局，HBM内存墙是癌症：Test-Time Compute的物理账本与架构死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-09 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260608_000214.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，而硅光互联是华尔街的棺材钉：Test-Time Compute与内存墙的死亡交叉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-08 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260607_000003.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基算力的最后狂欢：Test-Time Compute 与 HBM 内存墙的死亡交叉，以及华尔街正在押注的虚假曙光</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-07 00:00</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -304,22 +306,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://semiengineering.com/what-i-learned-at-the-2026-gsa-tech-summit-the-future-of-semiconductor-collaboration-is-full-stack/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/building-multi-agent-systems-for-asic-flows/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">What I Learned At The 2026 GSA Tech Summit: The Future Of Semiconductor Collaboration Is Full Stack</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">别扯什么单点突破，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI Infra的胜负手在于全栈垂直整合</span>。从先进制程到异构集成再到软件栈，任何环节的脱节都会让算力沦为废铁。GSA峰会喊了多年“合作”，但2026年才真正被逼到墙角——因为只有打通从晶圆厂到推理框架的任督二脉，才能喂饱那些贪婪的大模型。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Building Multi-Agent Systems For ASIC Flows</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">别扯什么“分而治之”的漂亮话。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">EDA工具链的碎片化才是真痛点</span>，多Agent协同不过是给老掉牙的IC设计流程打补丁。真正的颠覆在于用LLM重构RTL到GDSII的底层逻辑，而非在现有框架上叠床架屋。这波炒作，本质是EDA巨头在AI浪潮下的自救表演。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2606.07549" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2606.10062" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">PathoSage: Towards Multi-Source Evidence Adjudication in Pathology via Experience-Aware Agentic Workflow</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">病理诊断的Agent化终于不再只是“看图说话”。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">PathoSage的核心突破在于“经验感知”的多源证据裁决</span>，让AI学会像资深医生一样权衡不同模态的矛盾信息。但别高兴太早，这种workflow的泛化能力极差，换个癌种就得重新调教，离真正的临床落地还差一个“通用智能体”的鸿沟。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Deployment-Time Memorization in Foundation-Model Agents</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">“记忆”是Agent的阿克琉斯之踵。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">部署时记忆化暴露了LLM在隐私与持久化间的致命矛盾</span>。别被“长期交互”的伪需求迷惑，这本质是模型缺乏真正上下文理解能力的遮羞布。不解决记忆污染和遗忘机制，Agent永远只是高级聊天记录器。</p>
 </a>
 
-<a href="https://semiengineering.com/ai-models-transform-defect-inspection-and-review-but-can-fail-to-scale/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/dell-pro-max-16-plus-review-intel-nvidia-rtx-pro-5000-blackwell-system/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AI Models Transform Defect Inspection And Review, But Can Fail To Scale</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">芯片缺陷检测的AI化是伪命题？<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">90%的AI项目死于规模化，因为真实缺陷数据极度稀缺且分布长尾</span>。合成数据看似解药，实则制造了更多“完美假象”。当AI在Fab里只能识别它见过的缺陷，而真正的杀手缺陷往往闻所未闻时，这不过是场昂贵的自欺欺人。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Dell Pro Max 16 Plus Review A More Mobile NVIDIA RTX Pro 5000 Blackwell System</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">移动工作站塞进Blackwell？<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对“便携”二字的侮辱性定价</span>。RTX Pro 5000在16寸机身里必然遭遇散热和功耗的死亡之吻，性能释放注定妥协。Dell的“不惜成本”不过是给富哥的玩具贴金，真正的生产力场景，请乖乖滚回台式机或服务器集群。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
