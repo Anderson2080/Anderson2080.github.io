@@ -172,29 +172,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-06-12 00:16</span>
+                <span class="text-slate-500">2026-06-13 00:16</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            HBM3e是AI的癌症：Test-Time Compute的谎言、硅光互联的骗局与KV Cache的死刑判决
+            HBM3e是AI的癌症，硅光是骗局：Test-Time Compute与内存墙的死亡交叉——一份给对冲基金的硬核清算
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“Test-Time Compute”的叙事支付溢价，但这是对物理定律的无知。当推理链拉长至10K tokens，单次推理的功耗将从10kJ飙升到100kJ，而HBM3e的带宽墙（6.4 TB/s）将把延迟钉死在200ms以上——这不是优化问题，是热力学第二定律的判决。硅光互联的鼓吹者忽略了pJ/bit的能效陷阱：在1米互联距离下，硅光每比特能耗（~5 pJ/bit）是铜互联（~1 pJ/bit）的5倍，且需要额外30%的激光器面积。KV Cache碎片化更是一个笑话：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大的拥塞节点——带宽利用率从95%暴跌至40%。本文用数学证明：现有架构的物理极限将在2025年Q2撞墙，而所谓的“下一代方案”不过是资本市场的安慰剂。
+            市场正在为“Test-Time Compute”和“硅光互联”欢呼，仿佛它们能解决AI的算力饥渴。这是彻底的谎言。本报告将用物理参数和商业账本证明：HBM3e的带宽密度已触及TSV穿孔热密度的物理极限，每平方毫米的功耗密度超过1.5W，导致堆叠良率在12层后断崖式下跌。KV Cache碎片化在FP8精度下，单次100K上下文推理将产生超过2GB的瞬时内存占用，迫使GPU在HBM与SRAM之间进行灾难性的数据搬运，延迟从纳秒级退化到微秒级。硅光互联的pJ/bit效率在短距离（<1米）内被铜互联的先进封装（如CoWoS）碾压，其成本是后者的3倍以上。市场鼓吹的“算力无限”是谎言，真正的瓶颈是物理定律和每瓦性能的账本。本文将用数学推演，揭示AI硬件投资的真正陷阱与机会。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260612_001622.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260613_001638.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260611_001145.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM内存墙与硅光骗局：Test-Time Compute的物理账本，以及华尔街正在为“伪线性扩展”买单</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-11 00:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260610_000718.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-10 00:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260609_000103.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅光互联是骗局，HBM内存墙是癌症：Test-Time Compute的物理账本与架构死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-09 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260608_000214.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，而硅光互联是华尔街的棺材钉：Test-Time Compute与内存墙的死亡交叉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-08 00:02</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260612_001622.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症：Test-Time Compute的谎言、硅光互联的骗局与KV Cache的死刑判决</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-12 00:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260611_001145.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM内存墙与硅光骗局：Test-Time Compute的物理账本，以及华尔街正在为“伪线性扩展”买单</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-11 00:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260610_000718.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-10 00:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260609_000103.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅光互联是骗局，HBM内存墙是癌症：Test-Time Compute的物理账本与架构死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-09 00:01</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -308,22 +310,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://semiengineering.com/agentic-ai-is-changing-data-center-architectures/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2606.12451" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Agentic AI Is Changing Data Center Architectures</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent AI正暴力重构数据中心：独立GPU被宣判死刑</span>。异构SoC与Chiplet组合（CPU+GPU+NPU）成为新基建，核心逻辑是干掉内存墙和延迟。别再看单卡算力了，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">互联架构和存算一体才是Agent时代的算力密码</span>。英伟达的护城河，正在被架构革命从底层瓦解。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ToolSense: A Diagnostic Framework for Auditing Parametric Tool Knowledge in LLMs</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">工具检索是Agent落地的<strong class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">致命瓶颈</strong>，Embedding召回早已被证明是“黑盒幻觉”。ToolSense直接审计LLM参数化工具知识，等于给AI Infra装上X光机。别再用向量数据库糊弄了，<strong class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">诊断比检索更重要</strong>，这才是企业级Agent的基建良心。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2606.11245" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2606.12563" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Position: Hippocampal Explicit Memory Is the Cornerstone for AGI</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">LLM没有记忆，只有海马体才能拯救AGI</span>。这篇论文直击大模型软肋：当前Agent的“上下文窗口”是伪记忆，真正的智能需要类脑的显式记忆系统。别在参数规模上内卷了，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">记忆架构才是Agent从“对话机器”进化到“自主智能体”的钥匙</span>。没有记忆的Agent，永远只是高级复读机。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Arbor: Tree Search as a Cognition Layer for Autonomous Agents</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">多Agent框架泛滥成灾，但Arbor把<strong class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">树搜索</strong>作为认知层，直接降维打击。别再用ReAct那种线性“思考-行动”的弱智循环了，面对大规模状态空间，<strong class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">结构化探索才是Agent智商的分水岭</strong>。这波操作，让那些只会堆Prompt的“伪Agent”原形毕露。</p>
 </a>
 
-<a href="https://www.servethehome.com/asrock-industrial-nuc-box-358h-intel-panther-lake-mini-pc-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/optimizing-euv-source-efficiency-with-radiation-hydrodynamic-simulations-u-of-osaka-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ASRock Industrial NUC BOX-358H Mini PC Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Intel Panther Lake首秀即边缘AI的“特洛伊木马”</span>。NUC BOX-358H看似是迷你PC，实则是Intel在AI PC战场投下的战略核弹——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用低功耗封装实现端侧AI推理，直接威胁云端霸权</span>。当边缘设备开始跑Agent，数据中心就该慌了。这不仅是硬件迭代，是计算范式的降维打击。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Optimizing EUV Source Efficiency With Radiation-Hydrodynamic Simulations (U. Of Osaka et al.)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">EUV光源效率是光刻机的<strong class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">阿喀琉斯之踵</strong>，大阪大学用辐射流体力学模拟来优化，直击High-NA EUV量产成本要害。别只看ASML的机器多贵，<strong class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">光源效率每提升1%，就是数亿美金的晶圆厂运营成本节省</strong>。这才是芯片制造的硬核物理学，不是PPT上的纳米数字游戏。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
