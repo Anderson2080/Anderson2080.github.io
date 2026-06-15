@@ -174,29 +174,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-06-14 00:01</span>
+                <span class="text-slate-500">2026-06-15 00:04</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            Test-Time Compute 是AI的庞氏骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书
+            Test-Time Compute是华尔街最蠢的赌注：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“Test-Time Compute”的叙事支付荒谬的溢价。市场沉迷于“推理时算力需求暴增”的谎言，却选择性失明于物理定律的冰冷判决：HBM3e的带宽密度已触达TSV穿孔的热力学极限，硅光互联在pJ/bit能效上仍比铜互连差一个数量级，而KV Cache碎片化在FP8精度下，仅需100K上下文并发即可将80GB HBM3e的带宽利用率压至12%。本文用数学推演和架构解剖，证明现有方案在物理账本上已破产。核心真相：1) Test-Time Compute的边际收益被内存墙以指数级吞噬；2) 硅光互联在微秒级延迟下是伪命题；3) KV Cache的碎片化是系统级癌症，无药可救。读不懂这些，你的投资组合将在算力泡沫破裂时归零。
+            市场正在为“Test-Time Compute”狂欢，仿佛推理时增加算力就能无限提升智能。这是谎言。物理定律和商业账本给出了截然不同的答案：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大的拥塞节点，延迟从微秒级崩塌到毫秒级。硅光互联的pJ/bit效率被过度吹嘘，但实际良率和热密度瓶颈让TSV穿孔成为死穴。KV Cache碎片化更是一个被忽视的定时炸弹——它让SRAM面积浪费高达40%，直接推高每token成本至0.03美元。本文将用硬核数据证明：现有架构在Test-Time Compute面前是纸上谈兵，而所谓的“突破”不过是资本市场的幻觉。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260614_000153.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260615_000414.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260613_001638.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是骗局：Test-Time Compute与内存墙的死亡交叉——一份给对冲基金的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-13 00:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260612_001622.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症：Test-Time Compute的谎言、硅光互联的骗局与KV Cache的死刑判决</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-12 00:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260611_001145.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM内存墙与硅光骗局：Test-Time Compute的物理账本，以及华尔街正在为“伪线性扩展”买单</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-11 00:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260610_000718.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-10 00:07</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260614_000153.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是AI的庞氏骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-14 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260613_001638.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是骗局：Test-Time Compute与内存墙的死亡交叉——一份给对冲基金的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-13 00:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260612_001622.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症：Test-Time Compute的谎言、硅光互联的骗局与KV Cache的死刑判决</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-12 00:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260611_001145.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM内存墙与硅光骗局：Test-Time Compute的物理账本，以及华尔街正在为“伪线性扩展”买单</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-11 00:11</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -312,22 +314,20 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/this-is-an-intel-xeon-6-soc-dpu-on-a-pcie-card-from-senao-at-computex-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/anthropic-halts-access-to-fable-5-and-mythos-5/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">This is an Intel Xeon 6 SoC DPU on a PCIe Card from Senao at Computex 2026</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Intel把Xeon 6塞进PCIe卡做DPU，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是拿服务器CPU降维打击网卡</span>。这玩意功耗和成本注定是“核弹级”，除了超大规模云厂商自嗨，中小企业根本玩不起。别吹什么SmartNIC革命，这就是Intel为了清Xeon库存的骚操作，生态兼容性更是噩梦。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Anthropic Halts Access to Fable 5 and Mythos 5</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Anthropic因出口管制周末紧急关停Fable 5与Mythos 5，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是AI基础设施主权化的血腥警钟</span>。模型即武器，算力即弹药，美国正用许可证制度掐断全球AI供应链。别幻想技术无国界，未来每行代码都要过海关。</p>
 </a>
-
 <a href="https://semiengineering.com/cross-validated-timing-analysis-for-automotive-can-networks-nycu-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Cross-Validated Timing Analysis for Automotive CAN Networks (NYCU et al.)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">给CAN总线做时序分析，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是自动驾驶Agent的“心跳监护仪”</span>。没有硬实时保障，所有决策都是空中楼阁。但学术界这套交叉验证模型离量产还差十万八千里，车厂更信玄学般的实测打点。论文写得再漂亮，不如博世一个固件补丁实在。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">NYCU团队用交叉验证框架硬刚CAN网络时序分析，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是Agent落地汽车必须解决的“实时性”死穴</span>。别被大模型忽悠，自动驾驶Agent的决策延迟必须以微秒计，否则就是棺材板。学术界终于开始干点正事，而非沉迷于刷榜。</p>
 </a>
-
 <a href="https://semiengineering.com/optimizing-euv-source-efficiency-with-radiation-hydrodynamic-simulations-u-of-osaka-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Optimizing EUV Source Efficiency With Radiation-Hydrodynamic Simulations (U. Of Osaka et al.)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">大阪大学用辐射流体模拟优化EUV光源效率，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是卡住2nm以下制程脖子的“光刻机心脏”</span>。但模拟再准，也救不了ASML那台13.5nm光源的物理极限。日本在基础物理上确实有两把刷子，可惜产业转化能力被荷兰人按在地上摩擦。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">大阪大学用辐射流体模拟死磕EUV光源效率，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是2nm以下制程的“能源命门”</span>。EUV光源功率每提升1%，ASML的垄断霸权就多一分稳固。别指望弯道超车，人家在物理极限上抠纳米级功耗，这才是真正的硬核护城河。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
