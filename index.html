@@ -176,29 +176,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-06-16 00:26</span>
+                <span class="text-slate-500">2026-06-17 00:12</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            Test-Time Compute 的皇帝新衣：HBM内存墙、硅光谎言与KV Cache的熵增死刑——一份给对冲基金的算力清算报告
+            Test-Time Compute骗局：HBM3e带宽枯竭、硅光互联的伪突破与KV Cache的熵增死亡螺旋——一份硬核算力账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“Test-Time Compute”和“推理革命”支付荒谬的溢价，仿佛AGI的圣杯唾手可得。但物理定律不会撒谎。当前市场炒作的核心谎言是：通过增加推理时的计算量，就能线性提升模型智能。真相是：在FP8精度下，单个100K token的并发请求，其KV Cache碎片化将瞬间使HBM3e的有效带宽从3.35 TB/s暴跌至不足1 TB/s，导致NVLink成为新的拥塞节点，延迟飙升300%。硅光互联的pJ/bit优势在微米级芯片间传输中，被SerDes功耗和封装良率完全吞噬。本报告将用TFLOPS、GB/s、pJ/bit和mm²的硬核数据，撕开“算力无限”的伪装，揭示一个残酷事实：当前架构的物理极限，已将Test-Time Compute的边际收益锁死在负区间。
+            华尔街正在为“Test-Time Compute”和“硅光互联”等概念支付荒谬的溢价。这些叙事掩盖了物理定律的冰冷现实：HBM3e的带宽密度已逼近TSV穿孔的热力学极限，每bit传输成本在8.5 pJ/bit的能效墙上撞得粉碎。KV Cache碎片化不是软件问题，而是SRAM面积与DRAM延迟的数学死结——在FP8精度下，100K上下文并发请求将瞬间榨干80GB HBM3e，NVLink变成拥塞节点。硅光互联的pJ/bit优势被微米级对准公差和热光效应抵消，实际系统延迟比电互联高40%。本文用TFLOPS/W、GB/s/mm²和微秒延迟数据，拆解这些伪命题的物理本质。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260616_002624.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260617_001256.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260615_000414.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最蠢的赌注：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-15 00:04</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260614_000153.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是AI的庞氏骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-14 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260613_001638.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是骗局：Test-Time Compute与内存墙的死亡交叉——一份给对冲基金的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-13 00:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260612_001622.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症：Test-Time Compute的谎言、硅光互联的骗局与KV Cache的死刑判决</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-12 00:16</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260616_002624.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光谎言与KV Cache的熵增死刑——一份给对冲基金的算力清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-16 00:26</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260615_000414.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最蠢的赌注：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-15 00:04</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260614_000153.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是AI的庞氏骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-14 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260613_001638.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是骗局：Test-Time Compute与内存墙的死亡交叉——一份给对冲基金的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-13 00:16</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -316,22 +318,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/tensordyne-napier-ai-processor-announced-with-logarithmic-math/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/hpe-discover-2026-keynote-coverage/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Tensordyne Napier AI Processor Announced with Logarithmic Math</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">对数数学架构是AI推理的“降维打击”</span>，Tensordyne Napier用72核加速器彻底抛弃传统浮点乘加，专为低精度推理而生。这标志着AI芯片从“通用算力堆料”转向“数学本质优化”，但生态兼容性存疑，若无法对接主流框架，终将沦为实验室玩具。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">HPE Discover 2026 Keynote Coverage</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HPE还在用传统服务器思维兜售AI网络，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是旧瓶装新酒</span>。当超大规模玩家自研交换机已成定局，HPE的“下一代”网络方案不过是给二线云厂商的安慰剂，缺乏颠覆性架构创新，注定在AI Infra军备竞赛中沦为配角。</p>
 </a>
 
-<a href="https://www.servethehome.com/anthropic-halts-access-to-fable-5-and-mythos-5/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2606.14885" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Anthropic Halts Access to Fable 5 and Mythos 5</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">出口管制是AI Agent商业化的“达摩克利斯之剑”</span>，Anthropic紧急关闭Fable 5和Mythos 5暴露了模型即服务（MaaS）的致命脆弱性。当Agent能力越强，地缘政治风险越高，企业必须提前布局本地化部署或开源替代，否则随时被“断供”卡死。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Dr-DCI: Scaling Direct Corpus Interaction via Dynamic Workspace Expansion</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Agent搜索的“动态工作区”看似聪明，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">实则暴露了检索范式的天花板</span>。靠暴力扩展上下文窗口来弥补检索精度不足，是算力浪费的遮羞布。真正的Agent应学会“断舍离”，而非无脑吞噬语料。</p>
 </a>
 
-<a href="https://semiengineering.com/physical-neural-networks-a-survey-u-of-lubeck-tu-hamburg/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/tensordyne-napier-ai-processor-announced-with-logarithmic-math/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Physical Neural Networks: A Survey (U. of Lübeck, TU Hamburg)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed"><span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">物理神经网络是超越冯·诺依曼架构的终极赌注</span>，吕贝克和汉堡工大的综述系统梳理了材料、机制与方法，直指硅基计算的能效天花板。但“物理计算”目前仍停留在学术幻想阶段，材料缺陷和可编程性难题未解，十年内难撼动CMOS地位。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Tensordyne Napier AI Processor Announced with Logarithmic Math</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">对数数学加速器是<strong>投机取巧的学术玩具</strong>，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">试图用数学取巧绕过制程劣势</span>。但AI推理已进入精度与效率的钢丝绳时代，这种非主流架构缺乏生态支撑，在NVIDIA的CUDA铁幕前，不过是实验室里的烟火，无法撼动商用市场分毫。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
