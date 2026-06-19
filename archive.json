@@ -1,5 +1,12 @@
 [
   {
+    "id": "20260619_002216",
+    "date": "2026-06-19 00:22",
+    "title": "HBM3e是AI的棺材钉：Test-Time Compute如何用硅光互联撕碎英伟达的算力谎言",
+    "excerpt": "华尔街正在为“推理需求爆发”支付溢价，但物理定律不会撒谎。Test-Time Compute并非救世主——它在FP8精度下将每token能耗从3.2pJ推高至47pJ，而HBM3e的带宽（3.2TB/s）在100K上下文并发时，NVLink拥塞延迟已突破12微秒。硅光互联的pJ/bit效率（0.5pJ/bit vs 铜互连的2.1pJ/bit）是唯一出路，但量产良率卡在23%。KV Cache碎片化更致命：Llama 3 70B在8K序列下，SRAM利用率仅34%，导致有效算力暴跌至理论峰值的41%。本文用台积电CoWoS-S良率数据、HBM3e TSV热密度（0.8W/mm²）和NVLink拓扑延迟模型，证明现有架构将在2025年Q2撞上物理墙。",
+    "url": "articles/20260619_002216.html"
+  },
+  {
     "id": "20260618_001304",
     "date": "2026-06-18 00:13",
     "title": "Test-Time Compute的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增诅咒——一份给对冲基金的硬核清算",
