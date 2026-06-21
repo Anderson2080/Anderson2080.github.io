@@ -1,5 +1,12 @@
 [
   {
+    "id": "20260621_000202",
+    "date": "2026-06-21 00:02",
+    "title": "Test-Time Compute 是华尔街最蠢的赌注：HBM内存墙、硅光谎言与KV Cache碎片化的物理死刑判决书",
+    "excerpt": "市场正在为“Test-Time Compute”和“AI推理爆发”狂欢，但物理定律不会撒谎。NVIDIA H100/H200的HBM3e带宽（3.35 TB/s）在FP8精度下，面对100K token上下文的多智能体并发，每token的KV Cache访问延迟将直接击穿NVLink的拥塞阈值，导致有效算力利用率暴跌至12%以下。硅光互联的pJ/bit能耗比在短距离（<2m）内被铜互联的SerDes完爆，而所谓的“存算一体”在SRAM面积（每MB占用~0.5mm²在5nm节点）面前只是笑话。本文用TFLOPS、GB/s、微秒延迟和每token成本（美分）拆解：为什么现有架构在Test-Time Compute场景下是纸老虎，以及真正的瓶颈不在算力，而在HBM堆叠的TSV穿孔热密度（已逼近150W/cm²）和KV Cache的碎片化内存分配效率（低于40%）。对冲基金若押注“算力无限”，将血本无归。",
+    "url": "articles/20260621_000202.html"
+  },
+  {
     "id": "20260620_000439",
     "date": "2026-06-20 00:04",
     "title": "Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书",
