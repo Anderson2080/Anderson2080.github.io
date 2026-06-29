@@ -1,5 +1,12 @@
 [
   {
+    "id": "20260629_000329",
+    "date": "2026-06-29 00:03",
+    "title": "Test-Time Compute 的皇帝新衣：HBM内存墙、硅光谎言与KV Cache碎片化——2025年算力架构的物理判决书",
+    "excerpt": "华尔街正在为“Test-Time Compute”和“AI推理爆发”支付荒谬的溢价。但物理定律不会为叙事让步：HBM3e的带宽密度（2.4 TB/s per stack）在100K上下文下，面对FP8精度的KV Cache（每token 2KB），单次推理的显存搬运延迟已突破300微秒，而NVLink的拥塞模型显示，当并发请求超过32个时，有效带宽将暴跌至理论值的40%。硅光互联的pJ/bit能耗比（0.5 pJ/bit）看似优于铜线（1.2 pJ/bit），但片上激光器阵列的WPE（Wall-Plug Efficiency）仅8%，导致整体功耗密度突破100 W/mm²——这已逼近硅基热管理的物理极限。本文用数学证明：现有架构在Test-Time Compute上的收益，将在2025年Q3被内存墙和碎片化彻底吞噬。",
+    "url": "articles/20260629_000329.html"
+  },
+  {
     "id": "20260627_235705",
     "date": "2026-06-27 23:57",
     "title": "Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份给对冲基金的硬核清算",
