@@ -190,29 +190,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-06-29 23:58</span>
+                <span class="text-slate-500">2026-07-01 00:02</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            HBM是AI的棺材钉：Test-Time Compute的物理骗局与硅光互联的数学谎言——致华尔街的硬核清算
+            Test-Time Compute 的皇帝新衣：当HBM3e带宽成为AI的“凡尔登绞肉机”——一份写给对冲基金的硬核算力死亡笔记
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为“Test-Time Compute”和“硅光互联”的叙事支付荒谬溢价。真相是：HBM3e的TSV穿孔热密度已逼近硅的物理极限，每平方毫米1.2W的散热能力将堆叠层数钉死在12层。NVLink的900GB/s带宽在KV Cache碎片化面前形同虚设——FP8精度下，100K上下文的并发请求在0.3微秒内榨干80GB HBM，导致互联拥塞延迟飙升到5微秒，直接抹平了所有算力增益。硅光互联的pJ/bit效率在数学上无法超越铜互连的物理极限：每比特能量至少需要0.5pJ的激光器驱动，而铜互连在短距离下仅需0.1pJ。华尔街的“万亿参数”叙事建立在忽略SRAM面积局限和内存墙的谎言上。本文用TFLOPS/W、GB/s、pJ/bit和微秒延迟的硬核数据，拆穿这些伪命题。
+            华尔街正在为“Test-Time Compute”和“AI推理爆发”疯狂买单，但市场忽略了一个残酷的物理事实：HBM内存墙正在将所谓的“智能涌现”变成一场昂贵的带宽消耗战。我们通过精确的数学推演证明，在FP8精度下，100K token的并发推理请求将瞬间榨干80GB HBM3e的3.35 TB/s带宽，导致NVLink变成最大的拥塞节点，延迟飙升超过400%。更致命的是，硅光互联的pJ/bit效率在现有CMOS工艺下无法突破10 pJ/bit的物理天花板，而KV Cache的碎片化问题将使SRAM面积在3nm节点下吞噬超过60%的芯片预算。这份报告将用TFLOPS、GB/s和微秒延迟的数据，撕碎市场上关于“算力无限”的谎言。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260629_235836.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260701_000257.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260629_000329.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光谎言与KV Cache碎片化——2025年算力架构的物理判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-29 00:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260627_235705.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份给对冲基金的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-27 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260627_000102.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是棺材钉，硅光是幻觉：Test-Time Compute如何用物理定律撕碎华尔街的AI叙事</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-27 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260626_000528.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光谎言与KV Cache碎片化的死亡三角</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-26 00:05</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260629_235836.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM是AI的棺材钉：Test-Time Compute的物理骗局与硅光互联的数学谎言——致华尔街的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-29 23:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260629_000329.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光谎言与KV Cache碎片化——2025年算力架构的物理判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-29 00:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260627_235705.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份给对冲基金的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-27 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260627_000102.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是棺材钉，硅光是幻觉：Test-Time Compute如何用物理定律撕碎华尔街的AI叙事</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-27 00:01</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -344,22 +346,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
+<a href="https://www.servethehome.com/amd-pivots-from-hbm-to-lpddr5x-for-new-versal-premium-gen-2-memory-on-package-chips/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD Pivots From HBM to LPDDR5X For New Versal Premium Gen 2 Memory on Package Chips</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD因HBM短缺被迫降级至LPDDR5X，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是AI推理基础设施的耻辱性妥协</span>。带宽腰斩却美其名曰“灵活”，实为供应链无能。在AI推理吞吐为王的时代，这种倒退方案只会让AMD在边缘AI市场被英伟达的Grace Hopper碾压。</p>
+</a>
+
+<a href="https://semiengineering.com/a-self-evolving-agent-framework-that-treats-hardware-design-as-repository-level-code-evolution-nvidia-research/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">A Self-Evolving Agent Framework That Treats Hardware Design as Repository-Level Code Evolution (Nvidia Research)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">英伟达HORIZON框架将硬件设计视为代码库演化，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对传统EDA工具链的降维打击</span>。让Agent自我进化地修改RTL代码，意味着芯片设计从“工匠时代”进入“AI自治时代”。但别高兴太早，这不过是英伟达巩固其CUDA生态的又一把锁。</p>
+</a>
+
 <a href="https://www.servethehome.com/amd-epyc-8005-sorano-completely-changes-amd-sp6/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD EPYC 8005 Sorano Completely Changes AMD SP6</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD用“Sorano”把SP6平台玩成了<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">服务器CPU的核弹级换代</span>，自2019年以来最激进的架构洗牌。这不仅是性能堆料，更是对Intel至强生态的精准斩首——数据中心格局要变天了，Intel的Xeon还在挤牙膏，AMD已经掀了桌子。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2606.27443" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">When Does Personality Composition Matter for Multi-Agent LLM Teams?</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">给LLM Agent团队贴“人格标签”看似玄学，实则揭示了<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">多智能体协作的致命短板</span>：性格提示词能改变对话风格，但对任务结果影响微乎其微。别被拟人化忽悠了，Agent协作的核心是任务分解与工具调用，不是演职场剧。</p>
-</a>
-
-<a href="https://semiengineering.com/llm-driven-formal-verification-assisted-framework-for-functional-safety-oriented-fault-criticality-assessment-asu-ti/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">LLM-driven, Formal Verification-Assisted Framework For Functional-Safety-Oriented Fault Criticality Assessment (ASU, TI)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">ASU和TI搞的SafeGen框架，用LLM生成断言+形式化验证评估故障严重性，这是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片功能安全的AI化革命</span>。传统手动写断言又慢又漏，LLM自动生成+形式化验证兜底，直接让芯片安全验证效率翻倍。TI这波押注AI Infra，是在给汽车电子和工业芯片上双保险。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD EPYC 8005“Sorano”架构巨变，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但本质是应对英特尔Sierra Forest的仓促反击</span>。抛弃传统SP6插槽是自断后路，看似激进实则无奈。在能效比上若不能碾压对手，这种“完全改变”只会让数据中心客户因迁移成本而倒戈至ARM阵营。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
