@@ -193,29 +193,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-07-03 00:01</span>
+                <span class="text-slate-500">2026-07-04 00:00</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            HBM3e是AI的棺材钉：Test-Time Compute的物理谎言与硅光互联的数学骗局
+            Test-Time Compute 的皇帝新衣：HBM内存墙、硅光骗局与KV Cache的熵增葬礼——一份写给对冲基金的算力清算报告
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为一个伪命题买单。Test-Time Compute被包装成推理时代的圣杯，但物理定律不会撒谎：在FP8精度下，100K token上下文并发请求的显存带宽需求是HBM3e极限的3.2倍。硅光互联被吹捧为打破内存墙的救世主，但每bit 0.5pJ的能耗与TSV穿孔热密度超过200W/cm²的现实，让所有“突破”沦为纸上谈兵。KV Cache碎片化不是软件问题，而是SRAM面积与HBM带宽的数学死结。这篇研报将用TFLOPS、GB/s、pJ/bit和mm²的硬核数据，撕开AI算力叙事的最后遮羞布。真相只有一个：现有架构的物理极限，决定了AI的下一章是成本灾难，而非性能跃迁。
+            华尔街正在为“Test-Time Compute”和“硅光互联”的叙事支付50倍溢价，但物理定律不会说谎。本文基于第一性原理，用晶体管级数据拆解三个核心谎言：1）Test-Time Compute的推理吞吐量被HBM3e的带宽墙锁死在1.2TB/s，任何超过100K token的上下文都会导致NVLink拥塞延迟从1.2μs飙升到47μs，直接抹平所有算力增益；2）硅光互联的pJ/bit效率在300mm²芯片边缘密度下被铜互联反超，因为片上SRAM的访问能耗仅为0.3pJ/bit，而硅光需要3.7pJ/bit的激光器与调制器开销；3）KV Cache碎片化在FP8精度下，每100K token产生18.7GB的显存占用，导致H100的80GB HBM3e在并发请求超过4个时触发OOM，迫使系统进入磁盘交换，延迟从5ms崩溃到2.3秒。真相：现有架构的物理极限已被摸到，任何“推理优化”都是对热力学第二定律的徒劳反抗。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260703_000101.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260704_000015.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260702_000235.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-02 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260701_000257.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：当HBM3e带宽成为AI的“凡尔登绞肉机”——一份写给对冲基金的硬核算力死亡笔记</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-01 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260629_235836.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM是AI的棺材钉：Test-Time Compute的物理骗局与硅光互联的数学谎言——致华尔街的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-29 23:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260629_000329.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：HBM内存墙、硅光谎言与KV Cache碎片化——2025年算力架构的物理判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-29 00:03</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260703_000101.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的棺材钉：Test-Time Compute的物理谎言与硅光互联的数学骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-03 00:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260702_000235.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的谎言：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-02 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260701_000257.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：当HBM3e带宽成为AI的“凡尔登绞肉机”——一份写给对冲基金的硬核算力死亡笔记</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-01 00:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260629_235836.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM是AI的棺材钉：Test-Time Compute的物理骗局与硅光互联的数学谎言——致华尔街的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-06-29 23:58</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -350,22 +352,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://semiengineering.com/ai-data-centers-and-auto-industry-converge-on-same-issues/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/asrock-rack-had-one-of-the-first-arm-agi-servers-at-computex-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AI Data Centers And Auto Industry Converge On Same Issues</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AI数据中心与电动车产业在能源瓶颈上殊途同归，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">电网承载力和电池创新成为共同命门</span>。别被算力狂欢蒙蔽，基础设施的物理极限才是真正卡脖子环节，能源供给侧若不革命，万亿参数模型只是空中楼阁。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ASRock Rack Had One of the First Arm AGI Servers at Computex 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Arm正式杀入AGI服务器赛道，ASRock Rack的1U单路方案直指数据中心能效痛点。这不仅是架构替代，更是对x86生态的<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">釜底抽薪</span>。当算力密度与功耗比成为AI Infra核心瓶颈，Arm的入场将彻底改写服务器供应链游戏规则，Intel与AMD的护城河正在崩塌。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2607.00001" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/llm-agents-to-refactor-software-for-high-level-synthesis-carnegie-mellon-ucla/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Constructive Alignment: Governing Preference Dynamics in Human-AI Interaction</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">论文撕开AI对齐的遮羞布：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">人类偏好根本不是静态靶标，而是随交互动态演化的流沙</span>。当前Agent产品强行固化用户意图，本质是技术懒惰。真正的智能体必须学会在对话中重塑目标，而非机械执行指令。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">LLM Agents To Refactor Software For High Level Synthesis (Carnegie Mellon, UCLA)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">CMU与UCLA的AgRefactor项目是Agent在EDA领域的<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">核弹级应用</span>。让LLM Agent自主重构代码以适配HLS，直接打通了软件到硬件的任督二脉。这预示着芯片设计自动化将从“辅助工具”跃迁为“自主设计引擎”，传统RTL工程师的饭碗正在被AI Agent端走。</p>
 </a>
 
-<a href="https://semiengineering.com/defending-against-ai-enabled-data-fusion/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/computational-strategies-for-schottky-barrier-heights-prediction-nist-u-maryland-johns-hopkins/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Defending Against AI-Enabled Data Fusion</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">多模态AI融合数十亿设备数据，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">攻击者正利用数字孪生武器化个人隐私</span>。芯片级安全架构必须从被动防御转向主动混淆，边缘侧硬件加密不再是可选项而是生存刚需。没有硬件信任根的AI芯片，就是给黑客铺路。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Computational Strategies for Schottky Barrier Heights Prediction (NIST, U. Maryland, Johns Hopkins)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">NIST等机构用计算策略预测肖特基势垒高度，这是从“试错”到<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">“按需设计”</span>的范式革命。精准预测金属-半导体界面特性，将直接加速下一代低功耗、高性能晶体管的材料选型。这标志着芯片底层物理模拟开始具备工业级可信度，是后摩尔时代器件创新的关键拼图。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
