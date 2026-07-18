@@ -208,29 +208,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-07-17 23:46</span>
+                <span class="text-slate-500">2026-07-18 23:47</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            HBM3e是AI的棺材钉：Test-Time Compute、硅光互联与KV Cache碎片化如何撕碎华尔街的算力神话
+            HBM3e是AI的癌症，硅光是最后的化疗：Test-Time Compute、内存墙与KV Cache的物理死刑判决书
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在兜售一个危险的谎言：Test-Time Compute能无限扩展智能，HBM3e带宽是救世主，硅光互联即将终结内存墙。这些叙事忽略了一个冷酷的物理事实：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大的拥塞节点，延迟从微秒级崩盘到毫秒级。更致命的是，KV Cache碎片化正在以指数级吞噬SRAM面积，每增加一个token，推理成本就多一笔无法摊销的物理账。本文用数学和参数拆穿这些泡沫：HBM3e的TSV穿孔热密度限制在10W/mm²，硅光互联的pJ/bit效率在短距离内输给铜线，而Test-Time Compute的算力利用率在内存墙面前只有15%。华尔街必须重新定价AI基础设施的真实成本，否则下一轮财报季就是清算日。
+            华尔街正在为“Test-Time Compute”的所谓“推理革命”支付荒谬溢价。这是对物理定律的彻底无知。当模型在推理时多“思考”一秒，HBM3e的带宽就被多榨干1.2TB/s，而NVLink的拥塞延迟将直接飙升到毫秒级——这比任何算力提升都更致命。硅光互联？在每比特10pJ的能耗面前，它不过是另一个被过度炒作的散热器。KV Cache的碎片化不是软件问题，是SRAM面积和HBM带宽的数学死局：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大的拥塞节点。这篇研报将用TFLOPS、GB/s、pJ/bit和微秒延迟，拆解这些谎言，告诉你为什么现有架构在物理极限前不堪一击。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260717_234659.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260718_234752.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260716_235402.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，但硅光互联才是真正的呼吸机：Test-Time Compute的物理账本与架构骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-16 23:54</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260715_235452.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，但硅光互联才是真正的呼吸机：一份关于Test-Time Compute、内存墙与KV Cache碎片化的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-15 23:54</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260714_234809.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute泡沫破裂：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-14 23:48</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260713_234930.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最蠢的赌注：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-13 23:49</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260717_234659.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的棺材钉：Test-Time Compute、硅光互联与KV Cache碎片化如何撕碎华尔街的算力神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-17 23:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260716_235402.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，但硅光互联才是真正的呼吸机：Test-Time Compute的物理账本与架构骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-16 23:54</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260715_235452.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，但硅光互联才是真正的呼吸机：一份关于Test-Time Compute、内存墙与KV Cache碎片化的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-15 23:54</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260714_234809.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute泡沫破裂：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-14 23:48</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -380,22 +382,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/the-amd-instinct-mi350p-is-a-hbm-pcie-accelerator-that-has-been-all-over/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/next-gen-server-memory-on-display-ddr5-8000-rdimms-and-mrdimm-gen2-hits-ddr5-12800/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The AMD Instinct MI350P is a HBM PCIe AI Accelerator That Has Been All Over</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">MI350P疯狂刷屏暴露了<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AMD在AI Infra领域的致命短板：生态碎片化</span>。144GB HBM3E PCIe卡看似参数凶猛，实则是在用堆料掩盖软件栈的千疮百孔。没有ROCm的成熟生态，这不过是块昂贵的电子垃圾，注定沦为NVIDIA H100的廉价陪跑。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2607.13049" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">SPINE: Bridging the Cyber-Physical Gap with Agentic AI</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">SPINE试图用Agentic AI缝合数字与物理世界，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这不过是学术界对“具身智能”的又一次自嗨</span>。基础模型给机器人装上了“大脑”，却忽略了工业场景中毫秒级的实时性要求。论文里的仿真跑得再溜，落地时面对物理世界的噪声和延迟，Agent立马变“呆子”。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Next Gen Server Memory On Display: DDR5-8000 RDIMMs and MRDIMM Gen2 Hits DDR5-12800</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">内存带宽是AI推理的隐形瓶颈。美光DDR5-8000与三星MRDIMM Gen2的12.8GT/s看似激进，实则是对HBM产能不足的无奈补位。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">MRDIMM通过多路复用将带宽翻倍，但代价是延迟和功耗失控</span>。这暴露了行业在“后HBM时代”的焦虑：堆栈层数逼近物理极限，只能靠接口速率硬扛。对于AI Infra，这意味着内存子系统将从配角升级为系统设计的核心矛盾，未来服务器主板将围绕内存拓扑重构。</p>
 </a>
 
 <a href="https://semiengineering.com/chip-industry-week-in-review-147/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">本周芯片业看似热闹，实则<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">全是“旧酒装新瓶”的套路</span>。Intel扩产是政治正确的面子工程，Cadence的AI Agent不过是EDA工具的常规迭代，HBM标准更新更是挤牙膏。唯一亮点是光电子晶圆厂竞赛，但这玩意儿离量产还隔着十个台积电。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Cadence推出AI超级智能体，专攻PCB与先进封装设计，这是EDA工具从“辅助”到“自主”的质变。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent不再只是生成代码，而是直接操控物理设计流程，意图取代资深工程师的布局布线决策</span>。但风险在于，AI对非标失效模式（如信号完整性中的偶发串扰）缺乏直觉。这本质上是将芯片设计推向“黑盒化”，一旦Agent犯错，调试成本将指数级上升。行业需要警惕过度依赖导致的工程能力退化。</p>
+</a>
+
+<a href="https://www.servethehome.com/the-amd-instinct-mi350p-is-a-hbm-pcie-accelerator-that-has-been-all-over/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The AMD Instinct MI350P is a HBM PCIe AI Accelerator That Has Been All Over</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD MI350P频繁现身，本质是NVIDIA垄断下的“备胎”策略。144GB HBM3E配PCIe接口，摆明是瞄准那些被NVLink生态锁死、又买不到B200的客户。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但PCIe带宽瓶颈决定了它只能做推理或轻量训练，无法撼动H100/B200在千卡集群中的统治地位</span>。这暴露了AMD的尴尬：HBM堆叠技术不差，但缺乏统一内存互联架构（如NVLink-C2C），导致加速卡沦为“大号显存”。芯片前沿的竞争，早已从单卡算力转向系统级互联能力。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
