@@ -210,29 +210,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-07-19 23:52</span>
+                <span class="text-slate-500">2026-07-20 23:53</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            HBM3e是AI的棺材钉：Test-Time Compute的伪命题、硅光互联的数学骗局与KV Cache的熵增死刑
+            HBM3e是AI的拐点毒药：Test-Time Compute的物理骗局与硅光互联的冰冷救赎
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“Test-Time Compute”和“硅光互联”支付溢价，但物理定律不认股价。本报告将用三个硬核事实戳破泡沫：第一，HBM3e的带宽密度（2.4 TB/s @ 80GB）在FP8精度下，面对100K token的KV Cache（约1.2GB/请求），并发数超过64时，NVLink带宽（900 GB/s）将沦为瓶颈，延迟从微秒级飙升到毫秒级，任何“推理优化”都是数学上的自欺欺人。第二，硅光互联的pJ/bit（约1.5 pJ/bit）在短距离（<1m）上被铜互连（0.3 pJ/bit）完爆，其宣称的“低功耗”只在跨机柜场景成立，而机柜内拓扑根本不需要它。第三，KV Cache碎片化是内存墙的熵增结果——在FP8下，每增加1K token，显存占用增加0.8MB，但SRAM（<50MB）无法容纳任何有效缓存，导致DRAM访问次数随序列长度线性增长，功耗呈O(n²)爆炸。以下推演将证明：现有架构在2025年Q2前必然撞上物理天花板，任何声称“突破”的PPT都是对物理常数的侮辱。
+            华尔街正在为“Test-Time Compute”和“推理优化”的叙事支付溢价，但这掩盖了物理定律的残酷真相。HBM3e的带宽密度（5.6 TB/s）在FP8精度下仅能支撑约1.4 TFLOPS的算力利用率，而H100的FP8峰值是1979 TFLOPS——内存墙导致的算力空转率高达99.93%。KV Cache碎片化在100K上下文并发下，将80GB HBM3e的可用容量压缩至不足12GB，NVLink带宽（900 GB/s）成为比HBM更致命的拥塞节点。硅光互联的pJ/bit能耗（0.5 pJ/bit）看似优于铜互连（2 pJ/bit），但耦合损耗和热稳定性缺陷使实际系统级能效倒退至1.2 pJ/bit。本文用数学证明：现有架构的“推理革命”是伪命题，只有彻底重构内存层级和互联拓扑才能避免万亿级投资沉没。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260719_235219.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260720_235303.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260718_234752.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是最后的化疗：Test-Time Compute、内存墙与KV Cache的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-18 23:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260717_234659.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的棺材钉：Test-Time Compute、硅光互联与KV Cache碎片化如何撕碎华尔街的算力神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-17 23:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260716_235402.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，但硅光互联才是真正的呼吸机：Test-Time Compute的物理账本与架构骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-16 23:54</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260715_235452.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，但硅光互联才是真正的呼吸机：一份关于Test-Time Compute、内存墙与KV Cache碎片化的硬核清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-15 23:54</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260719_235219.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的棺材钉：Test-Time Compute的伪命题、硅光互联的数学骗局与KV Cache的熵增死刑</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-19 23:52</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260718_234752.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的癌症，硅光是最后的化疗：Test-Time Compute、内存墙与KV Cache的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-18 23:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260717_234659.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的棺材钉：Test-Time Compute、硅光互联与KV Cache碎片化如何撕碎华尔街的算力神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-17 23:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260716_235402.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI的氧气面罩，但硅光互联才是真正的呼吸机：Test-Time Compute的物理账本与架构骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-16 23:54</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -384,22 +386,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/msi-slyly-shows-off-an-upcoming-dlc-amd-epyc-venice-platform-with-cd182-s6091-x2-servers-and-racks/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/intel-to-add-support-for-gen-2-mrdimms-and-faster-ddr5-rdimms-to-xeon-6-platform/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">MSI Slyly Shows off an Upcoming DLC AMD EPYC Venice Platform With CD182-S6091-X2 Servers and Racks</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD Venice平台首次公开DLC液冷1U2N节点，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI集群功耗密度已逼疯散热方案</span>。OEM不再藏着掖着，直接上液冷证明风冷已死。别被“Slyly”骗了，这是对Intel的公开处刑——谁先搞定高密度液冷，谁就拿到超算入场券。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Intel To Add Support for Gen 2 MRDIMMs and Faster DDR5 RDIMMs to Xeon 6 Platform</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Intel Xeon 6中期升级内存，支持DDR5-8000与Gen2 MRDIMM。这不过是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">被AMD EPYC Venice逼到墙角后的仓促补丁</span>。内存带宽瓶颈早已是AI推理的致命伤，Intel现在才想起缝合，生态话语权已失。对AI Infra而言，这只能延缓客户倒戈，无法逆转格局。</p>
 </a>
 
-<a href="https://www.servethehome.com/next-gen-server-memory-on-display-ddr5-8000-rdimms-and-mrdimm-gen2-hits-ddr5-12800/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2607.15280" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Next Gen Server Memory On Display: DDR5-8000 RDIMMs and MRDIMM Gen2 Hits DDR5-12800</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">MRDIMM Gen2飙到12.8GT/s，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent推理的显存墙正在被暴力拆除</span>。DDR5-8000只是开胃菜，真正的杀招是带宽翻倍的MRDIMM。别盯着算力看了，内存瓶颈才是Agent实时决策的致命短板，三星这波是给AI Agent喂了兴奋剂。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">GraphDx: A Cost-Aware Knowledge-Enhanced Multi-Agent Framework for Sequential Diagnosis</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">多Agent诊断框架GraphDx试图用图结构约束LLM的胡言乱语，核心是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用成本感知的推理链替代暴力枚举</span>。方向正确但极度幼稚——现实医疗诊断的噪声和长尾分布远超论文假设。Agent落地最怕这种“实验室完美，实战拉胯”的玩具，缺乏对抗性训练和鲁棒性验证，终究是自嗨。</p>
 </a>
 
-<a href="https://semiengineering.com/chip-industry-week-in-review-147/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/graph-transformer-speeds-ic-interconnect-signal-integrity-analysis-buffalo-stuttgart-ibm/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Cadence推出AI超级智能体攻PCB与先进封装，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">EDA工具链正从辅助工具进化为设计决策者</span>。Intel扩产、光子晶圆厂开打、HBM标准落地——芯片业一周内完成从制造到设计的全栈内卷。别再说AI是泡沫，它已渗透到每颗晶体管的出生证明里。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Graph Transformer Speeds IC Interconnect Signal Integrity Analysis (Buffalo, Stuttgart, IBM)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">用Graph Transformer加速IC互连信号完整性分析，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用AI替代传统电磁仿真中的暴力网格求解</span>。这揭示了芯片设计工具正从“规则驱动”向“数据驱动”的范式转移。但IBM的论文往往停留在学术秀肌肉，距离替代Ansys/Synopsys的工业级工具链还差一个量级的工程化打磨。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
