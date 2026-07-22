@@ -1,5 +1,12 @@
 [
   {
+    "id": "20260722_235751",
+    "date": "2026-07-22 23:57",
+    "title": "Test-Time Compute 的皇帝新衣：HBM3e 带宽、硅光骗局与 KV Cache 的熵增葬礼——一份给对冲基金的硬核清算报告",
+    "excerpt": "华尔街正在为“Test-Time Compute”和“推理优化”支付荒谬的溢价。谎言在于：市场认为瓶颈是算力（TFLOPS），而真相是内存带宽（GB/s）与互联延迟（μs）。在 FP8 精度下，一个 100K token 的上下文，KV Cache 占用 1.6 GB，并发 100 个请求即可榨干 80 GB HBM3e 的 3.2 TB/s 带宽，导致 NVLink 变成拥塞节点。硅光互联的 pJ/bit 效率在 1m 距离内仍劣于铜缆，而 HBM 堆叠的 TSV 穿孔热密度已逼近 100 W/cm² 的物理极限。本文用数学推演证明：现有架构在 Test-Time 场景下，每 token 的边际成本将指数级上升，而所谓的“硅光突破”不过是实验室的 PPT 魔术。",
+    "url": "articles/20260722_235751.html"
+  },
+  {
     "id": "20260721_235214",
     "date": "2026-07-21 23:52",
     "title": "HBM3e是AI的棺材钉：Test-Time Compute、硅光互联与KV Cache碎片化如何终结摩尔定律的谎言",
