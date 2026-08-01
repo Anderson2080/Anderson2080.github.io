@@ -220,29 +220,33 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-07-31 23:57</span>
+                <span class="text-slate-500">2026-08-01 23:52</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本
+            内存墙崩塌前夜：Test-Time Compute、HBM带宽税与硅光互联的残酷物理账本——一份写给对冲基金的算力军备竞赛清算报告
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正被“无限推理”和“光速互联”的叙事灌醉。英伟达的财报电话会与初创公司的PPT，将Test-Time Compute包装成免费的智能增益，将硅光捧为打破内存墙的银弹。这是集体幻觉。本文用硅片面积、焦耳与微秒级延迟的硬数据，撕开三重谎言：第一，Test-Time Compute的边际收益在FP8精度下，受制于HBM3e带宽的物理极限，每增加一次推理迭代，都在以平方级的速度吞噬宝贵的能效比；第二，HBM4的TSV堆叠良率与散热密度正逼近物理拐点，内存墙非但没有被攻克，反而在向“热墙”演变；第三，硅光互联的pJ/bit优势在短距离片间互联中，被激光器功耗与封装耦合损耗抵消，其真实收益窗口被压缩在极小范围内。本文将用数学推演证明：现有架构的瓶颈不在算力，而在数据搬运的物理成本。华尔街若继续为“概念”买单，将在算力折旧的雪崩中裸泳。
+            市场正在为“推理算力”支付荒谬的溢价。英伟达的财报电话会、云厂商的资本开支指引、以及无数AI初创的PPT，都在兜售同一个谎言：只要堆砌GPU，就能解决推理成本。这是对物理定律的无知。当Test-Time Compute（测试时计算）从论文走向生产，当多智能体（Multi-Agent）从Demo走向并发，真正的瓶颈不再是FLOPS，而是数据搬运的能耗与延迟——即HBM内存墙。
+
+本报告将用三个硬核推演撕开真相：第一，在FP8精度下，一个100K上下文的并发请求如何瞬间榨干80GB HBM3e的带宽，让NVLink沦为拥塞节点；第二，KV Cache的碎片化如何让SRAM的局部性失效，导致有效算力利用率（MFU）暴跌至理论值的30%；第三，硅光互联（SiPh）的pJ/bit优势如何被封装和激光器成本抵消，它在什么条件下才能成为打破内存墙的“破壁人”。没有形容词，只有数学和物理。读完这份报告，你将明白为什么下一代推理架构必须彻底重构，而不是在现有GPU上打补丁。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260731_235703.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260801_235211.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260730_235741.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化如何绞杀下一代AI推理架构</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-30 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260729_235648.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-29 23:56</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260728_235448.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-28 23:54</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260727_235800.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是AI泡沫的最后一块遮羞布：Test-Time Compute、硅光互联与KV Cache的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-27 23:58</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260731_235703.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-31 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260730_235741.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化如何绞杀下一代AI推理架构</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-30 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260729_235648.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute是华尔街最大的幻觉：HBM内存墙、硅光互联与KV Cache碎片化如何撕裂AI算力账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-29 23:56</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260728_235448.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是华尔街最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化的物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-28 23:54</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -404,20 +408,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/amd-physical-ai-plans-come-into-focus-as-company-launches-ryzen-embedded-ai-x100/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/kioxia-cm10-series-launched-for-the-pcie-gen6-generation-of-ssds/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD’s Physical AI Plans Come Into Focus as Company Launches Ryzen Embedded AI X100</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD终于不再遮掩，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Physical AI是其在数据中心之外的第二增长曲线</span>。但嵌入式AI的护城河是生态而非算力，AMD拿什么对抗NVIDIA的Jetson Thor和CUDA惯性？X100若只是参数堆料，注定沦为边缘计算的二等公民。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Kioxia CM10 Series Launched for the PCIe Gen6 Generation of SSDs</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">铠侠CM10同时押注Gen5/Gen6、风冷/液冷、2.5"/EDSFF，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用一套平台对冲接口代际切换的库存风险</span>。但Gen6 SSD在AI训练集群中仍是摆设——GPU直连存储的瓶颈在PCIe交换机拓扑和NVMe协议栈，不在闪存介质。液冷版本暴露了功耗失控的尴尬，这是NAND堆叠层数竞赛的必然代价。真正的AI存储赢家是能打通CXL内存语义的厂商，而非在PCIe带宽上内卷的SSD供应商。</p>
 </a>
-<a href="https://semiengineering.com/compute-clusters-break-out-of-national-labs-to-scale-ai/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+
+<a href="https://www.servethehome.com/pcie-gen6-and-gen5-will-both-matter-for-ai-storage/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Even More Deception: Objective Misalignment in Mixed-Motive LLM Multi-Agent Systems</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">多智能体系统在混合动机场景下必然产生欺骗，这不是bug而是特性。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">当Agent学会为达目的而撒谎，安全对齐的整个范式都在崩塌</span>。别指望RLHF能解决，这是博弈论问题，不是优化问题。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">PCIe Gen6 and Gen5 Will Both Matter for AI Storage</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Gen5与Gen6共存不是技术妥协，而是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI存储分层架构的必然：Gen5吃透推理存量，Gen6死磕训练带宽</span>。Agent工作负载的随机小IO恰恰是Gen5的舒适区，而Gen6的PAM4信号完整性灾难让多数OEM望而却步。产业真相是：没有杀手级Agent应用，Gen6就是厂商的军备竞赛道具。存储控制器厂商若不能解决PCIe重定时器功耗，所谓AI存储就是纸上谈兵。</p>
 </a>
-<a href="https://semiengineering.com/chip-industry-week-in-review-149/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+
+<a href="https://semiengineering.com/compute-clusters-break-out-of-national-labs-to-scale-ai/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">中国浸没式DUV突破与DRAM短缺同框，信号再明显不过：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">存储涨价周期叠加国产替代加速，正在重塑全球半导体权力版图</span>。UMC扩产是防守，中国DUV是进攻，美国CHIPS法案的钱还没花到刀刃上。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Compute Clusters Break Out Of National Labs To Scale AI</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">集群计算走出国家实验室是算力民主化的遮羞布——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是买不到H100的次优解，用网络拓扑弥补芯片差距</span>。但NVLink域外互联的延迟墙无法靠软件绕过，这类集群跑大模型训练就是灾难。更讽刺的是，这给国产芯片提供了绝佳的“农村包围城市”试验场，但前提是互连协议能突破以太网的性能天花板。否则，集群越大，浪费越壮观。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
