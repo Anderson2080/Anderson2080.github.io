@@ -223,29 +223,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-04 00:03</span>
+                <span class="text-slate-500">2026-08-04 23:58</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本
+            算力骗局与内存绞索：Test-Time Compute 如何把 HBM3e 变成硅基时代的石油危机
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场在炒作“推理爆发”与“AI 算力无限需求”，但华尔街的模型里只有物理定律与单位成本。Test-Time Compute 的边际收益正在被 HBM 带宽的物理极限碾碎；硅光互联的 pJ/bit 优势在封装与激光器良率面前沦为纸上谈兵；KV Cache 的碎片化不是软件问题，而是 SRAM 面积与 HBM 容量的硬性数学矛盾。本报告用 3 组参数推演拆穿三个谎言：第一，FP8 精度下，100K 上下文并发请求将瞬间榨干 80GB HBM3e，NVLink 成为拥塞节点，延迟从 1.1 微秒恶化至 47 微秒；第二，HBM4 的 2TB/s 带宽提升，被 3.2 倍增长的 KV Cache 需求抵消，内存墙不降反升；第三，硅光互连的 0.5 pJ/bit 能耗优势，在 2m 链路长度下被激光器 30% 的壁插效率吞噬，实际能耗比铜缆高 1.8 倍。真相只有一个：算力账本上，物理极限是唯一的上司。
+            市场正在为“推理算力”狂欢，却对底层物理账本视而不见。Test-Time Compute 的每一分额外智能，都在向 HBM 带宽和 SRAM 容量索取十倍以上的血税。华尔街追捧的“长上下文”与“多智能体”叙事，在 5.6 TB/s 的 HBM3e 带宽和 80GB 容量面前，是彻头彻尾的数学自杀。本文用 1.2 TFLOPS/GB 的算术强度铁律，推演 KV Cache 碎片化如何将 NVLink 从救世主变成拥塞瓶颈；用 2.5 pJ/bit 的硅光能效，戳破“光进铜退”的谎言。你看到的算力牛市，是物理定律下的庞氏骗局。真相只有一个：内存墙才是唯一的算力天花板。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260804_000339.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260804_235815.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260802_235348.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌与推理税：Test-Time Compute的物理账本，以及HBM4救不了的华尔街幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-02 23:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260801_235211.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌前夜：Test-Time Compute、HBM带宽税与硅光互联的残酷物理账本——一份写给对冲基金的算力军备竞赛清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-01 23:52</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260731_235703.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-31 23:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260730_235741.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 是最大的算力骗局：HBM内存墙、硅光互联与KV Cache碎片化如何绞杀下一代AI推理架构</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-30 23:57</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260804_000339.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-04 00:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260802_235348.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌与推理税：Test-Time Compute的物理账本，以及HBM4救不了的华尔街幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-02 23:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260801_235211.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌前夜：Test-Time Compute、HBM带宽税与硅光互联的残酷物理账本——一份写给对冲基金的算力军备竞赛清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-01 23:52</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260731_235703.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-07-31 23:57</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -413,17 +415,17 @@
 <a href="https://www.servethehome.com/amd-helios-architecture-deep-dive-amd-broadcom-hardware-combined/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD Helios Architecture Deep Dive: The Power of AMD’s Hardware Combined</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Helios是AMD对NVIDIA GB200的正面宣战，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">博通定制交换芯片才是成败关键</span>。AMD终于明白单打独斗赢不了CUDA生态，必须靠开放机架级架构撬动超大规模客户。问题是Helios的Infinity Fabric在跨节点一致性上仍落后NVLink，且台积电CoWoS产能掐脖子。若2026年才能规模交付，黄仁勋的Blackwell Ultra已再收割一轮。AMD在赌客户受够了NVIDIA的封闭与傲慢，但这赌注需要MI400系列用实际跑分证明，而非PPT。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Helios是AMD对NVIDIA GB200的正面回应，但本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用Infinity Fabric把碎片化算力缝合起来</span>，对抗NVLink的封闭生态。成败不在芯片，而在Broadcom的SerDes和网络协议能否在超节点规模下不掉链子。若延迟和功耗失控，这又是一场PPT胜利。</p>
 </a>
-<a href="https://arxiv.org/abs/2607.28629" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2608.00003" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">拿Ollama跑本地Agent纯属学术自嗨。OpenClaw的架构价值在于<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">将记忆、工具调用与多模态感知解耦为可插拔模块</span>，但论文回避了最致命的上下文窗口坍缩问题。现实是Agent规模化卡在状态持久化和跨会话推理，而非推理引擎本身。更讽刺的是，这类系统在真实业务中90%的token消耗在无效工具调用上。别被"自主"忽悠，当前Agent本质仍是高级if-else编排，距离通用智能体的鸿沟比论文摘要暗示的大得多。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AutoFOAM: The Self-Refining Autonomous OpenFOAM Agent</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">CFD是硬核工程仿真，不是聊天机器人。AutoFOAM若真能自主调网格、判收敛、改边界条件，意味着<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">CAE领域最贵的专家经验正在被算法蒸馏</span>。但OpenFOAM的数值发散和物理不稳定性是LLM的噩梦，一个错误步长就能让残差爆炸。这玩意儿只能做辅助，别指望它独立交付工业级结果。</p>
 </a>
-<a href="https://semiengineering.com/chip-bridges-neuromorphic-and-deep-network-computing-tu-dresden/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/why-simulation-speed-is-holding-chiplets-back/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Bridges Neuromorphic And Deep-Network Computing (TU Dresden)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">SpiNNaker2试图用20nm工艺的ARM核模拟脉冲神经网络，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用数字电路的蛮力弥补神经形态架构的先天不足</span>。每芯片百万核的规模听着震撼，但功耗密度和通信瓶颈让它在真实推理任务中远逊于GPU。这类研究最大的价值是探索事件驱动计算的边界，而非替代Transformer。产业界别指望它，学术界倒是可以借此反思：我们是否过度依赖冯·诺依曼架构，而忽略了存内计算这条更务实的路径。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Why Simulation Speed Is Holding Chiplets Back</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Chiplet设计工具链已不是瓶颈，真正的墙是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">多物理场协同仿真的算力黑洞</span>——热、应力、电磁、信号完整性在2.5D/3D堆叠中互相耦合，每加一个die，计算量指数爆炸。EDA巨头们靠云并行和模型降阶续命，但物理精度和仿真速度的跷跷板，至今无人真正破解。这是制约3D IC落地的隐形天花板。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
