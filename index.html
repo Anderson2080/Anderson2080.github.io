@@ -225,29 +225,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-05 23:55</span>
+                <span class="text-slate-500">2026-08-07 01:40</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            硅基囚笼：Test-Time Compute、HBM内存墙与硅光互联的物理破产清算——一份写给对冲基金的算力死亡笔记
+            算力通胀的谎言：Test-Time Compute、HBM内存墙与硅光互联的物理清算
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为“推理繁荣”支付荒谬的溢价。你们追捧的“Test-Time Compute”叙事，本质是拿电费换Token的庞氏游戏。当模型在FP8精度下，单次100K上下文查询需加载1.2TB权重与KV Cache时，HBM3e的8TB/s带宽神话瞬间崩塌——实际有效带宽被地址映射与刷新开销砍掉30%，只剩5.6TB/s。这意味着，任何超过512并发请求的推理集群，其NVLink域内通信延迟将从1.2微秒恶化至40微秒以上，拥塞系数呈指数级发散。硅光互联？其pJ/bit能耗在短距（<2米）场景下是铜缆的3倍，只有跨越机柜级（>10米）才勉强盈亏平衡。KV Cache碎片化更是被严重低估的隐性杀手：在PagedAttention下，碎片率超过15%将导致有效显存利用率暴跌至68%，直接推高每Token边际成本至0.0032美元——比训练成本高一个数量级。本文将用热力学第二定律和排队论，撕碎这些被投行包装成“技术革命”的财务幻觉。
+            市场正在为“推理繁荣”支付荒谬的溢价。英伟达的财报电话会告诉你算力需求无限，但物理定律不这么认为。Test-Time Compute 的狂热掩盖了一个事实：当推理序列长度超过 32K，HBM3e 的 8.0 TB/s 带宽将沦为摆设，因为 KV Cache 的随机访问模式会让有效带宽暴跌至理论值的 12%。硅光互联被吹捧为救世主，但 2.5D 封装上每毫米硅波导的插入损耗是 0.5 dB，而一个 16 通道的微环调制器阵列在 85°C 下的热漂移会直接摧毁波分复用的信道隔离度。本文用三个硬核推演拆穿谎言：第一，FP8 精度下，100K 上下文的并发请求将在 0.4 秒内榨干 80GB HBM3e，NVLink 变成拥塞节点；第二，SRAM 面积在 3nm 节点上吞噬 40% 的 die 面积，但只能容纳 4K 上下文的 KV Cache；第三，硅光模块的 pJ/bit 能耗优势在 5 米以下的机架内被 PCB 走线的 0.3 pJ/bit 追平。没有魔法，只有账本。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260805_235512.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260807_014025.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260804_235815.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力骗局与内存绞索：Test-Time Compute 如何把 HBM3e 变成硅基时代的石油危机</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-04 23:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260804_000339.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-04 00:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260802_235348.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌与推理税：Test-Time Compute的物理账本，以及HBM4救不了的华尔街幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-02 23:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260801_235211.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌前夜：Test-Time Compute、HBM带宽税与硅光互联的残酷物理账本——一份写给对冲基金的算力军备竞赛清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-01 23:52</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260805_235512.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">硅基囚笼：Test-Time Compute、HBM内存墙与硅光互联的物理破产清算——一份写给对冲基金的算力死亡笔记</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-05 23:55</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260804_235815.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力骗局与内存绞索：Test-Time Compute 如何把 HBM3e 变成硅基时代的石油危机</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-04 23:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260804_000339.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-04 00:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260802_235348.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌与推理税：Test-Time Compute的物理账本，以及HBM4救不了的华尔街幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-02 23:53</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -414,20 +416,20 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/gigantic-dapustor-r6060-512tb-e2-nvme-ssd-shown-at-fms-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/amd-to-acquire-taalas-for-model-specific-ai-inference-chips/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Gigantic DapuStor R6060 512TB E2 NVMe SSD Shown at FMS 2026</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">512TB单盘是存储恐怖主义，直接宣告HDD在AI训练集群的死刑。但E2形态的散热和功耗是隐形地雷，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">容量翻倍≠TCO减半，PCIe Gen5带宽才是真瓶颈</span>。堆叠QLC的可靠性存疑，AI Infra采购需警惕纸面参数陷阱。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD to Acquire Taalas for Model Specific AI Inference Chips</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD买Taalas是<u>向专用推理芯片投降</u>，承认通用GPU在推理端已到天花板。模型专用芯片是<u>用硅片锁死算法迭代</u>，一旦模型架构剧变，流片即报废。这本质是拿资本开支换能效比，赌Transformer十年不亡。英伟达的CUDA护城河被绕过，但AMD的ROCm生态仍是短板，收购救不了软件债。</p>
 </a>
-<a href="https://arxiv.org/abs/2608.00003" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2608.04066" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AutoFOAM: The Self-Refining Autonomous OpenFOAM Agent</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">CFD专家系统被Agent化是必然，但OpenFOAM的数值发散是物理问题，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">LLM调参治标不治本，网格质量与湍流模型选择才是生死线</span>。AutoFOAM若不能内嵌物理一致性校验，不过是高级自动化的花架子，工程落地价值存疑。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The LLM Proposes, the Executive Disposes: A Self-Verifying Agent Instrument that Dissociates Commitment Drift from Binding Drift in Long-Horizon Agents</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">长程Agent的<u>自我验证是伪命题</u>——状态与自述皆不可信时，任何内省机制都是循环论证。把"承诺漂移"与"绑定漂移"解耦是<u>用工程手段掩盖架构缺陷</u>。真正的问题是LLM缺乏持久目标锚点，加个执行器只是给失控装了个仪表盘。方向错了，仪表越精密越危险。</p>
 </a>
-<a href="https://semiengineering.com/processing-in-memory-simulator-supporting-11-memory-technologies-riken-keiolos-alamos-ornl/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/separating-the-chaff-from-the-wheat-focusing-on-only-the-rdc-violations-you-care-about/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Processing-in-Memory Simulator Supporting 11 Memory Technologies (Riken, Keio,Los Alamos, ORNL)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">PIM炒了十年，终于有像样的全系统模拟器。但支持11种存储技术是双刃剑，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">模拟精度与速度的权衡决定其能否走出学术象牙塔</span>。HBM-PIM已死，3D DRAM与FeRAM的混合才是王道，这工具来得太晚。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Separating The Chaff From The Wheat: Focusing On Only The RDC Violations You Care About</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">RDC检查的<u>核心矛盾是误报率吞噬设计时间</u>。结构分析+时序感知是<u>用静态规则过滤动态风险</u>，本质是概率赌博。先进工艺下，真正的RDC风险往往藏在跨域异步路径里，现有分类法仍是经验主义。别指望工具自动分拣，关键路径的RDC豁免必须由架构师逐条签字，自动化只是辅助。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
