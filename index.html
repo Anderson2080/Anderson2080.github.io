@@ -230,29 +230,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-10 23:29</span>
+                <span class="text-slate-500">2026-08-11 23:35</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与内存墙绞肉机：Test-Time Compute 的物理账本，以及硅光、HBM 与 KV Cache 的生死局
+            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为“推理算力”支付荒谬的溢价。卖方报告告诉你 Test-Time Compute 是新的金矿，却回避了 1.5-bit 权重下，每 Token 的边际能量成本正在逼近 10 焦耳/百万 Token 的物理红线。HBM3e 的 8 TB/s 带宽在 100K 上下文面前是遮羞布，因为 KV Cache 的容量需求以 O(n²) 膨胀，而带宽仅以 O(√n) 增长。硅光互联被吹捧为救世主，但 2 pJ/bit 的调制能耗与 0.5 dB/cm 的插损，在 1024 卡集群的 All-to-All 通信中，将把 30% 的算力浪费在等待同步上。本文用 TSMC N3 的 SRAM 密度、HBM 堆叠良率与 NVLink 的物理拓扑，拆穿“软件优化”的谎言。核心真相：内存墙不是瓶颈，是判决。算力账本上，只有功耗、良率与延迟，没有故事。
+            市场正在为“Test-Time Compute”和“硅光革命”欢呼，但华尔街的定价模型里塞满了情绪，而非物理。本文用硅片面积、焦耳和微秒延迟说话。核心结论：第一，所谓“推理爆发”是伪命题，因为HBM3e的带宽（8.0 TB/s）在FP8精度下仅能支撑约4.1 PFLOPS的算力，而Blackwell B200的FP8稠密算力高达9 PFLOPS，算力利用率被锁死在45%以下。第二，KV Cache的碎片化不是软件问题，是SRAM面积与HBM带宽的物理矛盾，100K上下文的多并发请求将瞬间榨干80GB HBM3e，NVLink（1.8 TB/s）成为拥塞节点，延迟增加3.2倍。第三，硅光互联的pJ/bit优势（0.5 pJ/bit vs 铜缆2.5 pJ/bit）在芯片间距离超过2米时才成立，而机架内铜缆仍是成本最优解。本文推演每个数字，剥离叙事，只留账本。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260810_232913.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260811_233556.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260809_232458.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存绞索：Test-Time Compute、HBM墙与硅光幻象的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-09 23:24</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260808_232235.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-08 23:22</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260807_232827.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存绞索：Test-Time Compute、HBM墙与硅光幻梦的物理清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-07 23:28</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260807_014025.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力通胀的谎言：Test-Time Compute、HBM内存墙与硅光互联的物理清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-07 01:40</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260810_232913.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存墙绞肉机：Test-Time Compute 的物理账本，以及硅光、HBM 与 KV Cache 的生死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-10 23:29</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260809_232458.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存绞索：Test-Time Compute、HBM墙与硅光幻象的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-09 23:24</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260808_232235.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-08 23:22</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260807_232827.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存绞索：Test-Time Compute、HBM墙与硅光幻梦的物理清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-07 23:28</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -424,22 +426,20 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/panduit-e36g18l-pdu-review-a-sweet-managed-and-switched-by-outlet-pdu/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/minisforum-n5-max-review-with-amd-ryzen-ai-max-395/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Panduit E36G18L PDU Review: A Sweet Managed and Switched by Outlet PDU</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">机架配电终于从"傻大黑粗"进化到"每端口可控"。Panduit这款零U PDU把计量和远程开关做到插座级，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI集群的能耗精细化管理不再是纸上谈兵</span>。但别被"甜蜜"误导——这玩意儿是给那些被电费账单吓醒的基础设施团队准备的，不是玩具。混合插座设计倒是聪明，省得你为C13和C19各买一条PDU。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Minisforum N5 Max Review with AMD Ryzen AI Max+ 395</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD Strix Halo正以<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">64GB统一内存+10GbE+5盘NAS</span>的形态，将边缘AI推理与存储融合成一台桌面盒子。这标志着AI Infra正从云端向本地化、高密度、低功耗的"个人算力节点"坍缩。x86阵营用集成显卡+大内存围剿Apple Silicon，但散热与扩展性仍是死穴。企业级用户该警惕：这是玩具还是生产力工具，取决于软件生态是否跟上硬件堆料。</p>
 </a>
-
-<a href="https://semiengineering.com/failure-analysis-hw-enables-system-level-debug-for-3d-ics-google-tu-delft/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Failure Analysis HW Enables System-Level Debug For 3D ICs (Google, TU Delft)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">3D IC堆叠越深，故障定位越像大海捞针。Google和代尔夫特理工这次把失效分析硬件推到系统级调试层面，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">意味着Chiplet互连的"暗病"终于有了解剖刀</span>。没有这套硬件，3D IC的良率爬坡就是盲人摸象。但注意，这只是论文——距离成为商业工具还有十万八千里，别指望明天就能用上。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2608.06398" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2608.07474" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">字节级LLM终于等来专属路由策略。EntropyMoE用熵感知做稀疏专家分配，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">直击tokenizer-free模型计算量失控的命门</span>。这比那些在BPE上修修补补的MoE工作高明一个维度。但注意，熵作为路由信号在长尾语义上可能失灵——别指望它解决所有稀疏路由的顽疾。Agent若要实时推理，这种架构是必争之地。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Flow-by-Flow: Content-Judgment Bypass for Governing AI Output in High-Loss Domains</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">当AI输出速度超过人类认知带宽，人机回环治理就是自欺欺人。这篇论文直指要害：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">高损失领域必须用"内容-判断旁路"取代逐条审核</span>。这是对Agent安全范式的暴力解构——与其让人类当瓶颈，不如预设规则引擎前置拦截。但风险在于：旁路机制本身若被对抗攻击，后果是级联式的。金融、医疗Agent部署前，不读此文等于裸奔。</p>
+</a>
+<a href="https://semiengineering.com/from-hype-to-implementation-building-the-core-pillars-for-ai-in-semiconductors/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">From Hype To Implementation: Building The Core Pillars For AI In Semiconductors</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">芯片厂搞AI最大的敌人不是算法，是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">数据碎片化与治理真空</span>。台积电、三星的产线数据若不能统一喂给模型，再先进的AI也是瞎子。这篇文章戳破了"AI赋能制造"的泡沫——先建数据中台，再谈智能良率提升。半导体行业素来保守，但这次不转型，就会被拥有数据闭环的对手降维打击。别把Hype当战略。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
