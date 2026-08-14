@@ -233,33 +233,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-13 23:35</span>
+                <span class="text-slate-500">2026-08-14 23:15</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力军备竞赛的皇帝新衣：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本
+            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核拆解
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为“推理革命”支付荒谬的溢价。英伟达的财报电话会、OpenAI的发布会，都在兜售一个幻觉：只要堆砌更多H100/H200，AGI的算力饥渴就能被喂饱。华尔街的对冲基金们正用真金白银为这个幻觉买单，而物理定律不会因为PPT的华丽而妥协。
-
-本文基于SemiAnalysis方法论，用硅片面积、焦耳能量和微秒延迟的硬数据，撕开三个被过度美化的谎言：第一，Test-Time Compute不是免费的智能，它是用10倍于训练的单位成本换取边际Token，其功耗账本在FP8精度下会让数据中心电网瞬间崩溃。第二，HBM3e的带宽增长曲线正在撞上TSV穿孔的热密度极限，内存墙将从“瓶颈”恶化为“断崖”，任何软件层面的KV Cache优化都只是给漏水的船舀水。第三，硅光互联被吹捧为救世主，但其pJ/bit的能量效率和封装良率在量产面前是天文数字级的成本黑洞。
-
-本文将用数学推演证明：在100K上下文、并发1024请求的极端负载下，现有架构的NVLink将变成比GPU计算核心更昂贵的拥塞节点。真相是，我们正站在一个由物理定律划定的悬崖边，而整个行业还在加速狂奔。
+            市场正为“推理时代”的宏大叙事支付荒谬溢价。Test-Time Compute被包装成无限智能的钥匙，但每增加一个token的思考，都在以焦耳为单位焚烧HBM带宽。HBM3e的9.2Gbps引脚速率和1.3TB/s带宽，在100K上下文的多智能体并发下，是数学上注定的拥塞点，而非可扩展的资源。硅光互联被吹捧为救世主，但单通道100Gbps的调制器能效（~1.5pJ/bit）和激光器阵列的墙插效率（<15%），在跨die通信的微秒级延迟预算前，只是另一种昂贵的妥协。KV Cache碎片化不是软件问题，是SRAM面积（每GB SRAM成本约$4500）与HBM容量（每GB HBM3e成本约$15）之间三个数量级的成本鸿沟。本报告用物理参数和推演逻辑，拆穿三个谎言：1）Test-Time Compute没有免费午餐，只有线性增长的功耗和延迟；2）HBM带宽是硬天花板，NVLink不是解药；3）硅光互联的能效优势在真实负载下被激光器开销吞噬。真相是：现有架构的边际收益已趋近于零，下一次跃迁需要的是物理层面的重构，而非软件层面的修补。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260813_233507.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260814_231546.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260812_233522.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力泡沫的尸检报告：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-12 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260811_233556.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-11 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260810_232913.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存墙绞肉机：Test-Time Compute 的物理账本，以及硅光、HBM 与 KV Cache 的生死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-10 23:29</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260809_232458.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存绞索：Test-Time Compute、HBM墙与硅光幻象的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-09 23:24</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260813_233507.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力军备竞赛的皇帝新衣：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-13 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260812_233522.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力泡沫的尸检报告：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-12 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260811_233556.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-11 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260810_232913.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存墙绞肉机：Test-Time Compute 的物理账本，以及硅光、HBM 与 KV Cache 的生死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-10 23:29</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -434,22 +432,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/microchip-switchtec-160-lane-pcie-gen6-switch-shown-at-fms-2026-with-xpressconnect-pcie-6-retimer/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/160-bay-nvme-ssd-4u-server-shown-at-fms-2026-supermicro-asg-4116s-nu160r/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Microchip Switchtec 160-Lane PCIe Gen6 Switch Shown at FMS 2026 with XpressConnect PCIe 6 Retimer</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">PCIe Gen6交换机落地，160通道直指超大规模AI集群互连瓶颈。Microchip此举是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">在NVLink霸权外撕开标准化互连的口子</span>。Retimer配套是务实之举，但Gen6信号完整性仍是生死劫——良率与功耗若失控，不过是纸面参数。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">160-bay NVMe SSD 4U Server Shown at FMS 2026 Supermicro ASG-4116S-NU160R</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Supermicro把160块NVMe塞进4U，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">存储密度军备竞赛已进入疯狂阶段</span>。这不仅是硬件堆砌，更是为AI训练数据湖准备的弹药库。单机容量若达PB级，将直接冲击分布式存储架构的性价比逻辑。但散热和功耗是隐形天花板，风冷极限已至，液冷必须标配。此物是超大规模算力集群的血管，没有它，GPU只能饿着肚子空转。</p>
 </a>
 
 <a href="https://arxiv.org/abs/2608.11207" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Dynamic Governance of Multi-LLM Agent Systems for Collaborative Conversational Outcomes</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">多Agent协作的致命伤是目标函数缺失，动态治理机制试图补位。但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用LLM治理LLM是递归死循环</span>，缺乏可证明的收敛性保证。这方向若不能跳出启发式调参的泥潭，永远只是学术玩具。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">多Agent协作的最大谎言是“竞争出真知”。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">没有统一目标函数的对抗只是混沌噪音</span>。这篇论文直指要害：动态治理机制才是多LLM系统落地的生死门。当前Agent各自为政，上下文窗口互相污染，算力浪费惊人。若不能建立可量化的协作协议，多Agent永远停留在demo阶段，无法成为生产力工具。这是从玩具到工具的惊险一跃。</p>
 </a>
 
 <a href="https://semiengineering.com/the-1-megawatt-rack-debate/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The 1-Megawatt Rack Debate</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">1MW机柜之争本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">散热物理极限对算力堆叠的终极审判</span>。液冷已无退路，但架构重构才是正解——把计算搬到数据旁，而非把电力无限灌进机柜。死磕功率密度是工程惰性，不是创新。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">1MW机柜之争本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">算力密度与供电架构的路线对决</span>。无脑堆算力是硅基时代的蛮力思维，48V总线已逼近物理极限，光供电和近存计算才是解药。数据中心设计必须从“机房适配设备”翻转为“设备定义机房”。这场辩论没有中间派，选错阵营将导致数十亿美金沉没。液冷、高压直流、CPO，三选一还是全都要？答案决定下一代基础设施的生死。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
