@@ -234,29 +234,33 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-14 23:15</span>
+                <span class="text-slate-500">2026-08-15 23:14</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核拆解
+            Test-Time Compute 的皇帝新衣：HBM 内存墙、硅光泡沫与 KV Cache 碎片化的物理性死亡
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正为“推理时代”的宏大叙事支付荒谬溢价。Test-Time Compute被包装成无限智能的钥匙，但每增加一个token的思考，都在以焦耳为单位焚烧HBM带宽。HBM3e的9.2Gbps引脚速率和1.3TB/s带宽，在100K上下文的多智能体并发下，是数学上注定的拥塞点，而非可扩展的资源。硅光互联被吹捧为救世主，但单通道100Gbps的调制器能效（~1.5pJ/bit）和激光器阵列的墙插效率（<15%），在跨die通信的微秒级延迟预算前，只是另一种昂贵的妥协。KV Cache碎片化不是软件问题，是SRAM面积（每GB SRAM成本约$4500）与HBM容量（每GB HBM3e成本约$15）之间三个数量级的成本鸿沟。本报告用物理参数和推演逻辑，拆穿三个谎言：1）Test-Time Compute没有免费午餐，只有线性增长的功耗和延迟；2）HBM带宽是硬天花板，NVLink不是解药；3）硅光互联的能效优势在真实负载下被激光器开销吞噬。真相是：现有架构的边际收益已趋近于零，下一次跃迁需要的是物理层面的重构，而非软件层面的修补。
+            市场正在为“推理侧算力”支付荒谬的溢价。英伟达的财报电话会与各路 AI 布道者将 Test-Time Compute 吹捧为“新摩尔定律”，但华尔街的模型里没有物理常数。你们看到的“智能涌现”，在半导体物理层面只是 SRAM 面积与 HBM 带宽的粗暴交换。
+
+本文用三个硬核推演戳破泡沫：第一，在 FP8 精度下，100K 上下文的并发请求将瞬间榨干 80GB HBM3e，导致 NVLink 变成最大的拥塞节点，所谓的“长上下文”只是把延迟从毫秒级拖入秒级的地狱；第二，硅光互联的 pJ/bit 能耗优势在 2D 封装下是伪命题，因为片上光模块的激光器效率与热漂移将吞噬所有收益；第三，KV Cache 的碎片化不是软件问题，而是 HBM 的 Bank 冲突概率在数学上随并发数指数级上升的必然结果。读完本文，你们将明白：当前所有宣称“解决内存墙”的方案，都是在用更贵的晶体管掩盖更烂的架构。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260814_231546.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260815_231443.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260813_233507.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力军备竞赛的皇帝新衣：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-13 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260812_233522.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力泡沫的尸检报告：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-12 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260811_233556.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-11 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260810_232913.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与内存墙绞肉机：Test-Time Compute 的物理账本，以及硅光、HBM 与 KV Cache 的生死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-10 23:29</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260814_231546.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核拆解</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-14 23:15</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260813_233507.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力军备竞赛的皇帝新衣：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-13 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260812_233522.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力泡沫的尸检报告：Test-Time Compute、HBM内存墙与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-12 23:35</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260811_233556.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-11 23:35</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -432,22 +436,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/160-bay-nvme-ssd-4u-server-shown-at-fms-2026-supermicro-asg-4116s-nu160r/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">160-bay NVMe SSD 4U Server Shown at FMS 2026 Supermicro ASG-4116S-NU160R</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Supermicro把160块NVMe塞进4U，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">存储密度军备竞赛已进入疯狂阶段</span>。这不仅是硬件堆砌，更是为AI训练数据湖准备的弹药库。单机容量若达PB级，将直接冲击分布式存储架构的性价比逻辑。但散热和功耗是隐形天花板，风冷极限已至，液冷必须标配。此物是超大规模算力集群的血管，没有它，GPU只能饿着肚子空转。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2608.11207" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Dynamic Governance of Multi-LLM Agent Systems for Collaborative Conversational Outcomes</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">多Agent协作的最大谎言是“竞争出真知”。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">没有统一目标函数的对抗只是混沌噪音</span>。这篇论文直指要害：动态治理机制才是多LLM系统落地的生死门。当前Agent各自为政，上下文窗口互相污染，算力浪费惊人。若不能建立可量化的协作协议，多Agent永远停留在demo阶段，无法成为生产力工具。这是从玩具到工具的惊险一跃。</p>
-</a>
-
 <a href="https://semiengineering.com/the-1-megawatt-rack-debate/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The 1-Megawatt Rack Debate</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">1MW机柜之争本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">算力密度与供电架构的路线对决</span>。无脑堆算力是硅基时代的蛮力思维，48V总线已逼近物理极限，光供电和近存计算才是解药。数据中心设计必须从“机房适配设备”翻转为“设备定义机房”。这场辩论没有中间派，选错阵营将导致数十亿美金沉没。液冷、高压直流、CPO，三选一还是全都要？答案决定下一代基础设施的生死。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">1MW机柜是算力暴政的遮羞布。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">堆密度解决不了热力学死刑</span>，液冷、供电、机架承重全在给摩尔定律的残骸陪葬。真正该吵的是chiplet互连和光互连的架构革命，而不是在配电柜上绣花。这辩论本身就是行业黔驴技穷的招供。</p>
+</a>
+
+<a href="https://arxiv.org/abs/2608.12325" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Position: Reasoning is a Learnable Rule-Based Process</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">把推理降维成规则学习，是OpenAI o1路线图被逆向工程后的理论补丁。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这等于承认LLM的推理本质是搜索+模式匹配</span>，而非真正的逻辑涌现。对Agent而言是利空——若推理可被规则穷举，那么Agent的"规划"不过是更长的if-else链，scaling law的圣杯又碎了一块。</p>
+</a>
+
+<a href="https://semiengineering.com/chip-industry-week-in-review-151/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">CPO系统架构、2D晶体管界面、可编程AI忆阻器——三个方向同时冒头，说明硅基红利彻底见底。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Lam和ASE扩产是给旧时代续命</span>，真正的胜负手在2D材料和光互连的良率突破。美国半导体还在用扩产掩盖创新乏力，这周报就是行业焦虑的体检单。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
