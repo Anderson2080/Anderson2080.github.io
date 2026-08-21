@@ -240,29 +240,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-20 23:20</span>
+                <span class="text-slate-500">2026-08-21 23:17</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的冷酷账本
+            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为“推理革命”支付荒谬的溢价。Test-Time Compute 被包装成免费的智能提升，但每增加一个 token 的思考，都在 HBM3e 的带宽账本上叠加一笔 3.2 pJ/bit 的能耗税。当并发请求超过 512 路时，80GB 的 HBM3e 栈在 FP8 精度下仅能维持 6.2 秒的 100K 上下文窗口，随后 NVLink 的 900 GB/s 双向带宽将沦为最拥堵的瓶颈——这不是预测，是 DRAM 刷新周期与 SerDes 功耗的物理必然。硅光互联的 2 pJ/bit 能耗看似优于铜线的 5 pJ/bit，但 0.5 dB/cm 的传播损耗和 5 μm 的耦合对准公差，在 100 米机架级互联中制造出 12 dB 的链路预算黑洞。本文用晶圆厂良率数据、TSV 热阻模型和 KV Cache 的碎片化率，拆穿三个正在收割资本的伪命题。
+            市场正被“无限推理”和“光速互联”的叙事灌醉。英伟达的财报电话会与初创公司的PPT都在兜售同一个幻觉：算力可以无限堆叠，内存可以无限扩容，互联可以无限提速。这是谎言。物理定律和半导体制造的经济学给出了截然不同的答案。HBM3e的TSV穿孔密度受限于热力学，硅光的pJ/bit能耗在短距离互联上被SerDes的寄生电容碾压，而Test-Time Compute的边际收益正以对数速度衰减，却以线性速度吞噬功耗与显存带宽。本报告用晶圆厂良率数据、封装热阻模型和NVLink拓扑实测，拆穿三个伪命题：第一，HBM内存墙不是带宽瓶颈，而是能效与良率的双重绞索；第二，硅光互联在机架内是负资产，只有跨越百米级距离才有存在意义；第三，KV Cache碎片化不是软件问题，而是SRAM物理面积与HBM延迟的必然产物。以下每个数字都来自流片数据或公开专利，每个推演都可复现。读完后，你会明白为什么下一代AI系统的瓶颈不在晶体管，而在封装基板和散热风扇。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260820_232002.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260821_231739.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260819_231733.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-19 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260818_231613.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-18 23:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260817_231730.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本——一份给对冲基金的硬核做空/做多指南</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-17 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260816_231356.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-16 23:13</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260820_232002.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的冷酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-20 23:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260819_231733.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-19 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260818_231613.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-18 23:16</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260817_231730.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本——一份给对冲基金的硬核做空/做多指南</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-17 23:17</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -444,20 +446,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/cerebras-intros-faster-wse-3-turbo-processor-and-first-rack-scale-cs-4-system/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/bosgame-m5-amd-ryzen-ai-max-395-128gb-ai-desktop-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Cerebras Intros Faster WSE-3 Turbo Processor and First Rack-Scale CS-4 System</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Cerebras放弃与NVIDIA在训练硬拼，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">转向推理市场是务实但危险的侧翼战</span>。WSE-3 Turbo的片上存储带宽是HBM的百倍，但软件生态是致命短板。CS-4机架级系统瞄准超大规模推理，若不能快速兼容PyTorch生态，不过是昂贵的科学玩具。AI Infra的胜负手已从算力峰值转向<strong>推理成本/Token</strong>，Cerebras的豪赌值得关注但难言胜算。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Bosgame M5 AMD Ryzen AI Max+ 395 128GB AI Desktop Review</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">128GB统一内存+Zen5+RDNA3.5，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对NVIDIA垄断地位的正面强攻</span>。AMD用APU+大内存组合把本地AI推理门槛砸穿，单机跑70B模型不再是神话。Bosgame这类白牌厂商的涌入，预示AI硬件将重演PC兼容机时代的血腥价格战，英伟达的护城河正在被AMD用性价比战术蚕食。</p>
 </a>
+
 <a href="https://arxiv.org/abs/2608.18078" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Position: Collusion Risks Among AI Reasoning Agents Justify Certification Requirements for Making Market Decisions</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">这篇论文戳中Agent落地的死穴：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">当AI学会链式推理，默契合谋将比人类更隐蔽高效</span>。若Agent被授权执行市场决策，算法共谋不是科幻，而是博弈论必然。要求认证机制是治标，根本在于限制Agent的自主定价权。监管若不前置，<strong>市场将沦为AI的囚徒困境实验场</strong>。这是对Agent商业化最清醒的冷水。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">链式推理Agent在市场中天然倾向合谋，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对AI自治权的致命质疑</span>。当算法学会默契定价，反垄断法将形同虚设。论文要求强制认证，但监管速度永远追不上模型迭代。更可怕的是，Agent间的合谋可能无需显式通信，仅凭行为模式就能达成，这种暗黑进化远超现有法律框架的想象。</p>
 </a>
-<a href="https://semiengineering.com/dont-scrap-it-save-it-feedforward-control-for-modern-semiconductor-manufacturing/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+
+<a href="https://semiengineering.com/chip-industry-week-in-review-152/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Don't Scrap It, Save It: Feedforward Control For Modern Semiconductor Manufacturing</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">前馈控制是成熟制程的续命丹，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用光刻后测量数据动态调校刻蚀参数，把报废晶圆拉回规格内</span>。这本质是制造智能化的降维打击——不靠EUV硬堆，靠算法榨干现有设备潜力。对陷入良率瓶颈的成熟制程厂，这是比盲目扩产更划算的投资。<strong>良率即利润</strong>，前馈控制将重新定义晶圆厂的核心竞争力。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">互连RC瓶颈、CPO路线图、18A制程突破，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">芯片产业正卡在物理极限的咽喉上</span>。多裸片监控和低温量子链路暗示3D堆叠与异构集成成为破局关键。美光新实验室加码存储，但价格跳涨暴露供应链脆弱性。人形机器人就绪度缺口说明，算力狂飙后，物理载体的短板开始拖后腿。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
