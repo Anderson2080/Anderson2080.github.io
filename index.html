@@ -242,29 +242,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-22 23:15</span>
+                <span class="text-slate-500">2026-08-23 23:15</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血清算
+            系统升级中
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为一个伪命题狂欢。Test-Time Compute被吹捧为“推理革命”，但华尔街没有告诉你：在FP8精度下，一个100K上下文的并发请求，KV Cache的显存占用是恐怖的**60GB**。你引以为傲的80GB HBM3e，在服务端推理场景下，留给权重和激活值的空间仅剩**20GB**。这不是容量问题，这是带宽的死刑判决——HBM3e的峰值带宽**6.4TB/s**，在KV Cache的随机读取模式下，有效带宽会暴跌至**1.2TB/s**，因为页缺失和DRAM Bank冲突吞噬了**80%**的吞吐。NVLink 4.0的**900GB/s**双向带宽，在跨节点张量并行时，将成为比计算更昂贵的资源，延迟增加**3.2微秒**，而GPU核心的数学运算只需**0.1微秒**。硅光互联？Chiplet间的SerDes功耗高达**5pJ/bit**，而光模块的PAM4调制解调能耗是**2.5pJ/bit**，加上激光器阵列的**30%**电光转换效率，你节省的延迟被功耗账本完全吞噬。本文用**TFLOPS/Watt**、**pJ/bit**和**微秒级延迟**的硬数据，拆穿“算力无限”的谎言，告诉你为什么下一代架构必须从**SRAM面积**和**光交换拓扑**上重新发明。
+            <p>算力重组中...</p>
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260822_231502.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260823_231515.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260821_231739.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-21 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260820_232002.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的冷酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-20 23:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260819_231733.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-19 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260818_231613.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-18 23:16</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260822_231502.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-22 23:15</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260821_231739.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-21 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260820_232002.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM 内存墙与硅光互联的冷酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-20 23:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260819_231733.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-19 23:17</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -448,20 +450,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/bosgame-m5-amd-ryzen-ai-max-395-128gb-ai-desktop-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/d-matrix-raptor-3d-dram-accelerator-for-generative-inference-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Bosgame M5 AMD Ryzen AI Max+ 395 128GB AI Desktop Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">128GB统一内存被干到白菜价，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本地AI推理的显存霸权正在崩塌</span>。AMD用LPDDR5X堆容量，英伟达还在靠HBM收智商税。这机器跑70B模型就是慢速拖拉机，但价格屠夫已举刀，PC端AI Infra的性价比拐点提前到来。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">d-Matrix Raptor 3D-DRAM Accelerator for Generative Inference at Hot Chips 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HBM霸权终结者现身。d-Matrix用3D-DRAM堆叠逻辑，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">彻底绕开HBM的带宽与成本死穴</span>，专攻推理场景。这不仅是架构创新，更是对SK海力士、三星的釜底抽薪。若量产落地，HBM的卖方市场神话将崩塌，AI算力成本曲线被暴力拉平。</p>
 </a>
-<a href="https://semiengineering.com/chip-industry-week-in-review-152/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+
+<a href="https://www.servethehome.com/sk-hynix-hbm-packaging-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">18A赢单、CPO路线图、互连RC瓶颈三线交织，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">后摩尔时代拼的不是晶体管密度，而是封装与互连的暗战</span>。美光新实验室瞄准HBM4，量子低温链路还在实验室爬行。人形机器人缺口暴露，芯片厂跨界捞金，这周信息量炸裂但无颠覆性突破。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">SK hynix HBM Packaging at Hot Chips 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">SK海力士在Hot Chips上大吐苦水，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">HBM良率与散热瓶颈已逼近物理极限</span>。这暴露了HBM赛道的致命伤：堆叠层数越高，热密度越失控。英伟达的B200系列将被迫在功耗与性能间走钢丝。HBM的暴利时代即将撞上工程物理的天花板，替代方案窗口已开。</p>
 </a>
+
 <a href="https://semiengineering.com/dont-scrap-it-save-it-feedforward-control-for-modern-semiconductor-manufacturing/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Don’t Scrap It, Save It: Feedforward Control For Modern Semiconductor Manufacturing</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">前馈控制不是新词，但用在光刻到刻蚀的跨工序补偿，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是把制造从“事后质检”推向“实时自愈”</span>。每片晶圆单独调参，良率提升的算力成本被AI吃下。这是智能制造Agent在物理世界的终极落地，比任何聊天机器人都值钱。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Don't Scrap It, Save It: Feedforward Control For Modern Semiconductor Manufacturing</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">晶圆厂终于学会"将错就错"。前馈控制让光刻后的偏差直接指导刻蚀补偿，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">废片率大降意味着每片晶圆都是钱</span>。这是智能制造Agent在半导体制造中最务实的落地——不玩虚的AI大模型，直接啃工艺控制的硬骨头。台积电、三星若不跟进，成本劣势将致命。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
