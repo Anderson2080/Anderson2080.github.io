@@ -246,33 +246,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-27 04:11</span>
+                <span class="text-slate-500">2026-08-28 06:27</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            千亿参数推理的死亡行军：Test-Time Compute、HBM物理墙与硅光幻影——一份写给对冲基金的算力清算报告
+            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷酷账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正在为“推理爆发”支付荒谬的溢价。卖方分析师高喊“Test-Time Compute 将重估一切”，却对底层物理账本一无所知。真相是：在 FP8 精度下，一个 175B 参数的 MoE 模型，单次生成 token 的激活权重搬运量高达 350MB。若并发 10K 请求，HBM3e 的 6.4TB/s 带宽将在 0.55 毫秒内被榨干，随后整个系统沦为 NVLink 的囚徒——因为 NVLink 4.0 的 900GB/s 双向带宽，在跨 8 卡张量并行时，每 token 的通信延迟将突破 40 微秒，直接吞噬掉 75% 的算力利用率。
-
-更残酷的物理事实是：HBM3e 的堆叠层数已触及 12-Hi 的 TSV 穿孔热密度极限——每平方毫米 1.2W 的热流密度，让 1.6TB/s 的接口速度成为散热成本的囚徒。而 KV Cache 的碎片化，在 100K 上下文窗口下，每请求将产生 1.2GB 的动态显存占用，分配器碎片率超过 30%，这意味着 80GB 的 A100 实际可用容量仅为 56GB——你为算力支付的每一美元，有 30% 在物理层被浪费。
-
-本文用 4 组数学推演、3 个架构解剖，证明一个结论：当前所有宣称“解决内存墙”的硅光方案，其 pJ/bit 能耗比在 2Tbps 速率下仍比铜缆高 40%，且插入损耗 0.5dB/cm 的物理极限，让 3 米以上的光互联成为一场商业灾难。市场炒作的是未来，我们计算的是现在——而现在的账本，是亏损。
+            市场正被“推理算力无限扩张”的叙事灌醉。英伟达的财报电话会、各大云厂商的路线图，都在暗示Test-Time Compute是下一座金矿。但翻开物理账本，真相极其刺眼：HBM3e的堆叠良率在TSV穿孔热密度面前已逼近极限，单位bit的搬运能耗（pJ/bit）正在吞噬每一分算力红利。当上下文窗口冲向100K，KV Cache的碎片化会让HBM的有效带宽利用率暴跌至理论值的40%以下，NVLink不再是互联，而是拥塞的收费站。硅光互联被吹捧为救世主，但微秒级延迟与pJ/bit的能耗账本，在现有CMOS工艺下，连实验室的PPT都跑不通。本文用TFLOPS、GB/s、mm²和微秒延迟，拆穿三个谎言：第一，Test-Time Compute的边际收益正在被内存墙反向吞噬；第二，架构创新的宣传远快于物理实现；第三，华尔街为“未来”支付的溢价，实际是在为“过去”的物理定律买单。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260827_041118.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260828_062748.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260825_231948.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的死亡交叉点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-25 23:19</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260824_231732.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-24 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260823_231515.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-23 23:15</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260822_231502.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷血清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-22 23:15</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260827_041118.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">千亿参数推理的死亡行军：Test-Time Compute、HBM物理墙与硅光幻影——一份写给对冲基金的算力清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-27 04:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260825_231948.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的死亡交叉点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-25 23:19</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260824_231732.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-24 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260823_231515.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-23 23:15</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -460,22 +458,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/apple-mac-studio-m5-ultra-and-mac-mini-m6-launched/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/oxmiq-labs-hbf-in-ai-compute-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Apple Mac Studio M5 Ultra and Mac Mini M6 Launched</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">苹果用统一内存绑架本地AI开发者，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">M5 Ultra本质是带宽生意的暴力升级</span>。Mac Mini M6下探价格，实为抢占边缘推理入口。但CUDA生态壁垒未破，苹果这波攻势在专业算力市场仍是隔靴搔痒，开发者买账与否存疑。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Oxmiq Labs HBF in AI Compute at Hot Chips 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HBF炒作正酣，但Oxmiq这波分析戳破泡沫：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">HBF不是HBM的替代品，而是互补品</span>。其带宽密度优势仅在特定内存壁场景成立，且生态位极其狭窄。别被"颠覆性"叙事忽悠，HBF的良率与生态成熟度至少落后HBM三代。真正的赢家是能精准切分工作负载、混搭内存层次架构的玩家，而非押注单一技术的赌徒。</p>
 </a>
 
-<a href="https://www.servethehome.com/openai-jalapeno-asic-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/issues-stack-up-with-more-hbm-layers/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">OpenAI Jalapeno Custom AI ASIC at Hot Chips 2026</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">OpenAI自研ASIC从PPT到流片速度惊人，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Jalapeno对标NVIDIA的底气不在算力，而在绕开台积电CoWoS产能瓶颈</span>。然软件栈瘸腿是致命伤，若无法兼容PyTorch生态，这芯片就是昂贵的电子垃圾。微软谷歌的前车之鉴，OpenAI未必能逃过。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Issues Stack Up With More HBM Layers</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HBM堆叠层数撞上物理极限：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">TSV面积膨胀与散热瓶颈正在扼杀摩尔定律式的堆叠红利</span>。16层以上每加一层，良率损失呈指数级恶化，而功耗密度已逼近封装材料的物理熔点。行业必须转向混合键合与2.5D/3D异构集成，但这不是渐进改良，而是制造范式的彻底重构。谁先突破热管理，谁就锁定下一代AI加速器的王座。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2608.23569" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/from-spec-to-formal-properties/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">NL2SQL刷榜时代终结。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Spider 89%准确率在Oracle方言迁移下崩盘，暴露大模型只会背题不会推理</span>。ESQ-Bench戳破行业泡沫，企业级Agent落地最大瓶颈不是模型智商，而是跨数据库方言的语义一致性。这基准将成Agent从demo到生产的试金石。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">From Spec To Formal Properties</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">LLM生成formal properties？方向对了，但现实骨感。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">LLM擅长将模糊需求转化为可验证断言，却无法保证完备性</span>——漏掉的边界条件恰恰是芯片bug的温床。这工具只能当资深验证工程师的副驾，不能当自动驾驶。真正的突破在于LLM与符号引擎的闭环迭代，而非单次生成。别指望AI替你兜底，它只是放大你的思考盲区。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
