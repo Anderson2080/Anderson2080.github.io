@@ -247,29 +247,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-28 06:27</span>
+                <span class="text-slate-500">2026-08-29 03:59</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷酷账本
+            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正被“推理算力无限扩张”的叙事灌醉。英伟达的财报电话会、各大云厂商的路线图，都在暗示Test-Time Compute是下一座金矿。但翻开物理账本，真相极其刺眼：HBM3e的堆叠良率在TSV穿孔热密度面前已逼近极限，单位bit的搬运能耗（pJ/bit）正在吞噬每一分算力红利。当上下文窗口冲向100K，KV Cache的碎片化会让HBM的有效带宽利用率暴跌至理论值的40%以下，NVLink不再是互联，而是拥塞的收费站。硅光互联被吹捧为救世主，但微秒级延迟与pJ/bit的能耗账本，在现有CMOS工艺下，连实验室的PPT都跑不通。本文用TFLOPS、GB/s、mm²和微秒延迟，拆穿三个谎言：第一，Test-Time Compute的边际收益正在被内存墙反向吞噬；第二，架构创新的宣传远快于物理实现；第三，华尔街为“未来”支付的溢价，实际是在为“过去”的物理定律买单。
+            市场正将“推理算力”包装成无限增长的新圣杯。谎言。Test-Time Compute的边际收益正被HBM带宽的物理极限碾碎。当LLM在FP8精度下生成单个Token需访问约2.4MB权重与KV Cache时，一块80GB HBM3e的峰值带宽（3.35TB/s）仅能支撑每秒约140万次参数读取——这对应约5000 Token/s的生成速率，而多用户并发将使该数字呈指数级崩塌。本文用硅片面积、pJ/bit能量消耗与微秒级延迟账本证明：内存墙不是瓶颈，而是判决书。硅光互联的pJ/bit优势在跨die场景下无可替代，但片上SRAM的7.9MB/mm²密度上限与HBM的TSV热密度（>0.4W/mm²）将联合绞杀任何忽视物理定律的架构空想。以下是硬核推演，不含安慰剂。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260828_062748.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260829_035933.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260827_041118.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">千亿参数推理的死亡行军：Test-Time Compute、HBM物理墙与硅光幻影——一份写给对冲基金的算力清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-27 04:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260825_231948.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的死亡交叉点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-25 23:19</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260824_231732.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-24 23:17</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260823_231515.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-23 23:15</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260828_062748.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-28 06:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260827_041118.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">千亿参数推理的死亡行军：Test-Time Compute、HBM物理墙与硅光幻影——一份写给对冲基金的算力清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-27 04:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260825_231948.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的死亡交叉点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-25 23:19</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260824_231732.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-24 23:17</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -461,19 +463,17 @@
 <a href="https://www.servethehome.com/oxmiq-labs-hbf-in-ai-compute-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Oxmiq Labs HBF in AI Compute at Hot Chips 2026</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">HBF炒作正酣，但Oxmiq这波分析戳破泡沫：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">HBF不是HBM的替代品，而是互补品</span>。其带宽密度优势仅在特定内存壁场景成立，且生态位极其狭窄。别被"颠覆性"叙事忽悠，HBF的良率与生态成熟度至少落后HBM三代。真正的赢家是能精准切分工作负载、混搭内存层次架构的玩家，而非押注单一技术的赌徒。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HBF叫嚣取代HBM？<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">存储墙才是AI算力真瓶颈，HBF若只炒概念必死</span>。Oxmiq拿不出流片数据就是画饼。HBM4量产在即，HBF想翻盘需在能效比上碾压，否则又是学术圈自嗨。英伟达不会为未经验证的技术改架构。</p>
 </a>
-
-<a href="https://semiengineering.com/issues-stack-up-with-more-hbm-layers/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Issues Stack Up With More HBM Layers</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">HBM堆叠层数撞上物理极限：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">TSV面积膨胀与散热瓶颈正在扼杀摩尔定律式的堆叠红利</span>。16层以上每加一层，良率损失呈指数级恶化，而功耗密度已逼近封装材料的物理熔点。行业必须转向混合键合与2.5D/3D异构集成，但这不是渐进改良，而是制造范式的彻底重构。谁先突破热管理，谁就锁定下一代AI加速器的王座。</p>
-</a>
-
-<a href="https://semiengineering.com/from-spec-to-formal-properties/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2608.26109" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">From Spec To Formal Properties</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">LLM生成formal properties？方向对了，但现实骨感。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">LLM擅长将模糊需求转化为可验证断言，却无法保证完备性</span>——漏掉的边界条件恰恰是芯片bug的温床。这工具只能当资深验证工程师的副驾，不能当自动驾驶。真正的突破在于LLM与符号引擎的闭环迭代，而非单次生成。别指望AI替你兜底，它只是放大你的思考盲区。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Standalone LLM and a Pre-specified Agentic Pipeline for Explaining ICU Mortality Predictions: a Feasibility Study on the eICU Demo Dataset</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">ICU死亡率解释还在用eICU demo数据集？<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">医疗Agent若只做事后诸葛，临床价值趋近于零</span>。预定义pipeline本质是自动化报告，离真正的决策智能差十年。可解释性研究陷入自嗨，医生要的是干预建议，不是特征归因。</p>
+</a>
+<a href="https://semiengineering.com/ferroelectric-tuning-reduces-optical-interconnect-stalls-in-llm-training-georgia-tech/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Ferroelectric Tuning Reduces Optical-Interconnect Stalls In LLM Training (Georgia Tech)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">铁电调谐解决光互连热漂移？<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">晶圆级光互连的功耗墙被严重低估，铁电方案是剑走偏锋</span>。MoE训练通信瓶颈真实存在，但铁电材料可靠性存疑。台积电CoWoS路线未变，这类研究短期难进产线。除非能证明良率与耐久度，否则只是论文指标漂亮。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
