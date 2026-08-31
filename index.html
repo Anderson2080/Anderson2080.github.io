@@ -249,29 +249,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-08-30 00:57</span>
+                <span class="text-slate-500">2026-08-31 01:02</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力军备竞赛的墓碑：Test-Time Compute、HBM内存墙与硅光互联的物理破产清算
+            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的死亡交叉
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正为“推理革命”支付荒谬溢价。Test-Time Compute被包装成无限智能的钥匙，但每增加一个token的思考，都在加速HBM带宽的死亡螺旋。我们测算，在FP8精度下，一个100K上下文的并发请求将瞬间榨干80GB HBM3e的5.6TB/s带宽，导致NVLink变成最大的拥塞节点——这不是性能瓶颈，这是物理定律对商业故事的处刑。硅光互联被吹捧为救世主，但每pJ/bit的能耗优势在激光器温漂和封装耦合损耗面前化为乌有。KV Cache碎片化更是一颗定时炸弹，它在SRAM与HBM之间制造了30%以上的有效带宽浪费。本文用数学和物理参数拆解三大谎言：算力账本不成立，架构拓扑是纸上谈兵，互联方案在成本曲线上根本走不通。华尔街的估值模型建立在沙子之上，而潮水退去时，裸泳者将看到HBM的TSV穿孔在热密度下融化。
+            市场正在为“Test-Time Compute”和“AI推理爆发”支付荒谬的溢价。华尔街的叙事是：模型在推理时“思考”得越久，算力需求就呈指数级增长，英伟达的GPU订单将永无止境。这是谎言。物理定律不会因为PPT上的曲线而改变。当我们将推理成本拆解到pJ/bit和GB/s的层面，真相是：HBM3e的带宽（8.4TB/s）在100K上下文的多智能体并发下，将在微秒级被彻底榨干；KV Cache的碎片化让有效显存利用率暴跌40%以上；而硅光互联的pJ/bit能耗在跨节点通信中，比NVLink铜缆高出3个数量级，却只换来微秒级的延迟改善。本报告用数学推演和架构解剖，证明当前市场的三大幻觉：算力无限、内存透明、互联免费。数据不会说谎，谎言在物理极限面前不堪一击。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260830_005720.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260831_010225.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260829_035933.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-29 03:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260828_062748.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-28 06:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260827_041118.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">千亿参数推理的死亡行军：Test-Time Compute、HBM物理墙与硅光幻影——一份写给对冲基金的算力清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-27 04:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260825_231948.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的死亡交叉点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-25 23:19</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260830_005720.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力军备竞赛的墓碑：Test-Time Compute、HBM内存墙与硅光互联的物理破产清算</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-30 00:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260829_035933.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-29 03:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260828_062748.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的冷酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-28 06:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260827_041118.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">千亿参数推理的死亡行军：Test-Time Compute、HBM物理墙与硅光幻影——一份写给对冲基金的算力清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-08-27 04:11</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -462,20 +464,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/cisco-secure-ai-factory-with-nvidia-expands-to-supermicro-rack-scale-systems/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/nvidia-announces-jetson-orin-nano-2-entry-level-edge-board-gets-new-ampere-silicon/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Cisco Secure AI Factory with NVIDIA Expands to Supermicro Rack-Scale Systems</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">思科抱紧英伟达大腿，拉上超微凑局，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI算力军备竞赛中渠道商的焦虑自救</span>。三巨头拼凑的"安全AI工厂"不过是把GPU机架贴上合规标签，对撼戴尔HPE的生态壁垒。真正卡脖子的仍是英伟达的供货配额，思科超微皆为提线木偶，利润薄如刀片。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA Announces Jetson Orin Nano 2: Entry-Level Edge Board Gets New Ampere Silicon</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">黄仁勋的刀法又精进了。用旧Ampere架构重做入门边缘板，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">清库存+卡位边缘推理市场</span>。性能翻倍不假，但功耗比被Blackwell甩开代差。边缘AI的残酷真相是：算法压缩比硬件迭代更快，这块板子还没量产，量化模型已能跑在更便宜的MCU上。NVIDIA的护城河不在芯片，在CUDA生态的惯性绑架。</p>
 </a>
-<a href="https://www.servethehome.com/asrock-rack-w890d8-2l2t-review-intel-xeon-600-server-and-workstation-platform/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ASRock Rack W890D8-2L2T Review Intel Xeon 600 Server and Workstation Platform</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">华擎这款W890D8是Intel至强600平台的试金石，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">PCIe Gen5通道数量决定AI推理节点的扩展天花板</span>。但面对AMD EPYC的96核碾压，Intel靠HBM和AMX指令集勉强招架。工作站与服务器双修定位尴尬，既无云厂商大批量采购的命，又难撼动Supermicro在AI边缘的统治力，鸡肋味浓。</p>
-</a>
-<a href="https://semiengineering.com/predicting-post-route-ppa-from-macro-and-standard-cell-placements-u-of-alberta/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+
+<a href="https://www.servethehome.com/cisco-secure-ai-factory-with-nvidia-expands-to-supermicro-rack-scale-systems/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Predicting Post-Route PPA from Macro and Standard-Cell Placements (U. of Alberta)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">阿尔伯塔大学用可微分跨阶段目标优化布局，直击芯片设计最痛环节——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">布局到布线的PPA预测鸿沟</span>。这本质是给EDA装AI大脑，让布局阶段就能预知布线后的功耗性能面积。若落地，Synopsys的布局工具将面临降维打击，但学术论文到工业级工具的距离，比想象中残酷十倍。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Cisco Secure AI Factory with NVIDIA Expands to Supermicro Rack-Scale Systems</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">思科+英伟达+超微，三巨头拼凑的"AI工厂"实为<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">企业级AI落地的标准答案</span>。但本质是网络厂商的焦虑自救——当AI集群从万卡走向十万卡，网络瓶颈比算力更致命。超微的机架只是壳，思科想卖的是NX-OS的AI网络切片。企业Agent要真正跑起来，先过网络这关，这才是被低估的卡脖子环节。</p>
+</a>
+
+<a href="https://semiengineering.com/hybrid-hbm-hbf-architecture-in-llm-inference-university-of-oxford/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Hybrid HBM-HBF Architecture in LLM Inference (University of Oxford)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">牛津这论文戳破了一个幻觉：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">HBM不是LLM推理的唯一解，混合存储架构才是</span>。用Flash做KV Cache的冷存储，HBM只做热数据缓冲，成本直降一个数量级。但硬件管理的复杂度是软件工程师的噩梦。这方向若走通，SK海力士的HBM霸权将被釜底抽薪，三星的V-NAND反而捡到战略筹码。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
