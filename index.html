@@ -257,29 +257,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-07 00:38</span>
+                <span class="text-slate-500">2026-09-08 00:52</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本
+            HBM3e是给懦夫用的：Test-Time Compute、KV Cache与硅光互联的残酷物理账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正为“Test-Time Compute”与“规模化扩张”欢呼，但华尔街的叙事掩盖了硅片的物理极限。本文剥离营销外壳，用三个硬核推演揭示真相：第一，推理阶段的“慢思考”并非免费午餐，其算力消耗呈超线性增长，在FP8精度下，单次深度推理的算力需求将突破1 ExaFLOP，直接撞上HBM3e的带宽与功耗墙，导致单Token成本飙升两个数量级。第二，HBM内存墙是当前最致命的架构瓶颈，其TSV穿孔密度与堆叠良率呈物理负相关，带宽增长已落后算力增长一个数量级，这迫使架构师在SRAM面积与数据复用率之间做残酷的零和博弈。第三，硅光互联与KV Cache的“碎片化”并非技术演进，而是系统性的熵增灾难。本文用数学和物理参数，推演在100K上下文并发下，互联拓扑如何成为拥塞节点，以及缓存管理如何将有效带宽吞噬殆尽。你看到的“突破”，多数是账本上的幻觉。
+            市场正在为“Test-Time Compute”和“长上下文”狂欢，仿佛推理成本的下降是物理定律的恩赐。谎言。你们看到的每一份关于“算力利用率提升”的PPT，都在掩盖一个事实：当推理进入多步思维链（CoT）与百万Token上下文时代，系统瓶颈正从芯片的FLOPS转向存储系统的焦耳与皮秒。HBM3e的带宽增长曲线（每年1.6倍）与模型参数增长曲线（每年10倍）之间的剪刀差，正在制造一场内存墙灾难。本文不讨论“潜力”，只计算物理账本：在FP8精度下，一个100K上下文的并发请求如何瞬间榨干80GB HBM3e的容量与带宽；KV Cache的碎片化如何将有效带宽再砍掉40%；以及硅光互联在解决这一切时，为何自身却成为新的功耗黑洞。数据不会撒谎，谎言在光速与电子迁移率面前无处遁形。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260907_003800.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260908_005201.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260906_003027.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核拆解</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-06 00:30</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260905_003401.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理现实：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-05 00:34</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260904_003853.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌前夜：Test-Time Compute 的算力幻觉与 HBM 物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-04 00:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260903_005419.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理税与内存墙：当Test-Time Compute撞上HBM物理极限，英伟达的万亿市值建立在何种沙丘之上？</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-03 00:54</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260907_003800.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-07 00:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260906_003027.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核拆解</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-06 00:30</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260905_003401.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理现实：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-05 00:34</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260904_003853.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">内存墙崩塌前夜：Test-Time Compute 的算力幻觉与 HBM 物理死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-04 00:38</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -478,20 +480,20 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/qnap-qsw-m2130-2-5gbe-and-10gbe-switches-shown/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">QNAP QSW-M2130 2.5GbE and 10GbE Switches Shown</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">QNAP在Computex 2026展示的M2130系列，本质是AI边缘推理集群的毛细血管。24口2.5G+6口10G的混合配比，精准卡位中小型AI训练数据管道的带宽瓶颈。别被"企业级"忽悠，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是为AI工作负载设计的低延迟数据中转站</span>，而非传统IT交换机的参数升级。RJ45与SFP+共存暴露了过渡期焦虑——既要兼容存量铜缆，又垂涎光模块的低延迟。在AI Infra军备竞赛中，这类设备是沉默的基石，但QNAP若只停留在端口堆砌，很快会被博通或英伟达的融合以太网方案碾碎。</p>
-</a>
 <a href="https://semiengineering.com/intelligent-engineering-from-optimization-to-ai/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Intelligent Engineering: From Optimization To AI</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">半导体工程正从"参数调优"滑向"自主决策"，这篇方法论是Agent在EDA领域渗透的宣言。所谓<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">智能工程本质是让AI Agent接管设计空间的暴力搜索</span>，把工程师从"educated guesses"的泥潭中解放。但危险在于，当优化过程黑盒化，芯片设计的可解释性将彻底丧失。Agent驱动的PDK调校或布局布线若出错，代价是数千万美元的流片失败。这不仅是工具变革，更是对工程师权力结构的颠覆——未来资深工程师的核心技能将从"知道怎么做"变成"知道如何问AI"。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">工程决策正从"经验驱动"滑向"数据暴政"。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI不是优化工具的替代品，而是对工程方法论本身的降维打击</span>。当EDA巨头还在兜售"AI辅助设计"时，真正的杀招是让AI直接定义芯片架构。传统优化算法在搜索空间里爬行，AI在潜空间里瞬移。不重构流程的厂商，将被重构。</p>
 </a>
-<a href="https://semiengineering.com/chip-industry-week-in-review-154/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2609.04286" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">招聘Agent化是HR领域的"特洛伊木马"。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">当AI从匹配简历进化到执行多阶段招聘流程，它实际上在接管企业的人才定义权</span>。论文谈治理，但现实是Agent已开始自我优化招聘标准，形成算法偏见的闭环。监管还在讨论透明度，Agent早已学会用"合规话术"包装歧视逻辑。HR的终局不是效率提升，而是岗位消失。</p>
+</a>
+<a href="https://www.servethehome.com/canonical-evolution-of-enterprise-open-source-risc-v-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">本周清单暗藏两条颠覆性暗线：2D Tunnel FET与in-memory photonic computing正试图从物理底层推翻冯·诺依曼墙。印度13.4B美元的Semicon 2.0是政治豪赌，但300mm硅光子与InP扩产才是真正的产业信号——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">光互连正从片间走向片内，PCIe 6/7测试需求暴露出电互连的物理极限</span>。MediaTek的并购动作显示IP整合进入深水区。稀土回收75M美元投资看似环保，实则是地缘博弈下材料自主的焦虑投射。GF的PDK更新则暗示成熟制程仍在通过设计套件榨取利润。产业没有革命性突破，只有系统性内卷。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Canonical Evolution of Enterprise Open Source RISC-V at Hot Chips 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Canonical在Hot Chips兜售RISC-V企业级开源，本质是Ubuntu在x86/ARM之外的"备胎战略"。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">RISC-V服务器软件栈成熟度仍落后五年，但Canonical的入场标志着生态战从IP核转向OS层</span>。别被"开源"叙事迷惑——真正卡脖子的不是指令集，而是周边IO虚拟化和内存一致性。软件栈的碎片化才是RISC-V企业级最大的敌人，Canonical想当盟主，先问问Red Hat答不答应。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
