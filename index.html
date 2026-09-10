@@ -259,29 +259,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-09 00:58</span>
+                <span class="text-slate-500">2026-09-10 00:45</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            Test-Time Compute 的皇帝新衣：当 HBM 内存墙、硅光延迟与 KV Cache 熵增撕碎 100K 上下文的经济学幻象
+            算力绞肉机：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何肢解Transformer推理的物理极限
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场正将 Test-Time Compute 吹捧为 AGI 的万能钥匙，却对底层物理账本视而不见。华尔街的估值模型建立在“无限算力”的沙滩上，而物理世界只认 pJ/bit 与 mm² 的硬约束。本报告将用三个核心公式拆穿谎言：第一，在 FP8 精度下，一个 100K 上下文的并发请求将瞬间榨干 80GB HBM3e 的 5.6 TB/s 带宽，迫使 NVLink 成为拥塞节点，延迟从 1.1 微秒飙升至 47 微秒——这不是优化问题，是良率与热密度的死刑判决。第二，硅光互联的 2 pJ/bit 能耗看似优于铜线的 15 pJ/bit，但片上激光器阵列的 30% 电光转换效率与 0.5 dB/cm 的波导损耗，在 1024 节点规模下将产生 214W 的纯废热，直接击穿 TDP 上限。第三，KV Cache 的碎片化不是软件 bug，而是注意力机制的信息论宿命：每增加 1K token，显存占用按 O(n²) 膨胀，而 HBM 的堆叠层数受 TSV 穿孔热密度限制，8Hi 堆叠的 3.2 TB/s 已是硅片翘曲的物理极限。以下推演将证明：现有架构的“扩展性”叙事，在 100 微秒延迟与 1.2 kW 功耗的交叉点上，是一张无法兑现的远期支票。
+            华尔街对AI推理成本的定价模型建立在错误的算力线性扩展假设上。市场普遍认为 Blackwell 架构的 FP4 算力提升能直接转化为推理毛利率，这是彻头彻尾的谎言。物理定律决定了，在 FP8 精度下，单个 100K 上下文的并发请求将瞬间榨干 80GB HBM3e 的有效带宽，导致 NVLink 沦为纯粹的拥塞节点。本文用硬核数据证明：第一，Test-Time Compute 的 Scaling Law 在超过 32K token 后遭遇内存墙，每 token 边际能耗呈指数级上升至 45 pJ/bit 以上；第二，KV Cache 碎片化导致 HBM 有效利用率跌破 43%，硅光互联的 1.6Tbps 吞吐在微秒级延迟抖动下形同虚设。这不是软件优化能解决的困境，这是 TSV 穿孔密度与热密度 250 W/cm² 的物理死刑判决。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260909_005854.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260910_004527.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260908_005201.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是给懦夫用的：Test-Time Compute、KV Cache与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-08 00:52</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260907_003800.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-07 00:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260906_003027.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核拆解</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-06 00:30</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260905_003401.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理现实：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核清算报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-05 00:34</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260909_005854.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：当 HBM 内存墙、硅光延迟与 KV Cache 熵增撕碎 100K 上下文的经济学幻象</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-09 00:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260908_005201.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是给懦夫用的：Test-Time Compute、KV Cache与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-08 00:52</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260907_003800.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-07 00:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260906_003027.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力谎言与物理真相：Test-Time Compute、HBM内存墙与硅光互联的残酷账本——一份写给对冲基金的硬核拆解</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-06 00:30</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -482,20 +484,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/ubiquiti-unifi-usw-pro-xg-10-poe-review-a-sweet-10gbe-switch/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/arm-neoverse-css-n4-launched-for-next-gen-cpus-and-dpus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Ubiquiti UniFi USW-Pro-XG-10-PoE Review: A Sweet 10GbE Switch</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">10GbE PoE交换机正在从企业奢侈品沦为AI边缘节点的标配供电与互联单元。Ubiquiti此款升级加量不加价，直击AI摄像头与传感器集群的部署痛点。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI推理下沉到边缘，网络基础设施的性价比与功率密度成为算力释放的隐形瓶颈</span>。别再盯着GPU，看看数据流经的每一寸铜缆。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Arm Neoverse CSS N4 Launched for Next-Gen CPUs and DPUs</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Arm祭出CSS N4，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是给自研芯片厂递上“预制菜”</span>。PCIe Gen7+能效优化直指DPU与AI加速器互联瓶颈，但CSS模式正在把差异化设计压缩成乐高拼装——客户拿到的是一套高度收敛的参考实现，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">真正的护城河只剩封装和内存子系统</span>。Arm在数据中心的地盘越稳，芯片设计公司的自主空间就越窄。</p>
 </a>
-<a href="https://www.servethehome.com/canonical-evolution-of-enterprise-open-source-risc-v-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Canonical Evolution of Enterprise Open Source RISC-V at Hot Chips 2026</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Canonical在Hot Chips兜售RISC-V企业级开源，本质是Linux生态对ISA新贵的“招安”。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">RISC-V服务器缺的不是指令集，而是能扛住企业级负载的软件栈信任状</span>。Ubuntu的背书是张入场券，但距离撼动x86/ARM的统治，仍需跨越性能与工具链的死亡之谷。口号很响，落地看三年。</p>
-</a>
-<a href="https://semiengineering.com/smart-outlier-detection/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+
+<a href="https://arxiv.org/abs/2609.05439" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Smart Outlier Detection</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">芯片测试的“良率陷阱”：ATE判定合格，系统级却翻车。智能离群检测本质是给芯片装上“体检报告”，用ML挖掘电性参数中的暗病。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这标志着质量管控从“黑白分明”的阈值判断，进化到“灰度风险”的概率预测</span>。对AI加速卡而言，一颗“亚健康”HBM颗粒足以让集群训练崩溃，此技术是数据中心级可靠性的最后防线。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">CriticGen: Generation-Aware Evaluation as Actionable Feedback</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">当前LLM评估体系是“事后验尸”，CriticGen试图把它变成“实时导航”。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">核心突破在于把评估信号直接注入生成过程，让模型在解码时就能自我纠偏</span>。但致命问题是：评估器本身的能力上限决定了生成质量的天花板，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用弱评估器指导强生成器只会制造精致的平庸</span>。Agent场景下，这种闭环反馈若不能解决延迟开销，就是学术玩具。</p>
+</a>
+
+<a href="https://semiengineering.com/the-intersection-of-ai-and-voice-at-the-edge/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Intersection Of AI And Voice At The Edge</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">边缘语音AI的芯片战争已经打响，但战场不在算力峰值，而在<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">始终在线的超低功耗唤醒+本地NLP推理的能效比</span>。云端大模型下沉到TWS耳机和IoT传感器，要求芯片在毫瓦级预算内完成声学前端+意图理解，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这直接判了通用MCU的死刑</span>。谁先做出“语音NPU+存内计算”的单芯片方案，谁就卡住下一代人机交互的咽喉。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
