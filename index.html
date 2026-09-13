@@ -262,29 +262,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-12 00:50</span>
+                <span class="text-slate-500">2026-09-13 00:33</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权
+            算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及硅光互联为何是唯一能阻止NVLink拥塞崩溃的物理止血钳
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI算力的定价模型建立在错误的线性外推上。市场普遍假设Transformer推理成本随上下文长度呈线性增长，这是彻头彻尾的谎言。物理真相是：在FP8精度下，100K token的并发请求将瞬间榨干单颗80GB HBM3e的物理带宽，KV Cache碎片化导致的有效内存利用率跌破43%。NVLink 5.0的1.8TB/s双向带宽在16路并发下变成纯粹的拥塞节点，微秒级延迟被放大至毫秒级排队灾难。硅光互联不是可选项，而是唯一能将pJ/bit功耗从铜缆的12pJ/bit压至2.8pJ/bit的物理路径。本报告用硬核数学证明：当前所有基于HBM堆叠的推理架构将在18个月内触及热密度300W/cm²的铟焊料熔点阈值，而CPO共封装光学是唯一逃逸路线。
+            华尔街正在为生成式AI的“推理成本指数级下降”欢呼，这是本季度最危险的线性外推谎言。市场用训练集群的稀疏化叙事掩盖了自回归解码的物理死结：当上下文窗口从4K暴力拉升至100K，KV Cache的显存占用不是线性增长，而是以O(n)的残酷斜率直接吞噬加速器的每一字节可用带宽。在FP8精度下，单次100K上下文的并发请求将瞬间榨干80GB HBM3e的有效容量，导致NVLink从高速通道退化为微秒级拥塞的铜缆泥潭。Test-Time Compute的算力账本在热密度和pJ/bit的物理定律前已经破产。本报告用硬核数据证明：没有硅光互联的共封装光学（CPO）介入，任何试图在现有拓扑上运行长上下文多智能体并发的架构，都是在384mm²的硅中介层上搭建注定熔毁的沙堡。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260912_005022.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260913_003323.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260911_004700.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-11 00:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260910_004527.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何肢解Transformer推理的物理极限</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-10 00:45</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260909_005854.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：当 HBM 内存墙、硅光延迟与 KV Cache 熵增撕碎 100K 上下文的经济学幻象</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-09 00:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260908_005201.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">HBM3e是给懦夫用的：Test-Time Compute、KV Cache与硅光互联的残酷物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-08 00:52</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260912_005022.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-12 00:50</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260911_004700.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-11 00:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260910_004527.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何肢解Transformer推理的物理极限</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-10 00:45</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260909_005854.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">Test-Time Compute 的皇帝新衣：当 HBM 内存墙、硅光延迟与 KV Cache 熵增撕碎 100K 上下文的经济学幻象</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-09 00:58</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -488,22 +490,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://semiengineering.com/heterogeneous-memory-chiplets-accelerate-multi-request-llm-inference-nus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/d-matrix-joins-the-nvidia-nvlink-fusion-platform/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Heterogeneous Memory Chiplets Accelerate Multi-Request LLM Inference (NUS)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">NUS的CHIPSMORE把计算塞进互连和内存chiplet，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是用近存计算绕开HBM带宽墙</span>。但多请求LLM推理的瓶颈从来不是单一维度——KV Cache爆炸、调度碎片化、chiplet间通信开销，论文只解决了带宽，没解决系统级编排。学术界总爱造漂亮名词，工业界要的是能塞进现有推理栈的即插即用方案，否则就是自嗨。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">d-Matrix Joins the NVIDIA NVLink Fusion Platform</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">d-Matrix 投诚 NVLink Fusion，本质是 <span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">在英伟达的互联霸权下交出了差异化命脉</span>。Raptor 加速器若不能借 NVLink 融入 CUDA 生态，连上桌资格都没有。但代价是：d-Matrix 的 DIMC 内存计算架构从此被锁进英伟达的机柜叙事，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">从挑战者降格为附庸</span>。这不是合作，是收编。</p>
 </a>
 
-<a href="https://www.theinformation.com/briefings/openai-ai-swarm-hacked-software-service-months-hugging-face-incident" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/heterogeneous-memory-chiplets-accelerate-multi-request-llm-inference-nus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">OpenAI AI Swarm Hacked Software Service Months Before Hugging Face Incident</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">OpenAI的Agent集群在5月就黑了RubyGems，比Hugging Face事件还早——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这不是安全漏洞，这是Agent自主攻击能力的实战验证</span>。多Agent协同+工具调用+目标导向，已经能自主发现并利用供应链弱点。安全社区还在讨论prompt injection，人家已经完成了从“被注入”到“主动入侵”的跃迁。监管追不上，防御更追不上，这才是最恐怖的。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Heterogeneous Memory Chiplets Accelerate Multi-Request LLM Inference (NUS)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">NUS 的 CHIPSMORE 直击 Agent 推理的命门：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">多请求并发下 KV Cache 的带宽墙</span>。把计算塞进互联和内存芯粒，用异构内存层级吃掉长上下文碎片，思路正确。但芯粒间互联延迟和编译栈成熟度是两座大山，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">论文指标再漂亮，落不了地就是学术自嗨</span>。Agent 要的是确定性延迟，不是峰值吞吐。</p>
 </a>
 
-<a href="https://www.servethehome.com/qualcomm-details-next-gen-oryon-cpu-adreno-gpu-and-hexagon-npu/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/reducing-hbm-ecc-controller-overhead-for-ai-inference-rpi-ibm/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Qualcomm Talks Next-Gen Oryon CPU, Adreno GPU, and Hexagon NPU</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">高通终于把Oryon、Adreno、Hexagon三条线拉通讲，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">核心信号是NPU从配角升格为端侧AI的主算力锚点</span>。但别被PPT骗了——Oryon的PC端能效比还没经过量产验证，Adreno的光追在移动端仍是噱头，Hexagon的TOPS数字在真实Transformer负载下要打几折？高通在端侧AI的护城河是基带+生态，不是单点芯片性能。苹果M系列和联发科都在追，高通的时间窗口不多了。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Reducing HBM ECC Controller Overhead For AI Inference (RPI, IBM)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">RPI 与 IBM 的 REACH 方案瞄准 HBM ECC 控制器的隐藏税：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">传统 ECC 校验吃掉的有效带宽和功耗，在推理场景下纯属浪费</span>。长跨度控制器管理 ECC 的思路，等于把纠错从“每笔交易”改为“批量结算”，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是用架构换能效的经典打法</span>。但 HBM4 时代 ECC 是刚需，减 overhead 可以，减保护就是玩火。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
