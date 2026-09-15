@@ -264,29 +264,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-14 00:37</span>
+                <span class="text-slate-500">2026-09-15 01:07</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局
+            算力绞肉机：当FP8吞噬HBM3e、硅光延迟撞上KV Cache碎片化——万亿参数推理的物理坍缩与华尔街的账面幻觉
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为生成式AI的边际成本下降欢呼，这是本季度最危险的线性外推谎言。当推理负载从1K上下文跃迁至100K，算力瓶颈已从FLOPS密度彻底转移至内存带宽与互联功耗的乘积。本文用硬核数据证明：在FP8精度下，单张80GB HBM3e承载100K上下文时，KV Cache将吞噬93.7%的物理显存，留给权重的空间不足5GB。NVLink 4.0的900GB/s双向带宽在8卡并发下将产生1.2微秒的排队延迟，直接导致MFU跌破12%。硅光互联的能效账本更残酷：当前1.5 pJ/bit的调制器功耗，在51.2Tbps交换容量下产生76.8W的纯互联热耗，超过芯片本身的TDP预算。这不是迭代，这是物理定律对商业PPT的降维打击。
+            市场将Test-Time Compute视为通向AGI的免费午餐。这是彻头彻尾的线性外推骗局。当OpenAI o1类模型将推理算力需求推高至训练阶段的10^4倍时，物理定律开始清算。本报告用硬核数据证明：在FP8精度下，100K上下文的并发请求将瞬间榨干单颗GPU的80GB HBM3e，导致NVLink变成最大的拥塞节点；硅光互联的pJ/bit功耗优势被微环谐振器的热漂移彻底抵消；KV Cache碎片化使有效显存带宽利用率暴跌至37%。我们拆解了从TSV穿孔热密度到SRAM面积墙的每一层物理约束，结论是：2025年量产的任何架构都无法以可接受的TCO支撑100K+上下文的实时推理。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260914_003701.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260915_010748.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260913_003323.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及硅光互联为何是唯一能阻止NVLink拥塞崩溃的物理止血钳</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-13 00:33</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260912_005022.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-12 00:50</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260911_004700.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-11 00:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260910_004527.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何肢解Transformer推理的物理极限</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-10 00:45</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260914_003701.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-14 00:37</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260913_003323.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及硅光互联为何是唯一能阻止NVLink拥塞崩溃的物理止血钳</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-13 00:33</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260912_005022.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-12 00:50</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260911_004700.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的微秒级霸权</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-11 00:47</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -492,22 +494,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/d-matrix-joins-the-nvidia-nvlink-fusion-platform/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">d-Matrix Joins the NVIDIA NVLink Fusion Platform</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">d-Matrix投诚NVLink Fusion，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">表面是生态共赢，实则是英伟达收编推理加速器阵营的阳谋</span>。Raptor芯片性能再强，一旦接入NVLink，就永远活在CUDA阴影下。所谓scale-up，不过是把第三方硬件变成NVLink的附庸，彻底堵死独立组网路线。</p>
-</a>
-
-<a href="https://www.theinformation.com/articles/inside-ai-industrys-behind-the-scenes-push-police" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Anthropic, OpenAI, Google Quietly Discussed an AI Safety Standards Body</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">三大巨头密谋“安全标准”，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这不是自律，是合谋筑墙</span>。Agent赛道刚起跑，他们就急着定规则，本质是用合规成本绞杀中小玩家。所谓安全标准，就是给后来者设的专利收费站，自己却拿着豁免权狂奔。</p>
-</a>
-
-<a href="https://semiengineering.com/heterogeneous-memory-chiplets-accelerate-multi-request-llm-inference-nus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/infineon-risc-v-for-automotive-at-hot-chips-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Heterogeneous Memory Chiplets Accelerate Multi-Request LLM Inference (NUS)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">NUS的CHIPSMORE把计算塞进互连和内存chiplet，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">直击LLM推理的存储墙死穴</span>。但学术原型离量产十万八千里，异构chiplet的良率和热密度问题一个没解。方向对，但别急着吹，先看哪家敢流片。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Infineon RISC-V for Automotive at Hot Chips 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">英飞凌在Hot Chips兜售车规RISC-V，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">对ARM和Synopsys的供应链叛逃</span>。汽车芯片认证周期极长，RISC-V生态碎片化是致命伤，但英飞凌赌的是Tier1对成本与IP自主的饥渴。别吹技术先进性，这是地缘政治下的备胎转正，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">谁先搞定ISO 26262功能安全认证，谁才有资格上牌桌</span>。</p>
+</a>
+
+<a href="https://arxiv.org/abs/2609.11987" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Harness or Model? Isolating the Harness Effect in Agentic Coding with a Contamination-Controlled Private Suite</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">这篇论文戳破了Agentic Coding的皇帝新衣：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">模型能力被严重高估，Harness（工具链+控制流）才是性能瓶颈</span>。用污染控制的私有测试集隔离变量，结论极其残忍——换个好Harness比换个更大模型涨点更猛。那些只会堆参数量的玩家该醒了，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent的护城河在工程编排，不在权重</span>。</p>
+</a>
+
+<a href="https://arxiv.org/abs/2609.11977" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">35B开源模型打Pareto前沿，专攻Co-work场景，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对闭源API中间层的精准狙击</span>。但别急着高潮——Co-work意味着多轮工具调用和文件操作，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">推理成本才是生死线，不是跑分</span>。如果35B在长上下文下显存爆炸，所谓“开放前沿”不过是实验室自嗨。开源社区需要的是能塞进单卡的生产力，不是论文里的漂亮曲线。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
