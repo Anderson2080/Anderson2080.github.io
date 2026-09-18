@@ -267,29 +267,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-17 01:02</span>
+                <span class="text-slate-500">2026-09-18 00:57</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：拆解Test-Time Compute的物理死局——当8TB/s的HBM3e撞上KV Cache碎片化，硅光互联如何沦为价值10亿美元的废热
+            算力绞肉机：当100K上下文榨干HBM3e，NVLink沦为最大拥塞节点，硅光互联与KV Cache碎片化如何肢解Transformer推理经济学
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理即服务”的毛利率欢呼，这是本季度最大的认知泡沫。市场假设算力可以线性堆叠，但物理定律拒绝妥协。当OpenAI o1或DeepSeek R1将Test-Time Compute推向极致，单次推理消耗的Token量从1K暴增至100K，计算模式已从GEMM矩阵乘法转向访存密集型。核心矛盾在于：NVIDIA H100的3.35TB/s HBM带宽在FP8精度下，面对100K上下文并发，KV Cache的读写延迟将吞噬60%以上的有效算力。NVLink 5.0的1.8TB/s双向带宽在All-to-All通信中，因KV Cache碎片化导致的微秒级拥塞，将直接让8卡H100集群的MFU（模型浮点运算利用率）跌破15%。本报告用硬核数据证明：硅光互联的1.6Tbps理论值在封装热密度超过150W/cm²时，误码率呈指数级恶化。
+            华尔街对AI推理成本的建模存在结构性错误。当前市场普遍假设算力线性扩展、显存带宽无限、互联拓扑无阻塞。物理定律否定这三项假设。在FP8精度下，单个100K上下文请求的KV Cache占用约12.8GB（以Llama-3-70B为基准：80层×8 KV头×128维×2×100K×1字节）。当并发请求达到8路，80GB HBM3e瞬间归零，GPU被迫将KV Cache换出至NVLink域外的CXL内存池。此时NVLink的900GB/s双向带宽成为系统级瓶颈，单token解码延迟从微秒级劣化至毫秒级。硅光互联的pJ/bit功耗优势在<10米传输距离内被SerDes的5pJ/bit能效反超。KV Cache碎片化导致HBM3e的有效带宽利用率跌破40%。本报告用晶体管级参数证明：Test-Time Compute的边际收益在并发度>4时转为负值，推理经济学正在被内存墙物理性肢解。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260917_010207.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260918_005725.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260916_005859.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的KV Cache碎片化击穿HBM3e带宽墙，硅光互联的1.5 pJ/bit功耗红线与Test-Time Compute的微秒级死锁</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-16 00:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260915_010748.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8吞噬HBM3e、硅光延迟撞上KV Cache碎片化——万亿参数推理的物理坍缩与华尔街的账面幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-15 01:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260914_003701.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-14 00:37</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260913_003323.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及硅光互联为何是唯一能阻止NVLink拥塞崩溃的物理止血钳</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-13 00:33</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260917_010207.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：拆解Test-Time Compute的物理死局——当8TB/s的HBM3e撞上KV Cache碎片化，硅光互联如何沦为价值10亿美元的废热</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-17 01:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260916_005859.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的KV Cache碎片化击穿HBM3e带宽墙，硅光互联的1.5 pJ/bit功耗红线与Test-Time Compute的微秒级死锁</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-16 00:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260915_010748.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8吞噬HBM3e、硅光延迟撞上KV Cache碎片化——万亿参数推理的物理坍缩与华尔街的账面幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-15 01:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260914_003701.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-14 00:37</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -498,22 +500,20 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/astera-labs-releases-leo-2-cxl-memory-controllers-and-leo-x-controller-for-rackscale-fabric-attached-memory/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/inside-the-lab-where-the-arm-agi-cpu-is-brought-to-life/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Astera Labs Releases Leo 2 CXL Memory Controllers and Leo X Controller for Rackscale Fabric-Attached Memory</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">CXL 3.2 + PCIe Gen6 的 Leo 2 只是常规迭代，真正的杀招是 Leo X——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">把内存从服务器机箱里彻底解放出来，变成机架级共享池</span>。这意味着 AI 推理集群的内存利用率可以从 40% 拉到 80%+，直接砍掉一半的内存 CAPEX。但别高兴太早：CXL 交换机的延迟和故障域管理仍是雷区，Astera 若搞不定 fabric 级 QoS，客户只会把它当高端 PCIe 重定时器用。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Inside the lab where the Arm AGI CPU is brought to life</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Arm搞“AGI CPU”纯属<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">营销话术碰瓷</span>。所谓绝密实验室不过是ATE测试产线，拿服务器CPU蹭AGI热度，暴露其<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">在AI算力栈中缺乏核心话语权的焦虑</span>。别被PR带偏，Arm在训练侧连英伟达尾灯都看不到。</p>
 </a>
-
-<a href="https://arxiv.org/abs/2609.13356" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2609.17632" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">7B 稠密模型在数学和 Agentic Search 上叫板闭源大厂，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">“完全开源 + 极致效率”这八个字就是冲着 OpenAI o1 和 Google Gemini 的软肋去的</span>。但别被“从零训练”忽悠——数据配方和 RL 搜索策略才是真壁垒，论文若不敢公开训练细节和评测污染检查，这不过是又一个刷榜的学术玩具。Agent 赛道缺的不是模型，是可靠的工具调用和长程规划，7B 能扛住几轮 ReAct 循环？存疑。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">LLM交易Agent终于从<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">静态手写规则进化到经验驱动自演化</span>，方向对但别高潮。金融市场的<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">非平稳性与反身性</span>会让任何离线经验回放变成过拟合灾难。论文若没解决在线分布漂移，实盘就是韭菜收割机。</p>
 </a>
-
-<a href="https://semiengineering.com/why-soc-interconnects-have-outgrown-the-bus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/why-package-digital-twins-are-so-hard-to-build/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Why SoC Interconnects Have Outgrown the Bus</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">总线架构在 Chiplet 时代已经脑死亡，NoC 不是“更好”而是唯一活路。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但文章没点破的真相是：NoC 的功耗和面积开销正在吞噬 Chiplet 的良率红利</span>，UCIe 物理层再便宜，一致性协议和缓存管理的复杂度仍让中小设计公司望而却步。安全隔离和 QoS 在汽车/工业场景是硬门槛，NoC IP 供应商若只卖拓扑不卖验证套件，等着被客户自研替代吧。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Why Package Digital Twins Are So Hard To Build</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">封装数字孪生难在<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">模型与制造实际脱节</span>，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">数据治理灾难</span>。代工厂、OSAT、材料商各留一手，仿真参数靠猜，良率预测就是玄学。不打通跨企业数据链，数字孪生永远只是PPT里的漂亮泡泡。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
