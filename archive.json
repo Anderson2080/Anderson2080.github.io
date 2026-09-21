@@ -1,5 +1,12 @@
 [
   {
+    "id": "20260921_004631",
+    "date": "2026-09-21 00:46",
+    "title": "算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，硅光互联与KV Cache碎片化如何肢解Transformer推理的物理极限",
+    "excerpt": "华尔街对AI推理成本的建模存在结构性错误。市场按每百万Token线性外推成本，忽略了内存墙的非线性崩塌。在FP8精度下，单个100K上下文请求的KV Cache占用为 2 × 层数 × 头数 × 头维度 × 序列长度 × 1 Byte。以Llama-3-70B为例：80层、64头、128维，单序列KV Cache = 2×80×64×128×102400×1 Byte ≈ 134 GB。这意味着单张H100的80GB HBM3e连一个并发请求都装不下。当并发数达到32时，KV Cache总量膨胀至4.3 TB，NVLink 4.0的900 GB/s双向带宽将在微秒级时间窗口内被KV Cache的All-Gather操作彻底淹没。本报告用硬核物理参数证明：Test-Time Compute的瓶颈不在TFLOPS，而在HBM的pJ/bit能效比与硅光互联的耦合损耗。",
+    "url": "articles/20260921_004631.html"
+  },
+  {
     "id": "20260920_003428",
     "date": "2026-09-20 00:34",
     "title": "物理账本清算：当FP8 KV Cache击穿HBM3e带宽墙，硅光互联与Test-Time Compute的万亿参数幻觉",
