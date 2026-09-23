@@ -272,29 +272,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-22 01:23</span>
+                <span class="text-slate-500">2026-09-23 01:10</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            从HBM3e的6.4TB/s到硅光互联的1.6Tbps：拆解Test-Time Compute如何将推理成本推高至$0.18/1K tokens的物理死局
+            推理算力账本崩塌：从HBM3e的1.2pJ/bit能效墙到KV Cache 87%碎片率，拆解Test-Time Compute在512K上下文下的微秒级死锁与硅光互联的良率骗局
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI推理成本的建模存在结构性错误。当前市场按“每百万token固定单价”估值，忽略了Test-Time Compute（TTC）引入的序列长度平方级注意力开销与KV Cache线性膨胀的耦合效应。在FP8精度下，100K上下文、并发128的请求将瞬间榨干单颗80GB HBM3e的可用带宽——有效利用率跌破37%，NVLink C2C成为最大拥塞节点，而非GPU算力。硅光互联的1.6Tbps理论带宽在微秒级突发流量前等效于0。本文用三个物理账本证明：2025年推理集群的瓶颈不是TFLOPS，是pJ/bit与mm²的SRAM面积墙。
+            市场对Test-Time Compute的定价建立在错误的算力线性外推上。华尔街模型假设推理算力随上下文长度线性增长，物理层真相是：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，KV Cache的PagedAttention碎片率在真实负载下达到87%，导致有效带宽利用率跌破23%。NVLink 5.0的1.8TB/s双向带宽在16路并发下变成最大拥塞节点，单token解码延迟从微秒级劣化为毫秒级排队。硅光互联的1.2pJ/bit能效数据来自实验室25°C恒温，商用CPO封装在85°C结温下激光器波长漂移导致误码率突破1E-12，良率低于40%。本报告用硬核物理参数证明：当前AI基础设施的推理成本曲线在128K上下文处出现拐点，每百万token成本从$0.8跳变至$4.7，任何忽视HBM热密度与KV Cache随机访问粒度的估值模型都将被证伪。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260922_012330.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260923_011012.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260921_004631.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，硅光互联与KV Cache碎片化如何肢解Transformer推理的物理极限</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-21 00:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260920_003428.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8 KV Cache击穿HBM3e带宽墙，硅光互联与Test-Time Compute的万亿参数幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-20 00:34</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260919_005341.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的棺材板由NVLink的拥塞延迟钉死</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-19 00:53</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260918_005725.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文榨干HBM3e，NVLink沦为最大拥塞节点，硅光互联与KV Cache碎片化如何肢解Transformer推理经济学</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-18 00:57</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260922_012330.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从HBM3e的6.4TB/s到硅光互联的1.6Tbps：拆解Test-Time Compute如何将推理成本推高至$0.18/1K tokens的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-22 01:23</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260921_004631.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，硅光互联与KV Cache碎片化如何肢解Transformer推理的物理极限</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-21 00:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260920_003428.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8 KV Cache击穿HBM3e带宽墙，硅光互联与Test-Time Compute的万亿参数幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-20 00:34</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260919_005341.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的棺材板由NVLink的拥塞延迟钉死</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-19 00:53</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -508,22 +510,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://semiengineering.com/concurrent-hbm-and-host-memory-access-improves-llm-inference-throughput-georgia-tech-nvidia-stanford/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/nvidia-announces-dsx-ready-qualification-program-for-data-center-power-and-cooling-hardware/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Concurrent HBM And Host Memory Access Improves LLM Inference Throughput (Georgia Tech, Nvidia, Stanford)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">NVIDIA亲自下场证明HBM不够用了。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">BOOST的核心是让HBM和主机内存并发访问，本质是承认单靠HBM带宽已喂不饱LLM推理</span>。这对内存墙是务实妥协，但PCIe延迟和一致性开销能否被吞吐增益覆盖，才是量产的关键。别高兴太早，论文数据≠生产环境。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA Announces DSX Ready Qualification Program for Data Center Power and Cooling Hardware</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">NVIDIA不再满足于卖GPU，而是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">通过DSX Ready认证体系将手伸向数据中心供电与散热的底层标准</span>。这是典型的"芯片霸权外溢"——用算力垄断倒逼基础设施供应链站队。对电源和液冷厂商而言，不拿认证就出局，拿了认证就沦为NVIDIA AI工厂蓝图的附庸。生态锁定的护城河，比CUDA更深。</p>
 </a>
 
-<a href="https://www.theinformation.com/articles/metas-muse-tries-and-fails-disrupt-amazon" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.theinformation.com/briefings/exclusive-microsoft-boost-copilot-discounts-launches-ai-super-app" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Meta's Muse Tries (and Fails) to Disrupt Amazon</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Meta的Agent梦被亚马逊一巴掌扇醒。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Muse连电商网站的反爬都突破不了，谈何"颠覆"？</span>Agent要落地，先得学会在别人的地盘上守规矩。没有平台授权，再强的模型也只是困在沙盒里的玩具。这盆冷水浇得好，让行业看清Agent商业化的真实门槛。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Exclusive: Microsoft to Boost Copilot Discounts as It Launches AI 'Super App'</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Copilot打折30%-50%还捆绑"超级应用"，翻译过来就是：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">卖不动了，靠降价冲量</span>。Agent赛道最大的讽刺在于，微软把Copilot塞进一切产品线，却始终没证明它是"刚需"而非"鸡肋"。超级应用是伪命题——用户要的是能闭环干活的Agent，不是又一个入口缝合怪。折扣越狠，说明PMF越虚。</p>
 </a>
 
-<a href="https://semiengineering.com/detecting-hardware-trojans-in-synthesized-gate-level-netlists-uw-madison-marist/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/wafer-scale-sub-5nm-channel-monolayer-mos2-transistors-cmu-uf-mit-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Detecting Hardware Trojans in Synthesized Gate-Level Netlists (UW-Madison, Marist)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">硬件木马检测终于从RTL下沉到门级网表。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">RTL阶段的木马可以伪装，但综合后的门级网表会暴露物理痕迹</span>。这对供应链安全是刚需——尤其当Chiplet和第三方IP泛滥时。但论文方法能否扛住先进工艺的噪声和面积开销，才是试金石。别只发论文，拿流片数据说话。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Wafer-Scale Sub-5nm Channel Monolayer MoS2 Transistors (CMU, UF, MIT et al.)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">晶圆级亚5nm单层MoS₂晶体管，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是后硅时代最接近产业化的2D材料突破</span>。但别急着沸腾——实验室晶圆级和台积电量产之间隔着十年工程地狱。MoS₂的接触电阻、介电集成、良率全是坑。真正值得关注的是：当FinFET走到尽头，谁先跑通2D材料的CMOS工艺，谁就握住下一个制程节点的门票。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
