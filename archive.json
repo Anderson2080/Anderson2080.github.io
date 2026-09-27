@@ -1,5 +1,12 @@
 [
   {
+    "id": "20260927_010314",
+    "date": "2026-09-27 01:03",
+    "title": "物理账本清算：当FP8精度撞上100K上下文，80GB HBM3e与NVLink的拥塞死局——解构Test-Time Compute、硅光互联与KV Cache碎片化的硅基真相",
+    "excerpt": "华尔街对AI算力线性扩张的定价模型存在致命偏差。市场普遍将Transformer推理成本下降寄希望于算法优化，却无视了底层硅基物理的刚性约束。本文用硬核数据证伪三个流行谎言：第一，Test-Time Compute并非免费午餐，在FP8精度下，100K上下文并发请求将瞬间榨干单卡80GB HBM3e，导致KV Cache溢出至NVLink域，使900GB/s的卡间互联变成最大拥塞节点；第二，硅光互联的pJ/bit功耗优势在<10m传输距离内被SerDes的能效反超，CPO封装良率与光纤耦合公差是量产死穴；第三，KV Cache碎片化非软件调度可解，其根源在于HBM3e的TSV穿孔密度与2048-bit总线宽度的物理极限。本文推演：2025年单GPU推理吞吐量将被钉死在1.2K tokens/s（FP8, 100K ctx），任何宣称“百万token零成本”的架构都是对热力学第二定律的欺诈。",
+    "url": "articles/20260927_010314.html"
+  },
+  {
     "id": "20260926_010715",
     "date": "2026-09-26 01:07",
     "title": "推理算力账本崩塌：从HBM 8TB/s带宽墙到KV Cache 1.2GB/Token的物理死刑，拆解Test-Time Compute的硅基骗局",
