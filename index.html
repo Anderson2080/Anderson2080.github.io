@@ -277,29 +277,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-27 01:03</span>
+                <span class="text-slate-500">2026-09-28 01:20</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            物理账本清算：当FP8精度撞上100K上下文，80GB HBM3e与NVLink的拥塞死局——解构Test-Time Compute、硅光互联与KV Cache碎片化的硅基真相
+            物理账本清算：当FP8精度下的100K上下文击穿80GB HBM3e，NVLink如何沦为万亿参数推理的硅基血栓
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI算力线性扩张的定价模型存在致命偏差。市场普遍将Transformer推理成本下降寄希望于算法优化，却无视了底层硅基物理的刚性约束。本文用硬核数据证伪三个流行谎言：第一，Test-Time Compute并非免费午餐，在FP8精度下，100K上下文并发请求将瞬间榨干单卡80GB HBM3e，导致KV Cache溢出至NVLink域，使900GB/s的卡间互联变成最大拥塞节点；第二，硅光互联的pJ/bit功耗优势在<10m传输距离内被SerDes的能效反超，CPO封装良率与光纤耦合公差是量产死穴；第三，KV Cache碎片化非软件调度可解，其根源在于HBM3e的TSV穿孔密度与2048-bit总线宽度的物理极限。本文推演：2025年单GPU推理吞吐量将被钉死在1.2K tokens/s（FP8, 100K ctx），任何宣称“百万token零成本”的架构都是对热力学第二定律的欺诈。
+            华尔街对AI推理成本的建模存在结构性错误。市场按每百万Token线性外推成本，忽略了内存墙的非线性崩塌。在FP8精度下，单次100K上下文请求的KV Cache占用为 2 × 层数 × 隐藏维度 × 序列长度 × 1 Byte。以Llama 3 70B为例，80层、8192隐藏维度，单序列KV Cache达 131 GB。这直接击穿单卡80GB HBM3e容量，强制触发跨节点NVLink传输。当并发请求超过8路，NVLink 900 GB/s双向带宽的利用率突破94%，微秒级排队延迟指数级放大。本文用热密度、TSV穿孔良率、SRAM面积开销的硬数据，证明当前“堆HBM+扩NVLink”的架构在Test-Time Compute范式下已触及物理天花板。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260927_010314.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260928_012057.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260926_010715.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到KV Cache 1.2GB/Token的物理死刑，拆解Test-Time Compute的硅基骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-26 01:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260925_010608.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当Test-Time Compute撞上8TB/s的HBM墙，硅光互联与KV Cache碎片化如何绞杀万亿参数模型的边际利润</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-25 01:06</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260924_010002.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上128K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于Test-Time Compute物理账本的尸检报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-24 01:00</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260923_011012.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM3e的1.2pJ/bit能效墙到KV Cache 87%碎片率，拆解Test-Time Compute在512K上下文下的微秒级死锁与硅光互联的良率骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-23 01:10</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260927_010314.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度撞上100K上下文，80GB HBM3e与NVLink的拥塞死局——解构Test-Time Compute、硅光互联与KV Cache碎片化的硅基真相</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-27 01:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260926_010715.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到KV Cache 1.2GB/Token的物理死刑，拆解Test-Time Compute的硅基骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-26 01:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260925_010608.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当Test-Time Compute撞上8TB/s的HBM墙，硅光互联与KV Cache碎片化如何绞杀万亿参数模型的边际利润</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-25 01:06</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260924_010002.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上128K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于Test-Time Compute物理账本的尸检报告</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-24 01:00</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -518,20 +520,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/amd-takes-the-lid-off-of-next-gen-epyc-9006-venice-as-zen-6-comes-to-servers/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD Takes the Lid off of Next-Gen EPYC 9006 Venice As Zen 6 Comes to Servers</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD Zen 6 路线图提前曝光，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">EPYC 9006 直接对标 Intel 至强 7 的生死线</span>。别被“Venice”的浪漫名字骗了，这是苏姿丰在服务器腹地发起的又一轮核战。Intel 若再拿不出制程与能效的硬货，数据中心份额将被进一步蚕食。AMD 的节奏已从追赶变为领跑，留给蓝厂的时间不多了。</p>
-</a>
 <a href="https://semiengineering.com/chip-industry-week-in-review-157/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AI Agent 杀入芯片设计，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这不是辅助，是直接抢 EDA 工程师的饭碗</span>。中国在算力与存储上双倍下注，供应链设备与关键材料持续收紧。TSMC 合作伙伴加速，芯片上天，光互连爆发。Agent 驱动的设计闭环一旦跑通，传统芯片迭代周期将被彻底碾碎。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AI Agent杀入芯片设计，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">中国正用举国体制猛砸AI算力与存储</span>，设备与关键材料供应链全线吃紧。TSMC盟友加速扩产，芯片上天、光互连成新战场。别只盯着英伟达，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">地缘政治正把半导体供应链撕成两套平行体系</span>，谁先卡住材料谁就捏住命门。</p>
 </a>
+
+<a href="https://www.theinformation.com/briefings/anthropics-amodei-dine-trump-white-house" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Anthropic’s Amodei to Dine With Trump at White House</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Amodei与特朗普首次白宫私宴，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这不是技术会晤，是AI Agent监管话语权的投名状</span>。Anthropic一直标榜安全对齐，如今主动靠拢权力中心，说明Agent落地绕不开政府订单与合规枷锁。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">谁定义Agent安全标准，谁就掌握下一代AI基础设施的入场券</span>，开源派等着被收编吧。</p>
+</a>
+
 <a href="https://semiengineering.com/comparing-a7-cfet-and-a10-nanosheet-fets-from-parasitics-to-chip-reliability-tum-unimore-applied-materials/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Comparing A7 CFET and A10 Nanosheet FETs From Parasitics to Chip Reliability (TUM, UNIMORE, Applied Materials)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">TUM 与应材联合评估 A7 CFET 与 A10 纳米片，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">结论很残酷：CFET 寄生参数与可靠性仍是量产拦路虎</span>。A10 纳米片在成熟度上暂时领先，但 CFET 是 1nm 以下的唯一出路。这篇论文给盲目押注 CFET 的厂商泼了冷水——从实验室到晶圆厂，中间隔着无数个良率地狱。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">TUM与应材联合评估A7 CFET与A10纳米片，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">结论很残酷：CFET寄生效应更优但可靠性是硬伤</span>。A10纳米片在成熟度上仍占优，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">CFET才是1nm以下唯一出路，前提是解决热载流子与BTI退化</span>。这篇论文等于给GAA之后的技术路线判了缓刑——别急着吹CFET量产，先过可靠性这关再说。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
