@@ -279,29 +279,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-09-29 02:27</span>
+                <span class="text-slate-500">2026-09-30 01:47</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            物理账本清算：当FP8精度下的KV Cache以TB/s速率击穿HBM3e，硅光互联的1.5pJ/bit功耗墙如何绞杀万亿参数模型的Test-Time Compute幻觉
+            算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳账本
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI算力的定价模型建立在错误的热力学假设之上。当前所有关于“无限上下文”与“Test-Time Compute扩展定律”的叙事，在物理定律面前均呈现为庞氏骗局。核心矛盾并非TFLOPS不足，而是内存带宽与互联功耗的硬性锁死。本文以绝对参数推演三个物理真相：第一，在FP8精度下，单次100K上下文推理的KV Cache占用为1.6GB，若并发量达到50，仅KV Cache即需80GB HBM3e，直接击穿单卡物理上限，迫使NVLink承担每Token 3.2GB/s的跨卡搬运负载，引发微秒级拥塞崩溃。第二，硅光互联在1.5pJ/bit的能效下，单端口功耗在51.2Tbps交换容量下达到76.8W，远超CMOS驱动器的散热极限。第三，SRAM面积在3nm节点下仅能提供约120MB/mm²的密度，无法在片内缓存100K上下文的KV块，导致数据在HBM与计算单元间产生指数级搬运功耗。以下为基于物理常数的推演过程。
+            华尔街正在为生成式AI的“推理成本指数级下降”欢呼，这是本季度最危险的线性外推谎言。市场用稠密模型的FLOPs利用率掩盖了自回归解码阶段的内存带宽暴政。本文用硬核物理参数拆解三个被刻意回避的真相：第一，在FP8精度下，单次100K上下文并发请求的KV Cache将吞噬78.6GB HBM3e，直接击穿单卡物理上限，NVLink将退化为微秒级拥塞的铜缆坟场；第二，台积电CoWoS封装中TSV穿孔密度已逼近10^4/mm²的热通量极限，HBM3e的12-Hi堆叠良率在2025年Q3前无法突破65%；第三，硅光互联的pJ/bit账本在<50cm传输距离内仍无法击败铜缆，CPO的激光器可靠性MTTF<10^6小时是悬在万亿参数集群上的达摩克利斯之剑。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20260929_022702.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20260930_014733.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260928_012057.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的100K上下文击穿80GB HBM3e，NVLink如何沦为万亿参数推理的硅基血栓</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-28 01:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260927_010314.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度撞上100K上下文，80GB HBM3e与NVLink的拥塞死局——解构Test-Time Compute、硅光互联与KV Cache碎片化的硅基真相</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-27 01:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260926_010715.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到KV Cache 1.2GB/Token的物理死刑，拆解Test-Time Compute的硅基骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-26 01:07</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260925_010608.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当Test-Time Compute撞上8TB/s的HBM墙，硅光互联与KV Cache碎片化如何绞杀万亿参数模型的边际利润</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-25 01:06</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260929_022702.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的KV Cache以TB/s速率击穿HBM3e，硅光互联的1.5pJ/bit功耗墙如何绞杀万亿参数模型的Test-Time Compute幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-29 02:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260928_012057.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的100K上下文击穿80GB HBM3e，NVLink如何沦为万亿参数推理的硅基血栓</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-28 01:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260927_010314.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度撞上100K上下文，80GB HBM3e与NVLink的拥塞死局——解构Test-Time Compute、硅光互联与KV Cache碎片化的硅基真相</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-27 01:03</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260926_010715.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到KV Cache 1.2GB/Token的物理死刑，拆解Test-Time Compute的硅基骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-26 01:07</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -522,22 +524,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.theinformation.com/briefings/openai-will-ship-gpt-6-1-astra-due-safety-concerns" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">OpenAI Will Not Ship GPT-6.1 Astra Due to Safety Concerns</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">OpenAI因安全测试不达标而雪藏GPT-6.1 Astra，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这绝非伦理觉醒，而是算力经济学的冷酷算计</span>。训练成本指数级飙升，若模型能力提升边际递减却带来不可控风险，发布即负债。所谓“安全顾虑”，本质是ROI为负时的止损话术，为下一轮融资保留叙事空间。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2609.30325" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/nvidia-open-agent-safety-platform-launched/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">ScopeBench直击Agent落地的死穴：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">目标压力下的边界保持能力，才是区分玩具与生产工具的唯一标准</span>。当前所有Demo都在秀“能做什么”，却无人敢测“不该做什么时能否忍住”。渗透测试场景下，一次越界即灾难，这个Benchmark比任何能力榜单都更接近商业化的真实门槛。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA Open Agent Safety Platform Launched</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">NVIDIA 推出 OpenShell 0.1.0 与 Agent 安全平台，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是把 Agent 运行时锁进自家 CUDA 护城河</span>。所谓“开放”只是接口开放，安全策略、沙箱、工具调用全绑定 NIM 微服务。开发者一旦接入，迁移成本极高。这是黄仁勋在 Agent 时代复制 CUDA 霸权的关键一步，别被“Open”骗了。</p>
 </a>
 
-<a href="https://semiengineering.com/copper-grain-structure-influences-stress-around-scaled-tsvs-purdue-ucla/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/tsmc-oip-chip-industry-growth-blows-past-forecast/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Impact of Cu Microstructure On The TSV-Induced Residual Stress Within Silicon (Purdue, UCLA)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">普渡与UCLA用实验证据坐实了铜晶粒微结构对TSV残余应力的决定性影响。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">3D堆叠的良率瓶颈不在光刻，而在铜的微观织构</span>。当TSV尺寸持续缩小，晶界扩散与热膨胀失配的耦合效应将指数级放大，不控制电镀工艺的晶粒取向，HBM和Chiplet的可靠性就是空中楼阁。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">TSMC OIP: Chip Industry Growth Blows Past Forecast</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">台积电 OIP 承认 2030 年万亿美金预测<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">低估了 7000 亿</span>。这不是乐观，是 AI 算力饥渴把半导体从周期性行业变成结构性通胀行业。先进封装、HBM、Chiplet 是瓶颈也是印钞机。但注意：增长越猛，地缘政治断供风险越致命，台积电的产能就是全球 AI 的命门。</p>
+</a>
+
+<a href="https://semiengineering.com/why-verification-needs-a-thread-not-more-fragments/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Why Verification Needs a Thread, Not More Fragments</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">芯片验证工具碎片化已到临界点。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">没有端到端可追溯性，AI 辅助验证只是给垃圾流程贴金</span>。EDA 厂商卖点状工具，设计团队疲于缝合数据链。谁先做出统一验证线程（thread），谁就能吃掉 3nm 以下所有复杂 SoC 的验证预算。这不是技术问题，是数据架构的战争。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
