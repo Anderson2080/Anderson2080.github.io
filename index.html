@@ -281,29 +281,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-01 01:45</span>
+                <span class="text-slate-500">2026-10-02 01:56</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            物理账本清算：当Test-Time Compute撞上HBM3e热墙，硅光互联与KV Cache碎片化如何绞杀万亿参数推理的边际利润
+            物理账本清算：当Test-Time Compute撞上HBM墙，硅光互联与KV Cache碎片化如何绞杀推理经济学
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI推理成本的定价模型存在致命偏差。当前市场普遍假设算力扩展遵循线性衰减成本曲线，此假设在物理定律前不成立。本文以硬核参数推演三个被刻意忽略的物理瓶颈：第一，在FP8精度下，100K上下文并发请求将瞬间榨干单颗80GB HBM3e的有效带宽，NVLink将退化为最大拥塞节点而非加速通道。第二，硅光互联的pJ/bit能耗优势在<50μm耦合间距下被激光器Wall-Plug Efficiency（约15%）抵消，CPO方案在51.2Tbps交换容量下热密度突破风冷极限。第三，KV Cache碎片化导致HBM3e实际利用率跌破60%，PagedAttention仅解决逻辑碎片，物理Bank Conflict在长上下文下使有效带宽衰减至理论值的43%。本报告用TFLOPS、GB/s、pJ/bit、mm²、微秒延迟五组参数推演：万亿参数模型在1K并发下的真实推理成本是当前市场共识的3.7倍。
+            华尔街对AI推理成本的定价模型建立在错误的线性外推上。市场假设算力堆叠可无限压低单Token成本，忽略了一个物理事实：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e的有效带宽，导致NVLink沦为最大拥塞节点。Test-Time Compute并非免费午餐，其本质是用序列化延迟换取精度，而KV Cache碎片化使显存有效利用率跌破60%。硅光互联的pJ/bit优势在封装热密度面前被大幅抵消。本文用TFLOPS、GB/s、pJ/bit与微秒延迟数据，推演推理基础设施的真实物理极限，证明当前估值模型存在系统性偏差。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261001_014501.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261002_015600.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260930_014733.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-30 01:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260929_022702.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的KV Cache以TB/s速率击穿HBM3e，硅光互联的1.5pJ/bit功耗墙如何绞杀万亿参数模型的Test-Time Compute幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-29 02:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260928_012057.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的100K上下文击穿80GB HBM3e，NVLink如何沦为万亿参数推理的硅基血栓</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-28 01:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260927_010314.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度撞上100K上下文，80GB HBM3e与NVLink的拥塞死局——解构Test-Time Compute、硅光互联与KV Cache碎片化的硅基真相</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-27 01:03</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261001_014501.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当Test-Time Compute撞上HBM3e热墙，硅光互联与KV Cache碎片化如何绞杀万亿参数推理的边际利润</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-01 01:45</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260930_014733.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-30 01:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260929_022702.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的KV Cache以TB/s速率击穿HBM3e，硅光互联的1.5pJ/bit功耗墙如何绞杀万亿参数模型的Test-Time Compute幻觉</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-29 02:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20260928_012057.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的100K上下文击穿80GB HBM3e，NVLink如何沦为万亿参数推理的硅基血栓</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-09-28 01:20</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -526,22 +528,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/where-we-expect-amd-epyc-9006-cpus-in-the-era-of-agentic-ai/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/touring-the-f5-big-ip-next-for-kubernetes-lab-to-make-ai-clusters-more-efficient-nvidia-dpu/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Where We Expect AMD EPYC 9006 CPUs in the era of Agentic AI</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Agentic AI不是PPT概念，是CPU选型的硬约束。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">EPYC 9006的真正战场不在训练，而在推理编排与工具调用的并发密度</span>。谁还拿TOPS堆参数忽悠客户，谁就被踢出采购清单。AMD若不在内存带宽与Chiplet延迟上动刀，Agent负载会把Zen架构的调度器撕碎。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Touring the F5 BIG-IP Next for Kubernetes Lab to Make AI Clusters More Efficient</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">F5用DPU卸载网络栈，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">宣称同GPU集群性能翻3倍</span>，本质是给AI Infra的通信瓶颈打补丁。但别被营销数字迷惑——这3倍大概率是特定负载下的网络吞吐提升，而非训练吞吐。真正价值在于把CPU从网络协议处理中解放，让GPU喂饱数据。NVIDIA DPU生态再下一城，但F5的软件栈能否在K8s动态调度下不拖后腿，才是关键。否则，只是实验室里的漂亮Demo。</p>
 </a>
 
-<a href="https://www.theinformation.com/articles/behind-factory-founders-spat-cognition-key-hire" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2609.38288" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Behind Factory Founder’s Spat With Cognition Over Key Hire</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AI Coding Agent赛道已从技术比拼堕落到销售挖角战。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Cognition与Factory的撕逼暴露了行业核心焦虑：产品同质化严重，护城河约等于零</span>。创始人公开互撕不是血性，是估值压力下的失态。投资人该醒醒了——Agent公司靠一个销售VP就能动摇军心，说明技术壁垒薄如纸。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AREX-2把“自我改进”押注在长周期反思任务上，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">试图让Agent在迭代中自己发现并修正错误</span>。方向对，但风险极高：长周期意味着误差累积和计算成本爆炸，反思机制若缺乏外部验证信号，极易陷入自我欺骗的循环。当前多数Agent连短任务都做不稳，谈自我改进是空中楼阁。这篇论文的价值在于提出框架，但离工程可用还有十万八千里。别急着吹，先看它在真实环境里会不会“反思到崩溃”。</p>
 </a>
 
-<a href="https://semiengineering.com/e-series-gpu-ip-the-first-step-towards-converged-acceleration/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/the-hidden-challenges-of-edge-ai-design/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">E-Series GPU IP: The First Step Towards Converged Acceleration</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">图形、计算、AI三合一GPU IP，方向正确但参数寒酸。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">32 TOPS Int8@1GHz单核，放在2025年连边缘推理的门槛都够呛</span>。真正价值在于“可编程统一软件栈”这个叙事——硬件不够，软件来凑。但芯片行业铁律：架构融合若没有生态支撑，就是自嗨。等量产客户名单出来再鼓掌不迟。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Hidden Challenges of Edge AI Design</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">边缘AI芯片的致命伤被点破：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">模型迭代速度远超硅片周期</span>，架构师在灵活计算、数据搬运和纵深防御之间走钢丝。现实是，没有哪家能同时做好这三者——要么堆算力导致功耗爆炸，要么为安全牺牲性能。更讽刺的是，许多边缘AI芯片还没量产，其支持的模型就已经过时。这不是设计挑战，是商业模式的死结。除非转向可重构架构或Chiplet，否则边缘AI芯片注定是“发布即落后”的炮灰。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
