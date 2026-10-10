@@ -289,29 +289,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-09 02:41</span>
+                <span class="text-slate-500">2026-10-10 02:01</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，NVLink如何沦为万亿参数推理的死亡拥塞节点
+            推理算力账本崩塌：从HBM 8TB/s带宽墙到硅光1.5pJ/bit功耗悬崖，拆解Test-Time Compute与KV Cache碎片化的物理死局
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI推理成本的定价模型建立在沙丘之上。当前市场普遍假设算力线性扩张即可满足Test-Time Compute需求，忽略了一个致命物理事实：在FP8精度下，单次100K上下文推理的KV Cache占用高达51.2GB。当并发请求超过2路，80GB HBM3e瞬间归零，此时GPU计算利用率暴跌至12%以下，系统瓶颈从FLOPS切换为HBM带宽与NVLink拓扑的微秒级拥塞。硅光互联的1.6Tbps理论带宽在KV Cache碎片化访问模式下，有效利用率不足34%。本报告用硬核物理参数推演：为何NVIDIA Blackwell架构在长上下文场景中，每token推理成本被SRAM面积与TSV热密度锁死在$0.0042，以及为什么CPO（共封装光学）的pJ/bit功耗账本在2026年前无法翻越3.2pJ/bit的物理高墙。
+            华尔街对AI推理成本的定价模型建立在错误假设上。市场共识认为Test-Time Compute可线性扩展智能，却忽略了一个物理事实：在FP8精度下，100K上下文并发请求将瞬间榨干单颗80GB HBM3e的容量与8TB/s带宽。当KV Cache碎片化导致有效内存利用率跌破40%，NVLink的900GB/s双向带宽将取代FLOPS成为最大拥塞节点。硅光互联被鼓吹为救世主，但其1.5pJ/bit的能耗在51.2Tbps交换容量下产生76.8W纯互联功耗，热密度突破风冷极限。本报告用晶体管级推演证明：当前架构下，推理吞吐量的天花板由内存墙与互联功耗共同锁定，而非制程微缩。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261009_024141.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261010_020133.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261008_022408.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-08 02:24</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261007_015919.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：Test-Time Compute 的边际收益已被 HBM 带宽墙与 KV Cache 碎片化击穿</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-07 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261006_023833.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及为什么硅光互联是唯一能阻止NVLink变成PCIe 4.0的物理止血钳</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-06 02:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261005_013005.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当Test-Time Compute撞上HBM3e的1.2pJ/bit税，以及KV Cache碎片化如何让NVLink沦为价值3万美元的废铁</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-05 01:30</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261009_024141.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，NVLink如何沦为万亿参数推理的死亡拥塞节点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-09 02:41</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261008_022408.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-08 02:24</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261007_015919.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：Test-Time Compute 的边际收益已被 HBM 带宽墙与 KV Cache 碎片化击穿</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-07 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261006_023833.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及为什么硅光互联是唯一能阻止NVLink变成PCIe 4.0的物理止血钳</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-06 02:38</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -542,22 +544,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/xsight-labs-e1l-dpu-for-lower-power-200gbps-dpus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/gmktec-evo-x3-mini-pc-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Xsight Labs E1L DPU for Lower-Power 200Gbps DPUs</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">DPU赛道终于有人做“减法”了。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Xsight E1L用8-22核Arm N2+200Gbps+PCIe Gen5打中低端DPU空白</span>，但别高兴太早——Nvidia BlueField-3已下探到400Gbps，AMD Pensando同样虎视眈眈。200Gbps低功耗DPU的真实买家只有边缘推理和中小云，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这个市场能不能撑起一家DPU公司，本身就是个问号</span>。Xsight此前主攻交换芯片，DPU是第二曲线，赌的是“够用就好”的算力经济学。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">GMKtec EVO-X3 Mini-PC Review Looking at a 128GB AMD Local AI Box</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">128GB统一内存的Ryzen AI Max+ 395看似是本地推理的甜点，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">OCuLink接口才是真正杀招</span>——它让迷你主机摆脱了PCIe通道的阉割诅咒。然而，AMD的软件栈依然是扶不起的阿斗，买这盒子的人八成会装Linux自己折腾驱动。别指望开箱即用，这是给极客的玩具，不是给企业的方案。</p>
 </a>
 
-<a href="https://www.theinformation.com/briefings/south-korean-banks-hacked-using-chinese-ai-agent-researchers-say" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/xsight-labs-e1l-dpu-for-lower-power-200gbps-dpus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">South Korean Banks Were Hacked Using Chinese AI Agent, Researchers Say</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">这是AI Agent从“玩具”变“武器”的分水岭事件。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">开源中国AI Agent Artex+国产LLM被用于实战攻击韩国银行并成功窃取数据</span>，意味着Agent的自主规划、工具调用、多步执行能力已被武器化。安全圈还在讨论Prompt Injection的学术风险，攻击者已经用Agent完成了端到端入侵。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Anthropic同日宣布扩大网络防御计划绝非巧合——Agent攻防军备竞赛正式开打</span>。所有做Agent的团队必须回答：你的产品被滥用时，责任边界在哪？</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Xsight Labs E1L DPU for Lower-Power 200Gbps DPUs</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">DPU赛道终于有人做减法了。8-22核Arm N2、200Gbps、低功耗——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是给边缘Agent基础设施量身定制的卸荷引擎</span>。当Agent集群需要在近数据端做推理路由和状态管理时，把CPU从网络协议栈里解放出来比堆算力更紧迫。Xsight赌的是Agent爆发后DPU从云端下沉到边缘，这步棋比NVIDIA的BlueField更接地气。</p>
 </a>
 
-<a href="https://semiengineering.com/finding-critical-defects-before-they-become-costly-failures-process-control-for-hybrid-bonding-and-advanced-packaging/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/chip-industry-week-in-review-159/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Finding Critical Defects Before They Become Costly Failures: Process Control For Hybrid Bonding And Advanced Packaging</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">混合键合是3D堆叠的圣杯，但良率是它的阿喀琉斯之踵。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">亚微米级缺陷检测在混合键合中不是“锦上添花”而是“生死存亡”</span>——一颗坏die毁掉整颗HBM堆栈，成本指数级放大。文章强调互补检测+统一工作流，说白了就是：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">没有在线Metrology的先进封装产线就是在赌博</span>。台积电CoWoS良率爬坡花了数年，三星和Intel想追，先问问自己的检测方案够不够硬。设备商（KLA、Onto）才是这波先进封装浪潮的隐形赢家。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">一周内$2B代工协议、Hyper-NA EUV推进、$10T数据中心计划、SiC增资$1.5B——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">资本正在用脚投票，赌AI算力需求没有天花板</span>。但佳能nanoimprint悄然就绪、芯片走私被盯上，说明技术路线和地缘博弈都在加速分化。$10T的数字听着像庞氏，但没有一个玩家敢下牌桌。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
