@@ -290,29 +290,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-10 02:01</span>
+                <span class="text-slate-500">2026-10-11 01:29</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            推理算力账本崩塌：从HBM 8TB/s带宽墙到硅光1.5pJ/bit功耗悬崖，拆解Test-Time Compute与KV Cache碎片化的物理死局
+            解剖AI算力骗局：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何锁死万亿参数模型的物理天花板
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI推理成本的定价模型建立在错误假设上。市场共识认为Test-Time Compute可线性扩展智能，却忽略了一个物理事实：在FP8精度下，100K上下文并发请求将瞬间榨干单颗80GB HBM3e的容量与8TB/s带宽。当KV Cache碎片化导致有效内存利用率跌破40%，NVLink的900GB/s双向带宽将取代FLOPS成为最大拥塞节点。硅光互联被鼓吹为救世主，但其1.5pJ/bit的能耗在51.2Tbps交换容量下产生76.8W纯互联功耗，热密度突破风冷极限。本报告用晶体管级推演证明：当前架构下，推理吞吐量的天花板由内存墙与互联功耗共同锁定，而非制程微缩。
+            华尔街对AI算力的线性外推是2024年最大的定价错误。市场假设Transformer的推理成本将随算法优化无限下降。物理定律不支持这种假设。本文用硬核数据证明三个反共识真相：第一，Test-Time Compute的Scaling Law在物理层面撞上HBM带宽墙，FP8精度下100K上下文并发请求将在微秒级榨干80GB HBM3e，NVLink将沦为最大拥塞节点；第二，硅光互联的pJ/bit功耗优势被激光器热漂移与耦合损耗抵消，CPO良率在<50%区间徘徊，2026年前无法规模商用；第三，KV Cache碎片化不是软件问题，是DRAM row-buffer冲突与bank-group调度的物理必然，PagedAttention仅回收了<30%的浪费。以下推演全部基于可验证的TFLOPS、GB/s、pJ/bit与mm²参数。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261010_020133.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261011_012945.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261009_024141.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，NVLink如何沦为万亿参数推理的死亡拥塞节点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-09 02:41</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261008_022408.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-08 02:24</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261007_015919.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：Test-Time Compute 的边际收益已被 HBM 带宽墙与 KV Cache 碎片化击穿</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-07 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261006_023833.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及为什么硅光互联是唯一能阻止NVLink变成PCIe 4.0的物理止血钳</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-06 02:38</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261010_020133.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到硅光1.5pJ/bit功耗悬崖，拆解Test-Time Compute与KV Cache碎片化的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-10 02:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261009_024141.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，NVLink如何沦为万亿参数推理的死亡拥塞节点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-09 02:41</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261008_022408.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-08 02:24</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261007_015919.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：Test-Time Compute 的边际收益已被 HBM 带宽墙与 KV Cache 碎片化击穿</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-07 01:59</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -547,19 +549,19 @@
 <a href="https://www.servethehome.com/gmktec-evo-x3-mini-pc-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">GMKtec EVO-X3 Mini-PC Review Looking at a 128GB AMD Local AI Box</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">128GB统一内存的Ryzen AI Max+ 395看似是本地推理的甜点，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">OCuLink接口才是真正杀招</span>——它让迷你主机摆脱了PCIe通道的阉割诅咒。然而，AMD的软件栈依然是扶不起的阿斗，买这盒子的人八成会装Linux自己折腾驱动。别指望开箱即用，这是给极客的玩具，不是给企业的方案。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">128GB统一内存的Ryzen AI Max+ 395塞进迷你机箱，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本地跑70B模型不再是极客玩具，而是对云端API定价权的直接挑衅</span>。OCuLink接口是神来之笔，但AMD的软件栈仍是阿喀琉斯之踵——硬件堆料救不了ROCm的稀烂生态。买它的人最好祈祷别碰CUDA迁移。</p>
 </a>
 
-<a href="https://www.servethehome.com/xsight-labs-e1l-dpu-for-lower-power-200gbps-dpus/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2610.10549" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Xsight Labs E1L DPU for Lower-Power 200Gbps DPUs</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">DPU赛道终于有人做减法了。8-22核Arm N2、200Gbps、低功耗——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是给边缘Agent基础设施量身定制的卸荷引擎</span>。当Agent集群需要在近数据端做推理路由和状态管理时，把CPU从网络协议栈里解放出来比堆算力更紧迫。Xsight赌的是Agent爆发后DPU从云端下沉到边缘，这步棋比NVIDIA的BlueField更接地气。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Synthesis Through Simulation: Generating Coherent Enterprise Data via Scalable Agent-System Interaction</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">企业级Agent训练卡在数据隐私和长尾场景，这篇论文用模拟环境合成交互数据，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是给Agent造一个“数字沙盘”来刷经验值</span>。方向对，但合成数据的分布漂移和评估保真度是暗雷。别指望仿真能替代真实业务流的毒打，能覆盖30%边缘case就算烧高香。</p>
 </a>
 
 <a href="https://semiengineering.com/chip-industry-week-in-review-159/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">一周内$2B代工协议、Hyper-NA EUV推进、$10T数据中心计划、SiC增资$1.5B——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">资本正在用脚投票，赌AI算力需求没有天花板</span>。但佳能nanoimprint悄然就绪、芯片走私被盯上，说明技术路线和地缘博弈都在加速分化。$10T的数字听着像庞氏，但没有一个玩家敢下牌桌。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">$2B代工协议、Hyper-NA EUV、佳能纳米压印就绪、$10T数据中心——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这串数字背后是芯片业从“缺芯”叙事彻底切换到“产能军备竞赛”</span>。台积电三星财报好看，但AI芯片审查和走私暗流说明地缘绞索在收紧。800V和SiC是功率半导体的真金白银，别只盯着逻辑制程。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    

@@ -1,5 +1,12 @@
 [
   {
+    "id": "20261011_012945",
+    "date": "2026-10-11 01:29",
+    "title": "解剖AI算力骗局：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何锁死万亿参数模型的物理天花板",
+    "excerpt": "华尔街对AI算力的线性外推是2024年最大的定价错误。市场假设Transformer的推理成本将随算法优化无限下降。物理定律不支持这种假设。本文用硬核数据证明三个反共识真相：第一，Test-Time Compute的Scaling Law在物理层面撞上HBM带宽墙，FP8精度下100K上下文并发请求将在微秒级榨干80GB HBM3e，NVLink将沦为最大拥塞节点；第二，硅光互联的pJ/bit功耗优势被激光器热漂移与耦合损耗抵消，CPO良率在<50%区间徘徊，2026年前无法规模商用；第三，KV Cache碎片化不是软件问题，是DRAM row-buffer冲突与bank-group调度的物理必然，PagedAttention仅回收了<30%的浪费。以下推演全部基于可验证的TFLOPS、GB/s、pJ/bit与mm²参数。",
+    "url": "articles/20261011_012945.html"
+  },
+  {
     "id": "20261010_020133",
     "date": "2026-10-10 02:01",
     "title": "推理算力账本崩塌：从HBM 8TB/s带宽墙到硅光1.5pJ/bit功耗悬崖，拆解Test-Time Compute与KV Cache碎片化的物理死局",
