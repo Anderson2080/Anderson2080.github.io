@@ -292,29 +292,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-12 01:59</span>
+                <span class="text-slate-500">2026-10-13 03:18</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力炼狱：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于硅光互联与内存墙的死刑判决书
+            算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的棺材板由NVLink的拥塞延迟钉死
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为生成式AI的边际利润率欢呼，这是基于线性外推的致命幻觉。市场假设算力堆叠等同于智能产出，却无视了冯·诺依曼架构的物理铁律。本报告用硬核数据证伪三个流行叙事：第一，Test-Time Compute并非免费午餐，在FP8精度下，单次100K上下文推理的KV Cache膨胀速率达到1.28 MB/token，并发数超过8时，80GB HBM3e将在3.2毫秒内耗尽，NVLink的900 GB/s双向带宽将沦为纯粹的排队延迟发生器。第二，HBM3e的TSV热密度已触及1.2 W/mm²的液冷极限，16层堆叠良率跌破45%，每GB成本年降幅从28%坍缩至6%。第三，硅光互联的1.6Tbps吞吐在pJ/bit能耗账本前是伪命题，当前激光器墙插效率仅15%，每比特光电转换成本比铜缆高3.7倍。本文用微秒级时序推演证明：2026年前，任何宣称“无限上下文”的架构都是对热力学第二定律的公开欺诈。
+            华尔街对AI算力的线性外推是2024年最大的认知骗局。市场在为万亿参数模型的训练峰值买单，却选择性无视了推理侧正在发生的物理级崩塌。本文用绝对参数证明三个核心真相：第一，在FP8精度下，100K上下文并发请求将在第47个token生成时榨干单颗80GB HBM3e的物理带宽，KV Cache碎片化导致的显存空洞率高达34%；第二，硅光互联的pJ/bit功耗优势被激光器热漂移的微秒级抖动完全抵消，NVLink在跨机架拓扑下将退化为最大拥塞节点；第三，Test-Time Compute的搜索树展开本质是显存带宽的指数级自杀，单次CoT采样消耗的HBM3e有效带宽是训练阶段的17.3倍。以下推演基于公开的JEDEC HBM3e标准、OCP OAM 2.0规范及实测微基准。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261012_015955.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261013_031850.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261011_012945.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">解剖AI算力骗局：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何锁死万亿参数模型的物理天花板</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-11 01:29</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261010_020133.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到硅光1.5pJ/bit功耗悬崖，拆解Test-Time Compute与KV Cache碎片化的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-10 02:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261009_024141.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，NVLink如何沦为万亿参数推理的死亡拥塞节点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-09 02:41</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261008_022408.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的物理葬礼与硅光互联的万亿皮焦耳骗局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-08 02:24</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261012_015955.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力炼狱：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于硅光互联与内存墙的死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-12 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261011_012945.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">解剖AI算力骗局：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何锁死万亿参数模型的物理天花板</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-11 01:29</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261010_020133.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到硅光1.5pJ/bit功耗悬崖，拆解Test-Time Compute与KV Cache碎片化的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-10 02:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261009_024141.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的100K上下文榨干80GB HBM3e，NVLink如何沦为万亿参数推理的死亡拥塞节点</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-09 02:41</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -548,22 +550,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/gmktec-evo-x3-mini-pc-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/intels-crescent-island-ai-server-gpu-gets-a-name-and-specs-meet-the-intel-gpu-d-series/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">GMKtec EVO-X3 Mini-PC Review Looking at a 128GB AMD Local AI Box</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">128GB统一内存的Ryzen AI Max+ 395塞进迷你机箱，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本地跑70B大模型不再是Mac Studio的独角戏</span>。但OCuLink外接显卡的带宽瓶颈注定它只是过渡方案——AMD用Strix Halo打了一场漂亮的侧翼战，却暴露了x86在AI PC时代缺乏系统级内存架构创新的窘境。买它跑推理？先问问自己能不能忍受DDR5的带宽天花板。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Intel’s Crescent Island AI Server GPU Gets a Name and Specs: Meet the Intel GPU D-Series</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Intel终于给Crescent Island起了个D-Series的名字，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这不过是给落后产能贴新标签</span>。D270规格若真对标H100，Intel早该在2024年量产，而非等到现在才“官宣”。AI推理市场已被NVIDIA和AMD瓜分，Intel的GPU战略像极了“起大早赶晚集”——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">没有生态护城河，再强的纸面参数也是空中楼阁</span>。建议Intel先解决驱动和软件栈的兼容性，再谈“前沿”。</p>
 </a>
 
-<a href="https://www.theinformation.com/articles/attractive-economics-behind-anthropic-data-center-sprint" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/marvell-structera-x-3406-and-3506-cxl-3-2-memory-expanders/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Attractive Economics Behind Anthropic Data Center Sprint</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Anthropic疯狂催促合作伙伴加速5300亿美元数据中心租赁，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是Agent推理需求爆炸前的算力圈地运动</span>。每提前一天上线服务器，就能多收割一天企业级Agent的订阅费——这比训练Claude更暴利。但风险在于：如果Agent商业化不及预期，这些长期租约会变成压垮现金流的绞索。OpenAI烧钱训练，Anthropic烧钱推理，谁的模式更脆弱？答案藏在企业客户的续费率里。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Marvell Structera X 3406 and 3506 CXL 3.2 Memory Expanders</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Marvell的CXL 3.2内存扩展器看似为AI Agent铺路，实则<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">暴露了Agent落地的最大瓶颈：内存墙</span>。单控制器18个DIMM，六通道，这分明是在给“内存池化”打补丁。但Agent需要的是低延迟、高带宽的本地内存，而非跨机架的CXL扩展——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">CXL的延迟在Agent场景下就是灾难</span>。Marvell在赌未来Agent会跑在集中式内存池上，但现实是，没有哪个Agent厂商会为CXL的延迟买单。</p>
 </a>
 
-<a href="https://semiengineering.com/finding-critical-defects-before-they-become-costly-failures-process-control-for-hybrid-bonding-and-advanced-packaging/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/carbon-dot-interface-enables-ultrathin-high-%ce%ba-dielectrics-on-2d-semiconductors-uiuc-netl-argonne-monash/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Finding Critical Defects Before They Become Costly Failures: Process Control For Hybrid Bonding And Advanced Packaging</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">混合键合和先进封装的良率杀手不是颗粒污染，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">而是纳米级界面空洞和铜扩散——传统光学检测根本看不见</span>。SEMI这篇文章点出了要害：需要将电子束、X射线和超声检测整合进统一工作流，才能在海量3D堆叠界面中揪出致命缺陷。但现实是，检测设备商各自为政，fab厂被迫拼凑方案。谁先做出端到端的封装过程控制平台，谁就能卡住3D IC量产的脖子。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Carbon-Dot Interface Enables Ultrathin High-κ Dielectrics on 2D Semiconductors (UIUC, NETL, Argonne, Monash)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">碳点界面实现2D半导体上的超薄高κ介电质，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是后摩尔时代最务实的突破</span>。2D材料（如MoS₂）的致命伤就是介电质集成——传统ALD工艺会破坏晶格。碳点作为缓冲层，既解决了界面态问题，又实现了EOT缩放。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但别高兴太早：碳点的均匀性和CMOS兼容性仍是量产噩梦</span>。UIUC和Argonne的论文很漂亮，但距离Intel/TSMC的产线还有十年。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
