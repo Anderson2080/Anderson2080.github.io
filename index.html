@@ -294,29 +294,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-14 01:32</span>
+                <span class="text-slate-500">2026-10-16 00:57</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当FP8并发击穿HBM3e物理极限，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话
+            物理账本清算：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit谎言与Test-Time Compute的微秒级死亡螺旋
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI推理成本的定价模型建立在错误的线性外推上。市场假设算力扩展等同于性能扩展，忽略了内存带宽与互联功耗的物理天花板。本文用硬核数据证明三个核心真相：第一，在FP8精度下，100K上下文并发请求将瞬间榨干单颗GPU的80GB HBM3e，KV Cache碎片化导致有效带宽利用率跌破40%；第二，NVLink在All-to-All通信中产生微秒级拥塞，单跳延迟超过1.2μs时，张量并行的边际收益归零；第三，硅光互联的调制器功耗需降至5 pJ/bit以下才能突破铜缆的能效墙，而当前MZM调制器实测功耗为15-20 pJ/bit。任何忽视这些物理常数的估值模型，都是在沙滩上建造摩天大楼。
+            华尔街对AI算力的线性外推是2024年最大的金融幻觉。当前市场定价隐含了每18个月单位推理成本下降10倍的假设，但物理定律拒绝签署这张支票。本文用硬核数据证明三个反共识结论：第一，在FP8精度下，100K上下文窗口的并发请求将瞬间榨干单颗80GB HBM3e的有效带宽，KV Cache碎片化导致实际可用容量跌破42GB，NVLink交换机沦为最大拥塞节点，微秒级排队延迟直接击穿SLA。第二，硅光互联的1.5 pJ/bit能效数据仅在实验室25°C耦合条件下成立，商用封装中激光器TEC功耗与光纤耦合损耗将实际能效推高至4.8 pJ/bit，对比NVLink铜缆的2.1 pJ/bit毫无优势。第三，Test-Time Compute的边际收益在超过16次采样后趋近于零，而每次前向传播的HBM访问能耗占比高达63%，这意味着推理时间扩展的物理天花板已经触顶。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261014_013231.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261016_005738.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261013_031850.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的棺材板由NVLink的拥塞延迟钉死</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-13 03:18</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261012_015955.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力炼狱：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于硅光互联与内存墙的死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-12 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261011_012945.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">解剖AI算力骗局：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何锁死万亿参数模型的物理天花板</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-11 01:29</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261010_020133.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理算力账本崩塌：从HBM 8TB/s带宽墙到硅光1.5pJ/bit功耗悬崖，拆解Test-Time Compute与KV Cache碎片化的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-10 02:01</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261014_013231.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理极限，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-14 01:32</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261013_031850.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的棺材板由NVLink的拥塞延迟钉死</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-13 03:18</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261012_015955.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力炼狱：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于硅光互联与内存墙的死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-12 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261011_012945.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">解剖AI算力骗局：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何锁死万亿参数模型的物理天花板</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-11 01:29</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -552,22 +554,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/cisco-ocp-ai-networking-announcements-nvidia/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/inside-the-secretive-aws-networking-lab/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">New USFP Pluggable Optics Form Factor for Higher Speeds from Cisco and NVIDIA</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Cisco与NVIDIA联手推出USFP可插拔光模块，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是AI集群互联带宽瓶颈倒逼的物理层军备竞赛</span>。400G SerDes已到电信号极限，可插拔方案是给超大规模GPU集群续命的权宜之计。但别吹什么"开放生态"，这分明是两大巨头在CPO成熟前抢定事实标准，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">中小玩家只能被动跟牌，议价权归零</span>。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Inside the Secretive AWS Networking Lab</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AWS自研网络栈已从“够用”进化到“定义标准”。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">102.4T交换机加自研加密与时间同步，本质是把云厂商的规模优势转化为芯片级壁垒</span>。传统OEM的通用网络方案在超大规模AI集群面前已无还手之力，博通和思科该紧张了。</p>
 </a>
 
-<a href="https://semiengineering.com/agentic-ai-automates-rtl-waveform-analysis-and-debugging-columbia-google/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Agentic AI Automates RTL Waveform Analysis And Debugging (Columbia, Google)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Columbia与Google用Agent自动分析RTL波形，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对EDA三巨头核心护城河的直接偷袭</span>。验证环节占芯片设计60%工时，Agent若能吃掉波形调试，Synopsys/Cadence的license模式将遭降维打击。但论文归论文，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">工业级验证的corner case和sign-off责任，Agent敢背吗？</span>别急着欢呼。</p>
-</a>
-
-<a href="https://www.servethehome.com/intels-crescent-island-ai-server-gpu-gets-a-name-and-specs-meet-the-intel-gpu-d-series/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/cisco-ocp-ai-networking-announcements-nvidia/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Intel's Crescent Island AI Server GPU Gets a Name and Specs: Meet the Intel GPU D-Series</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Intel终于给Crescent Island定名D-Series D270，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但推理卡市场早已是NVIDIA的屠宰场，AMD都只能喝汤</span>。Intel GPU从Arc到Ponte Vecchio再到D-Series，路线图反复横跳，客户信心消耗殆尽。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">没有CUDA级软件生态，D270就是一块昂贵的硅片摆设</span>。Gaudi的教训还不够痛？</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">New USFP Pluggable Optics Form Factor for Higher Speeds from Cisco and NVIDIA</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">思科与英伟达联手推USFP，表面是光模块封装创新，实则是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用400G SerDes生态绑定客户，对抗博通在交换芯片领域的统治</span>。可插拔光模块的“可插拔”三个字正在被重新定义——谁掌握SerDes lane标准，谁就掐住AI集群的带宽咽喉。</p>
+</a>
+
+<a href="https://arxiv.org/abs/2610.14115" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Silent Failures in Agentic Data Science</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">LLM写代码门槛降低的代价是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">“静默失败”成为数据科学Agent的默认状态——代码跑通但结论全错，且无人察觉</span>。当前Agent评测体系沉迷于单元测试通过率，却对统计推断的隐性错误束手无策。这不是工程bug，是范式缺陷。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
