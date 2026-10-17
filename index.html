@@ -295,29 +295,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-16 00:57</span>
+                <span class="text-slate-500">2026-10-17 00:58</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            物理账本清算：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit谎言与Test-Time Compute的微秒级死亡螺旋
+            从HBM3e的6.4TB/s到硅光子的0.5pJ/bit：拆解Test-Time Compute如何用KV Cache碎片化在80GB显存里制造一场每秒烧掉2000美元的算力通胀
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI算力的线性外推是2024年最大的金融幻觉。当前市场定价隐含了每18个月单位推理成本下降10倍的假设，但物理定律拒绝签署这张支票。本文用硬核数据证明三个反共识结论：第一，在FP8精度下，100K上下文窗口的并发请求将瞬间榨干单颗80GB HBM3e的有效带宽，KV Cache碎片化导致实际可用容量跌破42GB，NVLink交换机沦为最大拥塞节点，微秒级排队延迟直接击穿SLA。第二，硅光互联的1.5 pJ/bit能效数据仅在实验室25°C耦合条件下成立，商用封装中激光器TEC功耗与光纤耦合损耗将实际能效推高至4.8 pJ/bit，对比NVLink铜缆的2.1 pJ/bit毫无优势。第三，Test-Time Compute的边际收益在超过16次采样后趋近于零，而每次前向传播的HBM访问能耗占比高达63%，这意味着推理时间扩展的物理天花板已经触顶。
+            华尔街正在为“推理算力需求永续增长”这一叙事支付40倍市销率。物理账本不支持这个谎言。在FP8精度下，一个100K上下文、batch size=64的并发请求，KV Cache占用为：2（K+V）× 80层 × 8个KV头 × 128维 × 100K tokens × 1 byte × 64 = 10.5GB。看似可控。但Test-Time Compute将单次推理的token生成量从500提升至50,000，KV Cache线性膨胀至105GB——单卡HBM3e的80GB容量在第一个请求组就宣告击穿。跨节点NVLink的900GB/s双向带宽被KV Cache的All-to-All通信瞬间吞噬，互联功耗从0.5pJ/bit飙升至3.2pJ/bit。硅光互联不是可选项，是唯一能让每token能耗低于0.8焦耳的物理路径。本文用晶体管级账本证明：当前所有“长上下文推理集群”方案，在数学上都是亏损的。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261016_005738.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261017_005817.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261014_013231.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理极限，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-14 01:32</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261013_031850.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的棺材板由NVLink的拥塞延迟钉死</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-13 03:18</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261012_015955.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力炼狱：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于硅光互联与内存墙的死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-12 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261011_012945.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">解剖AI算力骗局：当100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何锁死万亿参数模型的物理天花板</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-11 01:29</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261016_005738.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">物理账本清算：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit谎言与Test-Time Compute的微秒级死亡螺旋</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-16 00:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261014_013231.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理极限，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-14 01:32</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261013_031850.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e的棺材板由NVLink的拥塞延迟钉死</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-13 03:18</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261012_015955.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力炼狱：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片——一份关于硅光互联与内存墙的死刑判决书</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-12 01:59</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -554,22 +556,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/inside-the-secretive-aws-networking-lab/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/this-is-the-amd-helios-hpe-juniper-qfx5252-switch-tray-at-ocp-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Inside the Secretive AWS Networking Lab</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AWS自研网络栈已从“够用”进化到“定义标准”。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">102.4T交换机加自研加密与时间同步，本质是把云厂商的规模优势转化为芯片级壁垒</span>。传统OEM的通用网络方案在超大规模AI集群面前已无还手之力，博通和思科该紧张了。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">This is the AMD Helios HPE Juniper QFX5252 Switch Tray at OCP 2026</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD Helios机架交换机托盘亮相OCP，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是AMD用开放生态对NVIDIA InfiniBand封闭王座的正面宣战</span>。但别被"开放"口号迷惑——Juniper被HPE吞并后，这不过是另一场巨头分赃。真正的问题是：当交换芯片、网卡、GPU全绑在AMD战车上，客户只是从NVIDIA的牢笼换到AMD的围城。OCP的"开放"从来都是大厂重新划分势力范围的遮羞布。</p>
 </a>
 
-<a href="https://www.servethehome.com/cisco-ocp-ai-networking-announcements-nvidia/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">New USFP Pluggable Optics Form Factor for Higher Speeds from Cisco and NVIDIA</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">思科与英伟达联手推USFP，表面是光模块封装创新，实则是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用400G SerDes生态绑定客户，对抗博通在交换芯片领域的统治</span>。可插拔光模块的“可插拔”三个字正在被重新定义——谁掌握SerDes lane标准，谁就掐住AI集群的带宽咽喉。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2610.14115" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2610.20665" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Silent Failures in Agentic Data Science</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">LLM写代码门槛降低的代价是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">“静默失败”成为数据科学Agent的默认状态——代码跑通但结论全错，且无人察觉</span>。当前Agent评测体系沉迷于单元测试通过率，却对统计推断的隐性错误束手无策。这不是工程bug，是范式缺陷。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">这篇论文戳破了Agent评测最大的泡沫：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">所有静态benchmark都是自欺欺人的温室花朵</span>。现实世界不会暂停等你推理，API会超时、数据会过期、竞品会抢先。在"活时钟"下评测Agent，等于把温室花朵扔进台风——大部分所谓SOTA模型会瞬间现原形。更狠的是"教学"维度：不仅要测，还要教Agent在时间压力下做取舍。这才是Agent从玩具走向生产力的真正门槛。</p>
+</a>
+
+<a href="https://semiengineering.com/beyond-the-specification-what-really-determines-pcie-retimer-reach/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Beyond The Specification: What Really Determines PCIe Retimer Reach?</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">PCIe Retimer的"规格书"就是芯片行业最大的谎言。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">标称能跑多远和实际能跑多远之间，隔着硅设计、控制器智能、信道质量和物理介质的四重地狱</span>。AI服务器里GPU互联动辄几十条lane，任何一条retimer翻车就是整机报废。这篇文章的价值在于撕开spec的遮羞布：买retimer不是买参数，是买系统级信号完整性的工程能力。那些只会堆料不看信道的方案商，等着在224G PAM4时代集体翻车。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    

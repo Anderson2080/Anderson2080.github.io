@@ -1,5 +1,12 @@
 [
   {
+    "id": "20261017_005817",
+    "date": "2026-10-17 00:58",
+    "title": "从HBM3e的6.4TB/s到硅光子的0.5pJ/bit：拆解Test-Time Compute如何用KV Cache碎片化在80GB显存里制造一场每秒烧掉2000美元的算力通胀",
+    "excerpt": "华尔街正在为“推理算力需求永续增长”这一叙事支付40倍市销率。物理账本不支持这个谎言。在FP8精度下，一个100K上下文、batch size=64的并发请求，KV Cache占用为：2（K+V）× 80层 × 8个KV头 × 128维 × 100K tokens × 1 byte × 64 = 10.5GB。看似可控。但Test-Time Compute将单次推理的token生成量从500提升至50,000，KV Cache线性膨胀至105GB——单卡HBM3e的80GB容量在第一个请求组就宣告击穿。跨节点NVLink的900GB/s双向带宽被KV Cache的All-to-All通信瞬间吞噬，互联功耗从0.5pJ/bit飙升至3.2pJ/bit。硅光互联不是可选项，是唯一能让每token能耗低于0.8焦耳的物理路径。本文用晶体管级账本证明：当前所有“长上下文推理集群”方案，在数学上都是亏损的。",
+    "url": "articles/20261017_005817.html"
+  },
+  {
     "id": "20261016_005738",
     "date": "2026-10-16 00:57",
     "title": "物理账本清算：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit谎言与Test-Time Compute的微秒级死亡螺旋",
