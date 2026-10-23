@@ -301,29 +301,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-22 01:08</span>
+                <span class="text-slate-500">2026-10-23 01:08</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话
+            算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何撕裂万亿参数推理的物理底裤
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理即服务”的毛利率编织幻觉。卖方研报宣称Test-Time Compute（测试时计算）能通过增加推理时长换取智能跃迁，却刻意隐瞒了物理定律的账单：在FP8精度下，单次100K上下文推理的KV Cache占用高达1.6GB，并发数超过50即触发80GB HBM3e的硬性OOM（内存溢出）。NVLink的900GB/s双向带宽在All-Reduce通信中会因微秒级延迟累积而沦为最大拥塞节点。硅光互联的1.5pJ/bit能效看似解药，但激光器阵列的15%电光转换效率与TSV穿孔的热密度（>150W/cm²）正在将3D堆叠推向良率悬崖。本文用硬核推演证明：当前架构下，Test-Time Compute的边际成本曲线将在并发>32时垂直起飞，KV Cache碎片化导致的显存利用率衰减达37%，而硅光互联的封装良率瓶颈使每比特成本在2026年前无法击穿0.1美分。市场对“推理算力无限供给”的定价，建立在忽略热力学第二定律的沙堡之上。
+            华尔街对AI推理成本的建模存在系统性偏差。市场普遍将Test-Time Compute视为线性扩展的软件红利，无视了冯·诺依曼架构的物理天花板。本文用硬核数据证伪三个谎言：第一，FP8精度下100K上下文并发请求将瞬间击穿80GB HBM3e容量，NVLink将沦为最大拥塞节点而非算力通道；第二，硅光互联的1.5 pJ/bit能效在激光器热漂移面前是实验室童话，CPO封装良率与TSV热密度在3D堆叠下已逼近材料断裂极限；第三，KV Cache碎片化导致的内存分配器在PagedAttention下产生超过40%的SRAM面积浪费，L2缓存命中率在长上下文下衰减至12%以下。本文推演从TFLOPS到pJ/bit的完整物理账本，给出2025-2026年推理集群的真实TCO曲线。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261022_010856.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261023_010829.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261021_011139.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">每Token 0.8微焦的死亡螺旋：当KV Cache撕裂HBM4良率、硅光互联撞上1.6Tbps的物理墙</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-21 01:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261020_012757.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-20 01:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261019_004200.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬十万亿参数神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-19 00:42</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261018_003316.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-18 00:33</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261022_010856.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-22 01:08</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261021_011139.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">每Token 0.8微焦的死亡螺旋：当KV Cache撕裂HBM4良率、硅光互联撞上1.6Tbps的物理墙</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-21 01:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261020_012757.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">系统升级中</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-20 01:27</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261019_004200.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬十万亿参数神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-19 00:42</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -569,19 +571,19 @@
 <a href="https://www.servethehome.com/nvidia-gtc-berlin-2026-nvidia-intros-dsx-pods-and-more/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA GTC Berlin 2026 NVIDIA Intros DSX PODs and More</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">DSX POD把服务器塞进集装箱，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用物理标准化掩盖液冷与供电的碎片化烂摊子</span>。欧洲客户要的是主权云合规，不是又一个美式机柜美学。软件栈更新才是锁死生态的暗钩，硬件只是入场券。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">DSX POD把服务器塞进集装箱，本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用物理预制化对冲AI算力供给的交付瓶颈</span>。但软件栈更新才是真杀招——NVIDIA在把“卖盒子”升级为“卖可复制的算力单元”，客户锁定从芯片层下沉到部署层。别被硬件形态迷惑，这是渠道霸权的延伸。</p>
 </a>
 
-<a href="https://www.theinformation.com/briefings/microsoft-warns-chinese-state-linked-cyberattacks-powered-ai-agent" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2610.28686" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Microsoft Warns of Chinese State-Linked Cyberattacks Powered by AI Agent</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Artex把Agent从Demo拽进实战：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">自动化攻击的边际成本趋近于零，防御方的人力杠杆彻底失效</span>。微软这份警告的真正潜台词是——Agent安全护栏还没建好，攻击者已经跑通了PMF。别只盯着模型能力，看谁在闭环里迭代。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">RAG的痛点从来不是检索，是用户问得烂。用小模型做<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">查询澄清的专用微调</span>，比堆大模型做端到端更务实——把“反问”变成可训练能力，Agent才真正具备交互智能。这路子对了：小模型干窄活，大模型别浪费在猜用户心思上。</p>
 </a>
 
-<a href="https://semiengineering.com/scaling-data-movement-for-physical-ai/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/beyond-the-epe-budget-building-the-next-generation-of-computational-lithography/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Scaling Data Movement For Physical AI</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Physical AI的数据搬运瓶颈不在带宽峰值，在<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">确定性延迟与功耗墙的夹缝里</span>。云端那套HBM+CoWoS的暴力美学搬到机器人身上就是灾难。谁先搞定异构内存池的QoS调度，谁拿走边缘推理的定价权。别拿数据中心思维做物理AI。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Beyond The EPE Budget: Building The Next Generation Of Computational Lithography</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">EPE预算已榨干，靠调参数续命是死路。出路在<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">可解释AI+更丰富量测数据重构光刻模型</span>，而非继续堆算力暴力拟合。跨行业协作听着像口号，但掩膜、量测、EDA不打通，计算光刻就是无源之水。这是工程范式之争，不是算法调优。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
