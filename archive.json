@@ -1,5 +1,12 @@
 [
   {
+    "id": "20261026_005646",
+    "date": "2026-10-26 00:56",
+    "title": "每Token边际成本暴涨400%：拆解Test-Time Compute的算力谎言、HBM3e的pJ/bit热墙与KV Cache的SRAM面积死局",
+    "excerpt": "华尔街对\"推理即思考\"的叙事定价建立在错误的线性外推上。本文用物理账本证伪三个市场共识：其一，Test-Time Compute的算力回报在FP8精度下呈对数衰减，100K上下文单并发请求的KV Cache占用达12.8GB，8卡H800的640GB HBM3e在50并发下即触顶，NVLink 4.0的900GB/s双向带宽在All-to-All通信中成为最大拥塞节点；其二，HBM3e的TSV热密度已达0.8W/mm²，堆叠良率随层数呈指数衰减，12层HBM3e的pJ/bit能效在2.5pJ/bit徘徊，硅光互联的0.5pJ/bit理论值受限于激光器WPE与耦合损耗，2026年前无法量产；其三，KV Cache碎片化在PagedAttention下仍产生15-20%的显存浪费，GQA的8:1压缩比在长上下文下失效。本文给出可验证的推演逻辑与物理参数，供对冲基金做空过度定价的推理算力标的。",
+    "url": "articles/20261026_005646.html"
+  },
+  {
     "id": "20261025_004420",
     "date": "2026-10-25 00:44",
     "title": "算力绞肉机：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit账本与Test-Time Compute的物理死局",

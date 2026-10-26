@@ -304,29 +304,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-25 00:44</span>
+                <span class="text-slate-500">2026-10-26 00:56</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit账本与Test-Time Compute的物理死局
+            每Token边际成本暴涨400%：拆解Test-Time Compute的算力谎言、HBM3e的pJ/bit热墙与KV Cache的SRAM面积死局
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理即思考”的Test-Time Compute叙事支付荒谬的溢价，却集体无视了硅基物理定律的硬约束。市场共识存在三个致命谎言：第一，认为HBM3e的8 TB/s带宽足以喂饱下一代推理集群；第二，相信硅光互联能线性解决横向扩展的功耗墙；第三，低估了KV Cache碎片化对有效显存容量的毁灭性打击。本文用硬核数据证明：在FP8精度下，100K上下文的并发请求将瞬间榨干单颗80GB HBM3e，导致NVLink变成最大的拥塞节点；硅光互联在1.5 pJ/bit的物理极限下，激光器功耗将吞噬整机柜的功率预算；而Test-Time Compute的线性扩展假设，在SRAM面积与TSV热密度面前，不过是一张无法兑现的支票。这不是软件优化问题，这是热力学与量子隧穿的联合绞杀。
+            华尔街对"推理即思考"的叙事定价建立在错误的线性外推上。本文用物理账本证伪三个市场共识：其一，Test-Time Compute的算力回报在FP8精度下呈对数衰减，100K上下文单并发请求的KV Cache占用达12.8GB，8卡H800的640GB HBM3e在50并发下即触顶，NVLink 4.0的900GB/s双向带宽在All-to-All通信中成为最大拥塞节点；其二，HBM3e的TSV热密度已达0.8W/mm²，堆叠良率随层数呈指数衰减，12层HBM3e的pJ/bit能效在2.5pJ/bit徘徊，硅光互联的0.5pJ/bit理论值受限于激光器WPE与耦合损耗，2026年前无法量产；其三，KV Cache碎片化在PagedAttention下仍产生15-20%的显存浪费，GQA的8:1压缩比在长上下文下失效。本文给出可验证的推演逻辑与物理参数，供对冲基金做空过度定价的推理算力标的。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261025_004420.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261026_005646.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261024_011920.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-24 01:19</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261023_010829.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何撕裂万亿参数推理的物理底裤</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-23 01:08</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261022_010856.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-22 01:08</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261021_011139.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">每Token 0.8微焦的死亡螺旋：当KV Cache撕裂HBM4良率、硅光互联撞上1.6Tbps的物理墙</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-21 01:11</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261025_004420.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit账本与Test-Time Compute的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-25 00:44</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261024_011920.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-24 01:19</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261023_010829.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何撕裂万亿参数推理的物理底裤</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-23 01:08</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261022_010856.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-22 01:08</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -572,22 +574,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/adt-r27a-bk3-u-2-to-pcie-slot-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/aivres-nvidia-vera-rubin-and-hgx-b300-at-ocp-summit-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ADT R27A-BK3 U.2 to PCIe Adapter Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">别被"廉价"标签骗了——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">U.2转接卡的核心价值在于散热设计而非信号完整性</span>。企业级SSD满载功耗轻松破25W，被动散热片若压不住，降速比掉盘更隐蔽。ADT这款若只做"能点亮"的买卖，在AI训练集群里就是定时炸弹。买转接卡先看热仿真，别只看价格。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Aivres NVIDIA Vera Rubin and HGX B300 at OCP Summit</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Vera Rubin平台在OCP亮相，意味着<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">NVIDIA已把机架级AI工厂从路线图推进到可交付形态</span>。Aivres这类OEM同步跟进，说明Rubin的液冷、供电与互联规范已冻结。真正的信号不是芯片本身，而是供应链开始为2026-2027的部署周期备货——留给竞品追赶的窗口正在关闭。</p>
 </a>
 
-<a href="https://www.servethehome.com/msi-xpertstation-ws300-review-nvidia-dgx-station-gb300/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.theinformation.com/articles/anthropics-big-reveal" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">MSI XpertStation WS300 Review NVIDIA DGX Station GB300</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">DGX Station GB300的桌面化是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent工作负载从云端下沉到本地的分水岭</span>。MSI贴牌说明NVIDIA在推"个人AI超算"标准品，但真正的Agent落地瓶颈不在算力——在内存带宽和上下文窗口的性价比。GB300若不能把72B模型推理成本压到云端一半以下，这盒子就是极客玩具。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Anthropic's Big Reveal</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Anthropic递交IPO文件，是Agent赛道从"技术叙事"转向"财务叙事"的分水岭。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Claude的Agent化收入结构一旦公开，将直接重估整个AI应用层的估值逻辑</span>。别只看营收数字，要看推理成本占比和Agent任务留存率——那才是泡沫与护城河的分界线。</p>
 </a>
 
-<a href="https://semiengineering.com/chip-industry-week-in-review-161/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/pt-w-alloy-shows-potential-for-thinner-high-NA-euv-mask-absorbers-chinese-academy-of-sciences-et-al/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Tenstorrent融15亿、CHIPS法案砸3.89亿、800V进AI数据中心——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这三件事拼出同一个信号：算力军备竞赛正从"买GPU"转向"建电力+供应链主权"</span>。Micron路线图和垂直GaN是材料层的暗线。别盯着NVIDIA股价了，看谁在锁800V电源和HBM产能，那才是真护城河。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Pt-W Alloy Shows Potential For Thinner High-NA EUV Mask Absorbers (Chinese Academy of Sciences et al.)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">中科院用Pt-W合金攻High-NA EUV掩模吸收层，直击3nm以下光刻的<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">阴影效应与掩模3D畸变这一被ASML生态长期垄断的痛点</span>。但论文到量产隔着整条掩模供应链——别被"突破"二字冲昏头，先看缺陷密度和刻蚀选择比数据。这是中国在EUV材料端少有的正面切入。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
