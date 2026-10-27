@@ -1,5 +1,12 @@
 [
   {
+    "id": "20261027_014639",
+    "date": "2026-10-27 01:46",
+    "title": "算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的物理账本",
+    "excerpt": "市场对AI推理成本的定价模型建立在错误的线性外推之上。卖方分析师鼓吹的“算力无限供给”在物理定律前是伪命题。本文用硬核数据证伪三个谎言：第一，Test-Time Compute的Scaling Law并非免费午餐，在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大拥塞节点，单token边际成本不降反升；第二，硅光互联的pJ/bit优势被激光器功耗与耦合损耗吞噬，短期无法替代铜缆在<2m机架内的统治地位；第三，KV Cache碎片化导致HBM有效带宽利用率跌破40%，PagedAttention只是软件补丁，无法解决DRAM row-buffer冲突的物理本质。核心真相：推理经济学的瓶颈已从TFLOPS转移至GB/s与pJ/bit的乘积，2025年前任何宣称“推理成本年降10倍”的模型都应被扔进垃圾桶。",
+    "url": "articles/20261027_014639.html"
+  },
+  {
     "id": "20261026_005646",
     "date": "2026-10-26 00:56",
     "title": "每Token边际成本暴涨400%：拆解Test-Time Compute的算力谎言、HBM3e的pJ/bit热墙与KV Cache的SRAM面积死局",
