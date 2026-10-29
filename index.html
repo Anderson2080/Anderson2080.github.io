@@ -307,29 +307,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-10-28 01:58</span>
+                <span class="text-slate-500">2026-10-29 02:02</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当FP8精度与100K上下文撕裂HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话
+            算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的账面ROI
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为生成式AI的边际利润欢呼，而硅谷的实验室里，物理定律正在签发死亡判决书。市场对Test-Time Compute的狂热崇拜建立在一个致命的谎言之上：算力可以无限堆叠。本文剥离所有路演PPT的伪装，用硬核物理参数推演三大底层崩塌点。第一，在FP8精度下，单张80GB HBM3e显卡在100K上下文并发请求下，KV Cache膨胀将瞬间击穿显存墙，导致NVLink沦为最大拥塞节点。第二，HBM3e的TSV热密度已逼近材料学极限，8-Hi堆叠良率与1.2 pJ/bit的能效比构成不可调和的矛盾。第三，硅光互联的波分复用（WDM）在微秒级延迟面前，无法掩盖激光器功耗与耦合损耗的物理天花板。本文用TFLOPS、GB/s、mm²和微秒延迟的数据，证明当前架构在Test-Time Compute范式下，是一场注定破产的算力庞氏骗局。
+            华尔街对“推理即印钞”的叙事建立在一条脆弱的假设上：算力供给曲线会平滑吸收Test-Time Compute的指数级膨胀。这是谎言。物理定律不谈判。在FP8精度下，单条100K上下文的并发请求会瞬间榨干单颗80GB HBM3e的有效带宽，NVLink从数据高速公路退化为最大拥塞节点。KV Cache碎片化使显存有效利用率跌破60%，而硅光互联的pJ/bit账本在封装热密度面前尚未闭合。本报告用硬核参数推演三件事：第一，Test-Time Compute的边际收益在序列长度超过32K后以O(n²)的注意力复杂度吞噬算力预算；第二，HBM3e的TSV热密度与堆叠良率构成物理天花板，8-Hi之后每增加一层，良率损失呈非线性恶化；第三，硅光互联在<10pJ/bit区间才具备商业可行性，当前封装方案在激光器功耗与耦合损耗上仍差一个数量级。结论冷酷：现有架构下，长上下文推理的每Token成本曲线不会下降，只会因内存墙而陡峭化。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261028_015850.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261029_020244.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261027_014639.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-27 01:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261026_005646.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">每Token边际成本暴涨400%：拆解Test-Time Compute的算力谎言、HBM3e的pJ/bit热墙与KV Cache的SRAM面积死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-26 00:56</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261025_004420.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit账本与Test-Time Compute的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-25 00:44</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261024_011920.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-24 01:19</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261028_015850.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文撕裂HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-28 01:58</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261027_014639.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-27 01:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261026_005646.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">每Token边际成本暴涨400%：拆解Test-Time Compute的算力谎言、HBM3e的pJ/bit热墙与KV Cache的SRAM面积死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-26 00:56</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261025_004420.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度下的KV Cache撕裂80GB HBM3e，硅光互联的1.5 pJ/bit账本与Test-Time Compute的物理死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-25 00:44</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -581,19 +583,19 @@
 <a href="https://www.servethehome.com/microsoft-maia-300-shown-at-ocp-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Microsoft Maia 300 Shown at OCP 2026</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">微软Maia 300单托盘塞进4颗288GB HBM4、950W加速器，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是用功耗密度硬刚NVL72的暴力解法</span>。但950W风冷已到物理极限，OCP展示≠量产交付，微软自研芯片的软件栈成熟度仍是最大问号，别把PPT当护城河。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">单托盘4颗288GB HBM4、950W功耗，微软把内存墙当纸糊的。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但真正的杀招是OCP开放机架标准对英伟达封闭NVLink体系的釜底抽薪</span>——算力密度堆到物理极限后，互联协议才是云厂商的护城河。Maia 300若真2026量产，Azure自研芯片的TCO账本将首次压过H100租赁。</p>
 </a>
 
-<a href="https://arxiv.org/abs/2610.31789" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/introducing-build-a-chip-bench-from-workload-specification-to-gds/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Phronix: The Capability-Centric Learning Paradigm for Agents</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Phronix提出以能力为中心的学习范式，试图让Agent在科学计算性能工程中自我进化。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">方向对，但"能力抽象"若脱离真实工具链反馈就是空中楼阁</span>。当前Agent论文的通病：benchmark漂亮，落地即翻车，等开源代码再吹。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Introducing Build-A-Chip-Bench: From Workload Specification to GDS</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">用开源PDK让AI Agent跑通从规格到GDS全流程，听着像给EDA三巨头敲丧钟。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但芯片设计的容错率是零，Agent在时序收敛和DRC上的幻觉一次就烧掉千万流片费</span>。这个benchmark的真正价值不是替代工程师，而是量化Agent在哪个环节必翻车——大概率是物理验证。</p>
 </a>
 
-<a href="https://semiengineering.com/the-imec-report-scaling-optical-interconnects-for-the-ai-era/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/altera-agilex-27-800gbe-1-6tbe-hyperflow/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The imec Report: Scaling Optical Interconnects For The AI Era</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">imec直言光互连必须"贴近硅片"，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对可插拔光模块路线的死刑判决书</span>。CPO/硅光共封装不再是选项而是必答题，但良率、热管理和激光器寿命三座大山未翻越前，铜缆仍将吃掉未来两年AI集群的绝大多数带宽预算。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Altera Agilex 27 is the First Agilex 2X Platform Adding 800GbE and 1.6TbE and More</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">FPGA塞进1.6TbE和LPDDR6，Altera在AI网络卸载赛道对博通Tomahawk5亮剑。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但2027年才出货，届时英伟达Spectrum-X已迭代两代，FPGA的可编程性优势在固定功能ASIC的功耗碾压前越来越像遮羞布</span>。真正的赌注是HyperFlow能否让客户为灵活性多付30%溢价。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
