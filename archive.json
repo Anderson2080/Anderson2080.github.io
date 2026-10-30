@@ -1,5 +1,12 @@
 [
   {
+    "id": "20261030_022035",
+    "date": "2026-10-30 02:20",
+    "title": "从 8.0 TB/s 到 0.5 pJ/bit：解构 Test-Time Compute 的物理死局与 KV Cache 的硅基坟场",
+    "excerpt": "华尔街对“推理即算力”的狂热定价建立在极其脆弱的物理假设之上。市场普遍认为 Blackwell 架构的 FP4 算力（20 PFLOPS）能线性转化为 Test-Time Compute 的吞吐量。这是谎言。真实的物理瓶颈不在 Tensor Core 的乘加阵列，而在 8.0 TB/s 的 HBM3e 带宽与 900 GB/s 的 NVLink 总线之间。在 100K 上下文、FP8 精度下，单并发请求的 KV Cache 占用达 51.2 GB，并发数达到 4 时，80GB HBM 瞬间击穿，系统直接退化为 PCIe Gen5 的 128 GB/s 拥塞模型。我们将用 pJ/bit 的能耗账本证明：硅光互联在 1.6T 时代前无法解决 0.5 pJ/bit 以下的能效墙；用 SRAM 面积公式证明：KV Cache 碎片化将导致 40% 以上的有效带宽被垃圾回收机制吞噬。本文不讨论“趋势”，只计算焦耳、平方毫米与微秒。",
+    "url": "articles/20261030_022035.html"
+  },
+  {
     "id": "20261029_020244",
     "date": "2026-10-29 02:02",
     "title": "算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的账面ROI",
