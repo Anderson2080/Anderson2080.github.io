@@ -311,29 +311,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-11-01 01:47</span>
+                <span class="text-slate-500">2026-11-02 02:01</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理经济学
+            算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何撕碎万亿参数推理的虚假繁荣
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理即服务”的毛利率编织幻觉。卖方模型假设Token边际成本随规模递减，物理定律不签署这份对赌协议。本文用硬核参数拆解三个被刻意回避的真相：其一，Test-Time Compute将推理从内存带宽受限（Memory-Bound）推向容量受限（Capacity-Bound），FP8精度下100K上下文并发请求在80GB HBM3e上触发的是容量雪崩而非算力瓶颈；其二，HBM3e的TSV热密度在8-Hi堆叠下逼近1.2 W/mm²，良率曲线与功耗墙的交叉点决定了每GB成本下降斜率将在2026年归零；其三，KV Cache碎片化使有效内存利用率跌破60%，硅光互联的0.5 pJ/bit理论优势被封装良率与激光器可靠性拖入微秒级延迟的泥潭。本文用账本推演证明：当前架构下，长上下文推理的毛利结构是负凸性陷阱。
+            华尔街对AI推理成本的定价模型建立在“算力线性扩展”的谎言之上。市场普遍假设GPU FLOPS是唯一瓶颈，却无视了物理定律的死刑判决：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大的拥塞节点。本文用硬核数据证明三个核心真相：第一，Test-Time Compute的边际收益在序列长度超过32K时被内存带宽的pJ/bit功耗墙彻底吞噬；第二，HBM3e的TSV热密度在8-Hi堆叠下已逼近250°C/mm²的硅极限，良率曲线呈指数崩塌；第三，KV Cache碎片化导致SRAM有效利用率跌破40%，硅光互联的微秒级延迟在All-to-All通信中放大为毫秒级抖动。这不是工程优化问题，是热力学第二定律的账单。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261101_014700.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261102_020122.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261031_015715.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-31 01:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261030_022035.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从 8.0 TB/s 到 0.5 pJ/bit：解构 Test-Time Compute 的物理死局与 KV Cache 的硅基坟场</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-30 02:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261029_020244.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的账面ROI</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-29 02:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261028_015850.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文撕裂HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-28 01:58</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261101_014700.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理经济学</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-01 01:47</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261031_015715.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的物理账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-31 01:57</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261030_022035.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从 8.0 TB/s 到 0.5 pJ/bit：解构 Test-Time Compute 的物理死局与 KV Cache 的硅基坟场</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-30 02:20</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261029_020244.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理的账面ROI</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-10-29 02:02</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -586,22 +588,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/intel-q3-2026-earnings-data-center-foundry-client/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/nvidia-updates-rubin-gpu-specs-as-first-production-hardware-arrives/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Intel的财报撕开了AI Infra的残酷分层：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">数据中心业务靠AI算力需求续命，客户端却被DRAM/NAND涨价反噬</span>。这不是周期波动，是结构性挤压——存储成本正从消费端抽血补贴AI端。Intel若不能把Foundry的先进封装产能变现，所谓“数据中心 soaring”不过是给台积电和HBM供应商打工的账面繁荣。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2610.37720" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">LRMoE: Demand-Side Load Re-Calibration for Efficient MoE Training on Memory-Constrained Nodes</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">MoE训练的命门从来不是算力，是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">路由不均导致的显存墙与通信空转</span>。LRMoE从需求侧重校准负载，本质是让专家激活更“听话”，在受限节点上榨出有效吞吐。但别急着吹——这类方法在真实Agent长上下文、多轮工具调用的动态分布下能否稳住，才是检验它是不是“论文级玩具”的唯一标准。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Rubin量产即改规格，暴露NVIDIA在Blackwell到Rubin过渡期对HBM4供应与CoWoS产能的焦虑。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">规格漂移本质是供应链博弈的被动修正，而非架构自信</span>。客户拿到的"首发硬件"可能已是过渡版本，锁定订单前务必确认最终BOM。</p>
 </a>
 
 <a href="https://semiengineering.com/chip-industry-week-in-review-162/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">本周芯片圈的核心信号只有一个：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">HBM短缺正在掐住AI扩张的咽喉，而台积电酝酿涨价是趁火打劫的定价权宣示</span>。先进封装产能爬坡、英飞凌联电加码、Intel量子动作——全是围绕“谁能卡住AI硬件的脖子”在排兵布阵。别被domain-specialized模型的花边迷惑，存储与封装才是2026年的真战场。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HBM短缺+台积电涨价+先进封装爬坡，三重挤压下AI芯片成本曲线将陡峭化。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">2026年AI扩张的瓶颈已从算力转向存储带宽与封装产能</span>。英飞凌与联电扩产是成熟制程的防御性补仓，改变不了先进节点的结构性紧缺。别被"AI需求强劲"叙事麻痹，供给端才是定价权所在。</p>
+</a>
+
+<a href="https://semiengineering.com/auto-generation-of-properties-methodology-insertion/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Auto-Generation Of Properties: Methodology Insertion</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">EDA属性自动生成终于从"炫技"转向"嵌入方法论"，这是Agent在芯片设计落地的正确姿势。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">关键不在生成能力，而在能否无缝插入现有验证流程而不制造新债务</span>。长期有价值，但短期别指望替代资深工程师——属性语义的正确性仍靠人兜底。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
