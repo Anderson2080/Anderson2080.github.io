@@ -1,5 +1,12 @@
 [
   {
+    "id": "20261105_030148",
+    "date": "2026-11-05 03:01",
+    "title": "算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬十万亿参数推理神话",
+    "excerpt": "华尔街对“Test-Time Compute”的定价建立在算力线性扩展的幻觉之上。物理定律不认PPT。当前AI基础设施存在三个被刻意掩盖的硬约束：第一，FP8精度下100K上下文并发请求将瞬间榨干单颗80GB HBM3e，NVLink的900GB/s双向带宽在All-to-All通信中沦为最大拥塞节点；第二，KV Cache碎片化导致内存利用率跌破60%，PagedAttention的块调度延迟在微秒级抖动中吞噬吞吐；第三，铜缆互联在224G SerDes下功耗突破25pJ/bit，机架级功耗密度撞上风冷40kW天花板。本文用TFLOPS、GB/s、pJ/bit、mm²的硬参数推演：Test-Time Compute的边际收益在HBM带宽墙前衰减为负，硅光互联的商用窗口被InP激光器良率锁死在2027年之后。市场在为不存在的算力弹性支付溢价。",
+    "url": "articles/20261105_030148.html"
+  },
+  {
     "id": "20261104_025137",
     "date": "2026-11-04 02:51",
     "title": "从8.0TB/s的HBM3e带宽赤字到1.6pJ/bit的铜互连死刑：Test-Time Compute的物理坍塌与KV Cache碎片化引发的硅光强制跃迁",
