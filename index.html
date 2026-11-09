@@ -318,29 +318,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-11-08 01:59</span>
+                <span class="text-slate-500">2026-11-09 02:18</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            推理税单：当Test-Time Compute撞上HBM墙，每Token成本正在被pJ/bit与KV Cache碎片化重新定价
+            算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            市场把Test-Time Compute当作免费午餐兜售。物理定律不认这套。FP8精度下，100K上下文单请求的KV Cache即占用约51.2GB，80GB HBM3e在并发2路时触发OOM，NVLink沦为最大拥塞节点。本文用三本账拆穿叙事：其一，HBM3e单堆栈带宽1.2TB/s、TSV热密度逼近散热极限，容量年增仅约1.5倍而算力年增约3倍，内存墙以复利速度扩大；其二，硅光互联当前实测约3-5pJ/bit，对比铜互连的15-20pJ/bit，仅在>2m链路具备经济性，封装内渗透率2026年前低于8%；其三，KV Cache碎片化使有效显存利用率跌至60-70%，PagedAttention类方案将内部碎片压到<4%，但页表元数据开销吃掉3-5%带宽。结论：推理边际成本曲线在2025-2027年由HBM供给与互联功耗共同锁定，算力堆叠无法线性兑换吞吐。
+            华尔街正在为生成式AI的“推理红利”支付荒谬的溢价，完全无视了底层物理定律的死刑判决。市场共识存在三个致命谎言：第一，盲目迷信Test-Time Compute（测试时计算）的线性扩展能力；第二，低估了HBM内存墙对并发吞吐量的绝对绞杀；第三，将硅光互联视为无延迟的万能药。本报告剥离一切商业叙事，直击硅基物理极限。我们将用硬核推演证明：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink沦为最大拥塞节点；KV Cache的碎片化将使SRAM面积利用率跌破40%；而硅光互联的激光器功耗（pJ/bit）在极高带宽密度下将直接击穿芯片的散热极限（TDP）。这不是软件优化能填补的鸿沟，这是热力学与香农定律的联合收割。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261108_015929.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261109_021845.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261107_023003.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何撕裂万亿参数推理的物理底裤</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-07 02:30</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261106_030258.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬十万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-06 03:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261105_030148.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬十万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-05 03:01</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261104_025137.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从8.0TB/s的HBM3e带宽赤字到1.6pJ/bit的铜互连死刑：Test-Time Compute的物理坍塌与KV Cache碎片化引发的硅光强制跃迁</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-04 02:51</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261108_015929.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理税单：当Test-Time Compute撞上HBM墙，每Token成本正在被pJ/bit与KV Cache碎片化重新定价</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-08 01:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261107_023003.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何撕裂万亿参数推理的物理底裤</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-07 02:30</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261106_030258.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬十万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-06 03:02</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261105_030148.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬十万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-05 03:01</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -600,22 +602,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/asrock-rack-dmrd16-2l-plus-diamond-rapids-ocp-summit-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/dell-poweredge-r770ap-review-one-fast-intel-xeon-6-server/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Dell PowerEdge R770AP Review One Fast Intel Xeon 6 Server</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">双路Xeon 6配24通道DDR5，Dell把内存带宽堆到极致，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI推理瓶颈早已从内存转向互联与能效</span>。2U堆料猛，可客户要的是每瓦token数，不是跑分。Intel生态守成有余，进攻乏力，这机器更像给存量数据中心打补丁，而非AI新贵首选。</p>
+</a>
+
+<a href="https://www.servethehome.com/asrock-rack-dmrd16-2l-plus-diamond-raids-ocp-summit-2026/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">ASRock Rack DMRD16-2L+ Spotted with 16 DDR5 Slots for Diamond Rapids</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">16通道DDR5加128条PCIe Gen6，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Intel Diamond Rapids的I/O规格已把AMD EPYC的128 lane逼到墙角</span>。但MCIO走线密度意味着主板层数和散热设计成本飙升，OEM若不能把BOM压住，这板子只会沦为展台花瓶。真正的看点是Gen6信号完整性——ASRock Rack敢在OCP峰会展出，说明Retimer生态已就位，2027年量产窗口比预期紧。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Diamond Rapids提前亮剑：16通道DDR5加128条PCIe Gen6走MCIO，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Intel在用互联密度对冲制程与核心数劣势</span>。但Gen6信号完整性是鬼门关，MCIO布线密度让主板厂叫苦。更致命的是，客户刚上Gen5，Gen6换机潮谁来买单？纸面参数救不了份额。</p>
 </a>
 
 <a href="https://semiengineering.com/chip-industry-week-in-review-163/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Week In Review</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">HBM走私进中国、H200扣在香港、Oracle-腾讯AI芯片交易崩盘——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这三件事拼出同一张图：美国出口管制的执行层正在从“卡芯片”升级为“卡物流+卡交易对手”</span>。对AI Agent基础设施而言，算力获取的不确定性已从供应链风险变成合规风险，任何依赖跨境GPU池的Agent部署方案都得重写假设。Micron暂停台湾扩产则是需求侧信号：HBM买方在观望管制走向。</p>
-</a>
-
-<a href="https://semiengineering.com/adding-network-security-to-ai-hpc-and-data-centers-2/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Adding Network Security To AI, HPC, And Data Centers</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">MACsec/IPsec放MAC还是放PHY，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这个架构选择直接决定AI集群的线速加密开销是零还是30%</span>。800G时代把IPsec塞进SmartNIC已不现实，inline MACsec在交换芯片里做才是正解——但代价是SerDes面积和功耗。文章点出的真问题是：安全功能的位置正在重塑芯片分区，网络芯片厂商谁先集成谁吃下AI数据中心订单，博通和Marvell的下一代路线图已押注于此。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HBM走私、H200扣港、美光停建、甲骨文腾讯交易崩盘——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">地缘政治已成芯片供应链第一变量，Agent式自动化采购与合规风控不再是选项而是刚需</span>。企业若还靠人工盯出口管制清单，迟早踩雷。这周报是警钟：供应链情报必须Agent化、实时化。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
