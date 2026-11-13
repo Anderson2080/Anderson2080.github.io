@@ -322,29 +322,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-11-12 03:32</span>
+                <span class="text-slate-500">2026-11-13 03:05</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
             算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街对AI推理需求的线性外推模型存在根本性物理误判。市场普遍假设算力扩张等同于营收扩张，却无视了冯·诺依曼架构在万亿参数模型下的绝对物理锁死。本文用硬核数据证伪三个行业谎言：第一，Test-Time Compute并非免费午餐，在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大的拥塞节点，微秒级延迟被放大至毫秒级灾难；第二，硅光互联在1.6T时代受限于激光器功耗与光纤耦合损耗，短期内无法替代铜缆在机柜内的短距统治地位；第三，KV Cache碎片化导致内存利用率跌破60%，PagedAttention仅是软件补丁，无法解决HBM物理带宽与SRAM面积的根本矛盾。本文推演显示，单次推理成本下降曲线将在2025年Q3触底反弹，算力账本将重写整个AI基础设施估值模型。
+            华尔街对“推理成本线性下降”的定价模型建立在流沙之上。市场共识假设算力供给弹性无限，却无视了物理定律的绝对刚性。本文用硬核数据证伪三大谎言：第一，Test-Time Compute并非免费午餐，在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink沦为最大拥塞节点；第二，硅光互联的1.2 pJ/bit能耗优势被激光器热漂移与耦合损耗抵消，短期无法替代铜缆的0.5米内统治地位；第三，KV Cache碎片化使显存利用率跌破60%，PagedAttention仅缓解症状而非治愈。核心真相：推理算力的瓶颈已从FLOPS转移至内存带宽与互联延迟，2025年前HBM3e良率爬坡斜率无法支撑百万级并发，单位Token成本下降曲线将在Q3触底反弹。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261112_033251.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261113_030512.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261111_022837.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-11 02:28</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261110_042814.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文碾碎80GB HBM3e，硅光互联与KV Cache碎片化如何埋葬Transformer的线性叙事</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-10 04:28</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261109_021845.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-09 02:18</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261108_015929.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">推理税单：当Test-Time Compute撞上HBM墙，每Token成本正在被pJ/bit与KV Cache碎片化重新定价</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-08 01:59</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261112_033251.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-12 03:32</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261111_022837.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-11 02:28</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261110_042814.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文碾碎80GB HBM3e，硅光互联与KV Cache碎片化如何埋葬Transformer的线性叙事</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-10 04:28</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261109_021845.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8并发击穿HBM3e物理墙，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-09 02:18</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -608,22 +610,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/amd-epyc-9006-results-are-here-and-amd-delivers-a-knockout-part-deux/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/nvidia-ceo-and-co-founder-jensen-huang-resigns-effective-immediately/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD EPYC 9006 Results Are Here and AMD Delivers a Knockout Part Deux</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AMD Zen 6 架构的 EPYC 9006 "Venice" 用两代打磨的服务器 CPU 再次对 Intel 打出 KO 组合拳。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">真正的杀招不在单核跑分，而在每瓦性能与内存通道密度对 AI 推理集群的 TCO 碾压</span>。Intel 若拿不出能效对等的 Xeon，数据中心份额将继续被蚕食到无还手之力。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA CEO and Co-Founder Jensen Huang Resigns, Effective Immediately</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">黄仁勋即刻辞职是AI Infra史上最大黑天鹅。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">CUDA生态与NVLink路线图的连续性将面临资本市场的暴力重定价</span>，客户会加速向MetaRoCE+自研ASIC分流。没有黄仁勋的NVIDIA，护城河从“信仰”退化为“工程”，估值逻辑必须重写。</p>
 </a>
 
-<a href="https://www.servethehome.com/google-tpu-8tx-8i-max-amd-epyc-turin/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Google TPU 8tx Pairs AMD EPYC Turin Hosts with Confidential Computing while TPU 8i Max Doubles Memory Bandwidth</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Google 把 TPU 8tx 主机端绑上 AMD EPYC Turin 并塞入机密计算，TPU 8i Max 直接把内存带宽翻倍——这是对推理场景的精准外科手术。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">TPU 不再只是训练备胎，机密计算+带宽翻倍意味着 Google 要在云端推理市场正面硬刚 Nvidia 的护城河</span>，且用 AMD 主机绕开 Intel 的捆绑税，供应链算盘打得极精。</p>
+<a href="https://www.servethehome.com/this-is-the-meta-metaroce-network-adapter/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">This is the Meta MetaRoCE Network Adapter</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Meta自研RoCE网卡直指百万GPU集群，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是把Agent训练的网络税从InfiniBand手里抢回来</span>。但RoCE的拥塞控制与PFC风暴在万卡级仍是定时炸弹，Meta若跑通，等于给开放以太网阵营递上刺向NVIDIA Spectrum-X的刀。</p>
 </a>
 
-<a href="https://semiengineering.com/hardware-based-location-checks-target-ai-chip-smuggling-texas-am/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://semiengineering.com/the-semiconductor-singularity/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Hardware-Based Location Checks Target AI Chip Smuggling (Texas A&amp;M)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">Texas A&amp;M 的 "5G CATS" 用 5G 密码学授权给 AI 加速器做硬件级地理围栏，直指走私与出口管制漏洞。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是把出口管制从纸面禁令升级为硅片级强制执行，但代价是芯片必须内置 5G 鉴权模块——等于给每颗 GPU 装电子脚镣</span>。合规成本会转嫁给所有买家，且一旦被逆向破解，整套管制体系将形同虚设。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Semiconductor Singularity</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">“AI加速IC创新”是行业自我催眠。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">真正的奇点不在设计端用AI，而在制造端——光刻、封装、良率的物理极限AI救不了</span>。把EDA提速包装成半导体奇点，是掩盖摩尔定律棺材板钉钉子的公关话术。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
