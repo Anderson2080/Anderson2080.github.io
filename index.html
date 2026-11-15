@@ -324,29 +324,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-11-14 02:52</span>
+                <span class="text-slate-500">2026-11-15 02:19</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何把万亿参数模型碾成废铁
+            算力绞肉机：当KV Cache撕裂HBM墙，硅光互联与Test-Time Compute的万亿晶体管葬礼
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理即营收”的叙事支付40倍PS估值，但物理定律不读财报。市场假设Test-Time Compute可线性扩展智能，现实是：FP8精度下，100K上下文并发请求在0.8秒内榨干单颗80GB HBM3e，NVLink的900GB/s双向带宽沦为最大拥塞节点。KV Cache碎片化使有效显存利用率跌破62%，硅光互联的1.5pJ/bit能效在封装热密度面前撞上300W/cm²的红线。本文用TFLOPS、GB/s、pJ/bit、mm²和微秒延迟推演三个结论：第一，Test-Time Compute的边际收益在序列长度超过32K后以O(n²)衰减，算力账本无法闭合；第二，HBM3e的TSV热密度已逼近材料极限，12-Hi堆叠良率曲线在2025年Q2出现拐点；第三，硅光互联的封装瓶颈不在光子学，而在激光器与光纤阵列的亚微米对准精度。这不是技术路线之争，是热力学与商业账本的清算。
+            华尔街正在为生成式AI的边际利润欢呼，而硅谷的实验室里，物理定律正在对Transformer架构执行死刑。市场对Test-Time Compute的狂热掩盖了一个致命的物理事实：在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink沦为最大的拥塞节点。所谓的“无限上下文”与“多智能体协作”，本质上是将计算复杂度从O(N)推向O(N²)的暴力自杀。本文将剥离所有商业话术，用硬核数据推演三个核心真相：第一，HBM3e的TSV热密度已逼近300W/cm²的液冷极限，内存墙的带宽增速（1.5x/年）远落后于算力增速（3x/年）；第二，KV Cache的碎片化导致SRAM面积利用率跌破40%，L2缓存命中率在长上下文下呈指数级衰减；第三，硅光互联的1.5 pJ/bit能耗在512节点以上拓扑中，将被交换芯片的SerDes功耗彻底吞噬。这不是技术迭代，这是硅基文明的物理撞墙。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261114_025232.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261115_021917.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261113_030512.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-13 03:05</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261112_033251.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-12 03:32</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261111_022837.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-11 02:28</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261110_042814.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文碾碎80GB HBM3e，硅光互联与KV Cache碎片化如何埋葬Transformer的线性叙事</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-10 04:28</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261114_025232.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何把万亿参数模型碾成废铁</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-14 02:52</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261113_030512.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-13 03:05</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261112_033251.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-12 03:32</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261111_022837.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-11 02:28</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -612,22 +614,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/nvidia-ceo-and-co-founder-jensen-huang-resigns-effective-immediately/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA CEO and Co-Founder Jensen Huang Resigns, Effective Immediately</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">黄仁勋即刻辞任是AI Infra史上最大黑天鹅。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">CUDA生态护城河与NVLink路线图将面临战略真空</span>，客户与供应链的信任重构成本极高。若属实，短期算力租赁价格与竞品替代窗口将剧烈波动，需警惕二手消息源可靠性。</p>
-</a>
-
-<a href="https://arxiv.org/abs/2611.14654" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Cleaning an Agent's History Hurts When the World Still Holds the Error</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">这篇论文戳破了Agent记忆管理的幻觉：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">压缩/修复历史而不修复外部世界状态，等于让Agent在干净日志上重复踩坑</span>。当前主流context compaction方案缺乏环境回滚语义，工程上必须引入"世界状态校验点"而非只做文本摘要。</p>
-</a>
-
 <a href="https://semiengineering.com/shifting-hbm4-controller-functions-closer-to-memory-uc-riverside/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Shifting HBM4 Controller Functions Closer To Memory (UC Riverside)</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">UC Riverside把HBM4控制器功能下沉到base die，直击host侧带宽与延迟瓶颈。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是HBM从"内存颗粒"走向"近存计算单元"的关键一步</span>，但分区协议标准化与JEDEC兼容性才是量产死穴，否则只是学术自嗨。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">HBM4把控制器功能下放到Base Die，表面是架构优化，实质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">对台积电CoWoS生态的迂回革命</span>。UC Riverside这篇论文戳中了AI Infra的命门：主机侧控制已成带宽瓶颈，内存侧智能才是HBM4的胜负手。但学术界方案离量产隔着三个三星。</p>
+</a>
+
+<a href="https://www.theinformation.com/articles/fallout-jensens-downfall" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">The Fallout from Jensen's Downfall</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">黄仁勋"被离职"的冲击波远超芯片圈——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Nvidia的Agent生态战略将面临根本性重估</span>。当CEO个人IP与公司AI叙事深度绑定，治理危机就是估值危机。十万员工请愿救不了Jexit，但暴露了一个致命问题：Nvidia的Agent护城河究竟是CUDA，还是黄仁勋本人？</p>
+</a>
+
+<a href="https://www.servethehome.com/amd-launches-epyc-embedded-9006-venice-gets-an-early-start-in-embedded/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AMD Launches EPYC Embedded 9006: Venice Gets an Early Start in Embedded</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Zen 6 "Venice"先打嵌入式再上数据中心，AMD这步棋极其阴险——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用边缘市场做新架构的免费压力测试场</span>。嵌入式客户对稳定性要求苛刻，等于帮AMD提前筛完硅片bug。等Intel和Nvidia反应过来，Venice已经在路由器、基站和工控里扎了根。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
