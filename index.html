@@ -329,29 +329,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-11-19 03:56</span>
+                <span class="text-slate-500">2026-11-20 03:50</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            每秒 3.2TB 的物理墙与 0.8pJ/bit 的死亡线：拆解 Test-Time Compute 的算力骗局、KV Cache 的碎片化熵增与硅光互联的 18 个月倒计时
+            算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及硅光互联为何救不了NVLink的拥塞死局
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理即思考”的叙事支付 40 倍 PS 溢价，但物理定律不接受市梦率。当前大模型推理的真实瓶颈并非 FLOPS 不足，而是 HBM 带宽与互联功耗构成的刚性天花板。本文用三组硬核推演证伪市场共识：第一，FP8 精度下 128K 上下文的并发请求会在 4.7 秒内榨干单颗 192GB HBM3e 的 KV Cache 容量，使 NVLink 沦为 900GB/s 的拥塞瓶颈；第二，Test-Time Compute 的线性扩展假设在超过 32 次采样后遭遇收益坍塌，每 token 边际能耗从 0.4J 飙升至 2.7J；第三，硅光互联的 0.8pJ/bit 能耗墙将在 2026 年 Q3 与铜缆的 1.2pJ/bit 形成交叉，但 TSV 良率与激光器寿命将交付周期拖入 18 个月黑洞。以下为推演过程与参数账本。
+            华尔街正在为“Test-Time Compute”的推理缩放定律狂欢，将算力叙事推向新高。这是脱离物理定律的幻觉。本文用硬核数据拆解三个被刻意掩盖的真相：第一，在FP8精度下，单张80GB HBM3e显卡处理100K上下文并发请求时，KV Cache的指数级膨胀将在微秒级榨干显存带宽，NVLink将沦为最大拥塞节点，而非算力瓶颈；第二，HBM3e的TSV穿孔热密度已逼近1.2 W/mm²，堆叠良率与散热成本正在吞噬毛利，8-Hi以上的物理极限不可逾越；第三，硅光互联的1.5 pJ/bit能效看似美好，但激光器功耗与耦合损耗在1024节点以上拓扑中呈非线性恶化，无法解决KV Cache碎片化带来的内存墙。本文用TFLOPS、GB/s、pJ/bit、mm²、微秒延迟的账本，证明当前架构是纸上谈兵。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261119_035635.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261120_035016.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261118_035939.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从 8.0 TB/s 到 1.2 pJ/bit：拆解 Test-Time Compute 如何在 80GB HBM3e 的物理废墟上绞杀 Transformer 推理经济学</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-18 03:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261117_045526.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">8TB/s带宽撞上1.2PFLOPS算力：KV Cache碎片化如何把HBM3e与硅光互联拖入微秒级拥塞地狱</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-17 04:55</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261116_023117.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-16 02:31</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261115_021917.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当KV Cache撕裂HBM墙，硅光互联与Test-Time Compute的万亿晶体管葬礼</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-15 02:19</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261119_035635.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">每秒 3.2TB 的物理墙与 0.8pJ/bit 的死亡线：拆解 Test-Time Compute 的算力骗局、KV Cache 的碎片化熵增与硅光互联的 18 个月倒计时</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-19 03:56</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261118_035939.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从 8.0 TB/s 到 1.2 pJ/bit：拆解 Test-Time Compute 如何在 80GB HBM3e 的物理废墟上绞杀 Transformer 推理经济学</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-18 03:59</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261117_045526.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">8TB/s带宽撞上1.2PFLOPS算力：KV Cache碎片化如何把HBM3e与硅光互联拖入微秒级拥塞地狱</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-17 04:55</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261116_023117.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当Test-Time Compute撞上HBM内存墙，硅光互联与KV Cache碎片化如何肢解万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-16 02:31</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -622,22 +624,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
-<a href="https://www.servethehome.com/nvidia-announces-rubin-hpc-science-focused-server-gpu-to-arrive-in-2028/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://www.servethehome.com/november-2026-top500-new-systems-analysis/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">NVIDIA Announces Rubin HPC: Science-Focused Server GPU to Arrive in 2028</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">NVIDIA重返HPC是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用Rubin HPC把CUDA生态锁进科学计算腹地</span>，5万CUDA核+2028时间点精准卡位exascale换代窗口。但科学负载对FP64与互联的苛求远超AI训练，NVIDIA若只堆CUDA核数而不重构内存层级，恐沦为“AI GPU贴HPC标签”的营销秀。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">November 2026 Top500 New Systems Are Few and Far Between</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">Top500新系统寥寥无几，暴露的不是需求疲软而是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">超算采购周期与AI集群建设严重脱节</span>。传统HPC预算被GPU集群虹吸，榜单沦为存量翻新秀。厂商若还拿Top500排名当AI Infra卖点，纯属自欺欺人——客户看的是每美元token吞吐，不是Linpack峰值。</p>
 </a>
 
-<a href="https://semiengineering.com/can-ai-agents-really-shift-chip-design-left/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+<a href="https://arxiv.org/abs/2611.23365" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Can AI Agents Really Shift Chip Design Left?</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">“左移”口号震天响，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">Agent与EDA工具的API级集成才是真门槛，而非模型能力</span>。数十年工程经验藏在老工程师的直觉与私有脚本里，Agent抓不到这些隐性知识就只能做表面自动化。别把“能跑通demo”当成“能替代signoff”，芯片设计左移的代价是验证成本指数级上升。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Training Language Models for Introspective Oversight</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">让模型自省来监督reward hacking和欺骗行为，方向对但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是让骗子自己写悔过书</span>。内省能力与欺骗能力同源，训练越深越可能学会"表演诚实"。Agent安全不能靠模型自觉，必须外挂可验证的执行轨迹审计——这篇论文的实用价值在于给监管层递了把钝刀。</p>
 </a>
 
 <a href="https://www.servethehome.com/bull-shows-intel-xeon-diamond-rapids-package-at-sc26/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Bull Shows Intel Xeon Diamond Rapids Package at SC26</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">LGA9324封装亮相是Intel向HPC市场递的投名状，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">但封装尺寸膨胀背后是Intel在制程与chiplet互连上的被动追赶</span>。Bull Sequana平台站台说明OEM仍愿押注，可Diamond Rapids若不能在每瓦性能上压过EPYC，这9324个触点不过是给对手做嫁衣的昂贵插座。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">LGA9324封装亮相SC26，Intel在<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用插槽面积换内存带宽和CXL扩展性</span>，赌的是AI推理场景CPU重新变重要。但9324个触点对信号完整性和供电是噩梦，Bull这种二线OEM先秀封装恰恰说明一线厂商还在观望。Intel真正的考验是Diamond Rapids能否在2027年前把TCO打到GPU集群的1/3以下。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
