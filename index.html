@@ -333,29 +333,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-11-23 03:26</span>
+                <span class="text-slate-500">2026-11-24 06:41</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当100K上下文碾碎80GB HBM3e，硅光互联与KV Cache碎片化如何埋葬Transformer的线性叙事
+            80GB HBM3e的死刑判决：当100K上下文并发击穿NVLink脊背，硅光互联与KV Cache碎片化如何埋葬Test-Time Compute的算力乌托邦
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为“推理即服务”的毛利率编织谎言。市场共识假设Test-Time Compute（测试时计算）是免费的午餐，只需堆叠GPU即可线性扩展。物理定律拒绝这种无知。在FP8精度下，单个100K上下文的并发请求将瞬间榨干单颗80GB HBM3e的物理带宽，导致NVLink沦为最大的拥塞节点，而非加速器。本文用硬核数据证伪三个核心谬误：第一，HBM3e的TSV热密度在8层堆叠下已触及1.2 pJ/bit的能效墙，带宽增长曲线将在2026年Q2彻底扁平化；第二，KV Cache的碎片化并非软件调度问题，而是SRAM面积（<100 mm²）与注意力头维度之间的数学死锁，导致有效内存利用率跌破43%；第三，硅光互联的激光器功耗（>15 pJ/bit）在短距互连场景下反超铜缆，CPO的商用窗口被高估至少18个月。本文推演至微秒级延迟与pJ/bit级能耗，给出对冲基金做空“无限上下文”叙事、做多HBM热管理供应链的量化依据。
+            华尔街对"Test-Time Compute"的定价建立在两个未经物理验证的假设上：推理时间可无限线性扩展、内存带宽成本将随规模下降。这是谎言。本文用硬核数据证明三个核心真相：第一，FP8精度下100K上下文单请求的KV Cache占用达51.2GB，80GB HBM3e在并发超过1.5路时即物理性榨干，NVLink 900GB/s双向带宽在All-Reduce阶段成为最大拥塞节点，微秒级延迟劣化为毫秒级排队；第二，HBM3e的TSV穿孔热密度在8-Hi堆叠下已逼近1.2 W/mm²的散热天花板，良率曲线在2025年Q3出现非线性塌陷；第三，硅光互联的pJ/bit账本在<50cm互连距离上无法击败铜缆，CPO封装良率损失吞噬其带宽密度优势。KV Cache碎片化使有效内存利用率跌至62%，PagedAttention的块管理开销在100K上下文下产生18%的额外访存放大。本文推演：单集群Test-Time Compute的经济性在并发>32路时崩溃，每token边际成本上升3.7倍。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261123_032646.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261124_064106.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261122_024634.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当KV Cache撕裂HBM3e物理极限，硅光互联与Test-Time Compute的万亿美金死亡账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-22 02:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261121_034230.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-21 03:42</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261120_035016.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及硅光互联为何救不了NVLink的拥塞死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-20 03:50</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261119_035635.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">每秒 3.2TB 的物理墙与 0.8pJ/bit 的死亡线：拆解 Test-Time Compute 的算力骗局、KV Cache 的碎片化熵增与硅光互联的 18 个月倒计时</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-19 03:56</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261123_032646.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文碾碎80GB HBM3e，硅光互联与KV Cache碎片化如何埋葬Transformer的线性叙事</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-23 03:26</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261122_024634.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当KV Cache撕裂HBM3e物理极限，硅光互联与Test-Time Compute的万亿美金死亡账本</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-22 02:46</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261121_034230.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-21 03:42</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261120_035016.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度撞上100K上下文，80GB HBM3e如何在微秒级被KV Cache撕成碎片，以及硅光互联为何救不了NVLink的拥塞死局</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-20 03:50</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -630,22 +632,22 @@
                 </div>
             <div class="space-y-4">
                     <!-- RADAR_START -->
+<a href="https://semiengineering.com/hybrid-bonded-3d-nand-boosts-analog-in-memory-compute-density/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Hybrid-Bonded 3D NAND Boosts Analog In-Memory Compute Density (IBM, Micron, U. of Patras)</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">IBM+Micron用混合键合把3D NAND做成模拟存算宏，4.8M weights/mm²的密度确实亮眼，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">模拟计算精度和耐久性仍是量产死穴</span>。别急着吹颠覆，先看良率和写入干扰怎么解——存内计算喊了十年，缺的不是密度，是能跑Transformer的可靠性。</p>
+</a>
+
+<a href="https://www.theinformation.com/articles/jensen-owes-job-trump" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
+    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Jensen Owes His Job to Trump</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">黄仁勋“复职”被包装成特朗普的政治背书，实则是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">NVIDIA治理结构向政治权力低头的危险信号</span>。CEO去留由白宫“断言”决定，还谈什么独立技术路线？Agent生态依赖的算力霸权，如今绑上了政治战车——这不是芯片新闻，是公司治理的耻辱柱。</p>
+</a>
+
 <a href="https://www.servethehome.com/centec-zx530s-24s2cq-review/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Centec ZX530S-24S2CQ Review The Cheap 10G and 100G Switch Option with a Centec Switch Chip</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">盛科ZX530S以国产交换芯片切入10G/100G白盒市场，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">本质是用"够用"的SerDes和缓存规格打价格差，而非性能对标Broadcom</span>。对中小数据中心和边缘场景是务实选择，但别指望它在低时延和遥测能力上替代Trident。国产替代的叙事要落地，靠的是这种能出货的SKU，不是PPT。</p>
-</a>
-
-<a href="https://www.theinformation.com/articles/ai-bubble-deflating-dell-workday-deck" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">AI Bubble Deflating? Dell, Workday on Deck</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">AI概念股单日12-16%的跌幅不是回调，是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">市场开始对"算力军备竞赛"的资本开支回报率进行暴力重定价</span>。CoreWeave、Nebius这类neocloud首当其冲，说明杠杆堆出来的GPU集群商业模式经不起利率和订单波动的双重拷问。Dell和Workday的财报将是试金石——如果企业AI预算开始砍单，整条Infra链的估值逻辑要重写。</p>
-</a>
-
-<a href="https://www.theinformation.com/briefings/openai-calls-leading-ai-firms-agree-ai-development-limits" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
-    <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
-    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">OpenAI Calls For Leading AI Firms to Agree on AI Development Limits</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">OpenAI首席科学家呼吁"在可解释性达标前设限"，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">翻译过来就是：我们也不知道Agent内部在干什么，先别让对手跑太快</span>。这是竞争策略包装成安全倡议的经典操作——用行业自律拖慢开源和追赶者，同时给自己留监管套利窗口。Agent的可控性是真问题，但靠头部公司"自觉"定红线，不如指望芯片层面的安全岛和形式化验证工具链。</p>
+    <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Centec ZX530S-24S2CQ Review: The Cheap 10G and 100G Switch Option with a Centec Switch Chip</h4>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">盛科ZX530S用国产交换芯片把24口10G+2口100G打到白菜价，<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">这是对博通/Marvell低端交换市场的精准爆破</span>。但别只看价格——SDK成熟度、P4可编程性和长期固件支持才是企业敢不敢用的关键。国产替代不缺芯片，缺的是生态耐心。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
