@@ -337,29 +337,31 @@
     
     
     
+    
     <!-- DEEP_DIVES_START -->
     <article class="group relative bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 pr-0 md:pr-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                 <span class="text-white bg-blue-600 px-3 py-1.5 rounded-md shadow-sm">核心研判 / Tech Thesis</span>
-                <span class="text-slate-500">2026-11-27 04:43</span>
+                <span class="text-slate-500">2026-11-28 04:28</span>
             </div>
         </div>
         <h4 class="text-3xl md:text-[2.2rem] font-black text-slate-900 mb-6 group-hover:text-blue-600 transition-colors duration-300 leading-[1.25] tracking-tight">
-            算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话
+            算力绞肉机：当100K上下文撕裂HBM3e物理极限，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话
         </h4>
         <div class="text-lg text-slate-600 font-serif leading-relaxed mb-8 space-y-4 flex-grow">
-            华尔街正在为生成式AI的边际利润欢呼，而硅谷的实验室里，物理定律正在对Transformer架构执行死刑。市场共识存在致命误判：认为Test-Time Compute（测试时计算）的扩展仅受限于GPU采购预算。真相是，算力扩展的瓶颈早已从FP8/FP4的TFLOPS峰值，转移到了HBM3e的物理带宽与互联拓扑的微秒级延迟上。本文用硬核数据推演三个核心真相：第一，在FP8精度下，100K上下文的并发请求将瞬间榨干80GB HBM3e，导致NVLink变成最大的拥塞节点；第二，KV Cache的碎片化导致内存利用率跌破60%，SRAM面积局限使片上缓存无法承接长上下文；第三，硅光互联的pJ/bit功耗账本在<1.6Tbps单通道速率下，仍无法解决多智能体并发下的拓扑拥塞。这不是软件优化能填补的沟壑，这是硅基物理的叹息之墙。
+            华尔街对“Test-Time Compute”的狂热定价建立在流沙之上。市场普遍误判推理算力瓶颈在于FLOPS堆叠，而物理真相是：内存带宽与互联功耗正在执行死刑。在FP8精度下，单张80GB HBM3e承载100K上下文并发请求时，KV Cache的指数级膨胀将瞬间击穿显存墙，迫使NVLink沦为最大拥塞节点。硅光互联的pJ/bit账本在良率地狱前毫无胜算。本文将用绝对数学推演证明：当前架构下，长上下文推理的边际成本呈非线性爆炸，所谓“推理即服务”的毛利率模型是彻头彻尾的会计幻觉。
         </div>
         <div class="mt-2 pt-2">
-            <a href="articles/20261127_044315.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
+            <a href="articles/20261128_042814.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide hover:bg-blue-600 transition-colors duration-300">
                 阅读完整深度研判 
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261126_043855.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从HBM3e的1.2pJ/bit能耗墙到硅光互联的0.1pJ/bit救赎：拆解Test-Time Compute如何在微秒级延迟下绞杀80GB显存与NVLink拓扑</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-26 04:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261125_051118.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当HBM3e的8.0 Gbps撞上KV Cache的物理熵增，以及硅光互联的1.5 pJ/bit死亡线</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-25 05:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261124_064106.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">80GB HBM3e的死刑判决：当100K上下文并发击穿NVLink脊背，硅光互联与KV Cache碎片化如何埋葬Test-Time Compute的算力乌托邦</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-24 06:41</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261123_032646.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当100K上下文碾碎80GB HBM3e，硅光互联与KV Cache碎片化如何埋葬Transformer的线性叙事</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-23 03:26</div></a></li></ul></div>
+        <div class="mt-8 pt-8 border-t border-slate-200"><h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-5 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>过往深度研判 ARCHIVE</h4><ul class="space-y-4"><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261127_044315.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当FP8精度与100K上下文榨干HBM3e，硅光互联与KV Cache碎片化如何埋葬万亿参数推理神话</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-27 04:43</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261126_043855.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">从HBM3e的1.2pJ/bit能耗墙到硅光互联的0.1pJ/bit救赎：拆解Test-Time Compute如何在微秒级延迟下绞杀80GB显存与NVLink拓扑</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-26 04:38</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261125_051118.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">算力绞肉机：当HBM3e的8.0 Gbps撞上KV Cache的物理熵增，以及硅光互联的1.5 pJ/bit死亡线</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-25 05:11</div></a></li><li class="border-b border-slate-100 last:border-0 pb-3 last:pb-0"><a href="articles/20261124_064106.html" class="group block"><div class="text-sm md:text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug mb-1">80GB HBM3e的死刑判决：当100K上下文并发击穿NVLink脊背，硅光互联与KV Cache碎片化如何埋葬Test-Time Compute的算力乌托邦</div><div class="text-xs text-slate-400 font-medium uppercase tracking-wider">2026-11-24 06:41</div></a></li></ul></div>
     </article>
     <!-- DEEP_DIVES_END -->
+    
     
     
     
@@ -641,19 +643,19 @@
 <a href="https://www.servethehome.com/kioxia-gp2-series-ssd/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">AI Infra</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Kioxia Announces GP2 Series SSD with Over 18 Million Random Read IOPS</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">18M IOPS+50DWPD看似填补DRAM与TLC之间的SLC缓存层，实则是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用寿命换带宽的暴力堆料</span>。AI推理的KV Cache分层终于有了物理载体，但50DWPD意味着这盘三年内必被写穿——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">买得起的嫌贵，买得起的又不敢当写缓存用</span>。Kioxia在赌AI Infra的IO瓶颈比寿命焦虑更痛。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">18M IOPS+50DWPD的SSD本质是<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">在DRAM与TLC之间硬切一层"伪内存"</span>，专治KV Cache和向量检索的随机读饥渴。但别吹成通用存储革命——50DWPD寿命注定它只能活在推理缓存层，写放大和成本会教做人。<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">AI Infra的真正瓶颈从来不是顺序带宽，而是这种"内存墙"的补丁能撑多久</span>。</p>
 </a>
 
 <a href="https://arxiv.org/abs/2611.33160" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">Agent</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Context Scaling: A New Frontier of AI Scaling</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">这篇论文戳破了Agent落地的最大幻觉：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">失败根源不是推理弱，而是任务依赖的状态与可用上下文错配</span>。Context Scaling把"喂多少上下文"从工程调参升维成Scaling Law新轴，但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">上下文窗口再大也救不了状态管理烂的Agent架构</span>——这是给RAG和Memory系统敲的丧钟，不是福音。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">这篇论文戳破了Agent最大的幻觉：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">失败不是因为模型笨，而是任务依赖的状态和可用上下文错配</span>。Context Scaling把"记忆管理"从工程trick升格为scaling维度，方向对。但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">上下文无限扩张≠有效推理，检索噪声和注意力稀释才是Agent落地的真坟墓</span>，别又造一个"更长即更强"的叙事泡沫。</p>
 </a>
 
 <a href="https://semiengineering.com/chip-industry-technical-paper-roundup-nov-25-2/" target="_blank" class="block bg-slate-100/70 hover:bg-slate-100 p-6 rounded-xl transition-colors group border border-transparent hover:border-slate-200 mb-4">
     <div class="flex items-center justify-between mb-3"><span class="text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded uppercase tracking-wider">芯片前沿</span><span class="text-sm font-semibold text-slate-500">今日前沿</span></div>
     <h4 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors mb-3">Chip Industry Technical Paper Roundup: Nov. 25</h4>
-    <p class="text-base text-slate-600 font-serif leading-relaxed">混合键合3D NAND模拟IMC、HBF降GPU延迟、背面时钟网格——三篇论文指向同一结论：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">存储墙的解法正在从"堆HBM"转向"把计算塞进存储里"</span>。但最刺眼的是LLM-agent验证后量子硬件——<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">用AI验证抗量子芯片，等于让贼设计锁</span>。Chiplet良率匹配那篇才是真干货，可惜被埋没了。</p>
+    <p class="text-base text-slate-600 font-serif leading-relaxed">这轮论文清单暴露了先进封装的真实焦虑：<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">HBF降GPU延迟、背面时钟网格救BSPDN、混合键合3D NAND塞模拟IMC</span>——全是在物理极限下"往Z轴要性能"。但<span class="underline decoration-wavy decoration-blue-500 underline-offset-4 font-semibold text-slate-800">defect-aware chiplet匹配和LLM-agent验证后量子硬件，说明良率与安全已成Chiplet时代的双杀命题</span>。堆叠不是万能药，热和测试成本会反噬。</p>
 </a><div class="mt-6 pt-5 border-t border-slate-200"><a href="radar_archive.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-widest">过往情报雷达 Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
 <!-- RADAR_END -->
                 </div>    
